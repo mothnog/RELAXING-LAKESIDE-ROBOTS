@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://81qdrxre4gkd"]
+
+[ext_resource type="Script" uid="uid://bf3a3cnik3nmt" path="res://scenes/player/interpolate_camera.gd" id="1_e6e6n"]
+
+[node name="InterpolateCamera" type="Camera3D"]
+script = ExtResource("1_e6e6n")

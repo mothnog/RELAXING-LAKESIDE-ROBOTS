@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=3 uid="uid://dlwuufevvxlfw"]
+
+[ext_resource type="Script" uid="uid://c8gb3u2sjqvga" path="res://scenes/interactable/interact_question.gd" id="1_afyty"]
+[ext_resource type="Texture2D" uid="uid://ex6ofx65qfnw" path="res://assets/hud/question.png" id="1_niix5"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_afyty"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f4qvu"]
+atlas = ExtResource("1_niix5")
+region = Rect2(0, 0, 60, 75)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_plxei"]
+atlas = ExtResource("1_niix5")
+region = Rect2(60, 0, 60, 75)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_22rxj"]
+atlas = ExtResource("1_niix5")
+region = Rect2(120, 0, 60, 75)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xsvkd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f4qvu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_plxei")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_22rxj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="InteractQuestion" type="Area3D"]
+script = ExtResource("1_afyty")
+require_input = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.426824, 0)
+shape = SubResource("SphereShape3D_afyty")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.391672, 0)
+billboard = 2
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_xsvkd")
+autoplay = "default"
+frame_progress = 0.0251767
