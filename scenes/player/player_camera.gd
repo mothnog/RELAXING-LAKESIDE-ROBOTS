@@ -30,28 +30,29 @@ func _ready():
 func _process(delta):
 	if ! Engine.is_editor_hint():
 		
-		# rotating around the player
-		rotation_dir = Input.get_axis("cam_left", "cam_right")
-		
-		rotation_vel = lerp(rotation_vel, rotation_dir * rotation_speed, rotation_accel * delta)
-		
-		rotate_around -= rotation_vel * delta
-		
-		position = horizontal_dist * -Vector3.FORWARD.rotated(Vector3(0, 1, 0), rotate_around) + height_vec
-		rotation.y = rotate_around
-		
-		
-		# look up/down
-		look_dir = Input.get_axis("cam_down", "cam_up")
-		
-		if look_dir != 0:
-			rotation.x = lerp(rotation.x, default_x_rotation + (look_dir * look_span), look_away_accel * delta)
-		else:
-			rotation.x = lerp(rotation.x, default_x_rotation, look_return_accel * delta)
-		
-		
-		# colliding with walls
-		raycast.target_position = position - raycast.position
-		
-		if raycast.is_colliding():
-			position = raycast.get_collision_point() - player.position + (raycast.get_collision_normal() * WALL_PADDING)
+		if current:
+			# rotating around the player
+			rotation_dir = Input.get_axis("cam_left", "cam_right")
+			
+			rotation_vel = lerp(rotation_vel, rotation_dir * rotation_speed, rotation_accel * delta)
+			
+			rotate_around -= rotation_vel * delta
+			
+			position = horizontal_dist * -Vector3.FORWARD.rotated(Vector3(0, 1, 0), rotate_around) + height_vec
+			rotation.y = rotate_around
+			
+			
+			# look up/down
+			look_dir = Input.get_axis("cam_down", "cam_up")
+			
+			if look_dir != 0:
+				rotation.x = lerp(rotation.x, default_x_rotation + (look_dir * look_span), look_away_accel * delta)
+			else:
+				rotation.x = lerp(rotation.x, default_x_rotation, look_return_accel * delta)
+			
+			
+			# colliding with walls
+			raycast.target_position = position - raycast.position
+			
+			if raycast.is_colliding():
+				position = raycast.get_collision_point() - player.position + (raycast.get_collision_normal() * WALL_PADDING)

@@ -1,0 +1,85 @@
+[gd_scene load_steps=5 format=3 uid="uid://d3sjaioi0ueus"]
+
+[ext_resource type="Script" uid="uid://cx4gbpk4vd4k1" path="res://scenes/robots/bird.gd" id="1_8jfiy"]
+
+[sub_resource type="Animation" id="Animation_fch6v"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:path_progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:path_mirror")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_8jfiy"]
+resource_name = "path"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:path_progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:path_mirror")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [1, -1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fch6v"]
+_data = {
+&"RESET": SubResource("Animation_fch6v"),
+&"path": SubResource("Animation_8jfiy")
+}
+
+[node name="Bird" type="Node3D"]
+script = ExtResource("1_8jfiy")
+path_mirror = 0
+path_height = 0.3
+noise_speed = 50.0
+noise_amplitude = Vector3(1, 0.2, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_fch6v")
+}
+autoplay = "path"
+speed_scale = 0.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.800003, -0.152665, -0.111078)
+radius = 0.25
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.74621)

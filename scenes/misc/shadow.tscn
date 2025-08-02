@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cpw84yq5ergmc"]
+
+[ext_resource type="Texture2D" uid="uid://c58rm5epmd2xm" path="res://assets/misc/shadow.png" id="1_8h7oh"]
+
+[node name="Shadow" type="Decal"]
+size = Vector3(0.44, 5, 0.44)
+texture_albedo = ExtResource("1_8h7oh")
+albedo_mix = 0.33
+normal_fade = 0.999
+upper_fade = 0.0208045

@@ -6,7 +6,7 @@ extends Camera3D
 @export var time: float = 2
 @export var require_movement: bool = true
 @export var current_on_start: bool = false
-@export var easing: bool = false
+@export var easing: bool = true
 
 @onready var initial_transform: Transform3D  = global_transform
 

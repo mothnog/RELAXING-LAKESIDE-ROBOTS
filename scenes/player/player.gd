@@ -6,6 +6,7 @@ class_name Player
 
 
 @export var speed: float = 2
+@export var gravity: float = 0.2
 
 
 var input_dir: Vector3
@@ -35,7 +36,9 @@ func _physics_process(delta):
 	
 	
 	# gravity
-	velocity.y = -2.5
+	velocity.y -= 0.2
+	if is_on_floor(): 
+		velocity.y = -0.01
 	
 	move_and_slide()
 	

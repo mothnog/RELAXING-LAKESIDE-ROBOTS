@@ -51,7 +51,7 @@ animation = &"idle"
 frame_progress = 0.0984042
 
 [node name="PlayerCamera" parent="." node_paths=PackedStringArray("raycast") instance=ExtResource("4_dqkch")]
-transform = Transform3D(1, 0, 0, 0, 0.984808, 0.173648, 0, -0.173648, 0.984808, 0, 1, 1.5)
+transform = Transform3D(1, 0, 0, 0, 0.992546, 0.121869, 0, -0.121869, 0.992546, 0, 1, 1.75)
 raycast = NodePath("../RayCast3D")
 
 [node name="RayCast3D" type="RayCast3D" parent="."]

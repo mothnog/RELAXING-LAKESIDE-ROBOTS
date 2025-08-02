@@ -36,7 +36,6 @@ animations = [{
 
 [node name="InteractQuestion" type="Area3D"]
 script = ExtResource("1_afyty")
-require_input = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.426824, 0)
@@ -48,4 +47,4 @@ billboard = 2
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_xsvkd")
 autoplay = "default"
-frame_progress = 0.0251767
+frame_progress = 0.331569
