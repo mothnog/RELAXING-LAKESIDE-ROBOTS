@@ -1,28 +1,23 @@
-[gd_scene load_steps=6 format=3 uid="uid://bd75fyaa41cwg"]
+[gd_scene load_steps=5 format=3 uid="uid://bd75fyaa41cwg"]
 
 [ext_resource type="Script" uid="uid://dcv646x01170x" path="res://scenes/interactable/garbage_pile.gd" id="1_q8hls"]
 [ext_resource type="Texture2D" uid="uid://bpt54ynojuuee" path="res://assets/misc/garbage.png" id="2_hcpl8"]
+[ext_resource type="PackedScene" uid="uid://cpw84yq5ergmc" path="res://scenes/misc/shadow.tscn" id="3_rixy6"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_q8hls"]
-sky_horizon_color = Color(0.384314, 0.454902, 0.54902, 1)
-ground_bottom_color = Color(0.384314, 0.454902, 0.54902, 1)
-ground_horizon_color = Color(0.384314, 0.454902, 0.54902, 1)
-ground_curve = 45.4479
-
-[sub_resource type="Sky" id="Sky_4wyf3"]
-sky_material = SubResource("ProceduralSkyMaterial_q8hls")
-
-[sub_resource type="Environment" id="Environment_hcpl8"]
-background_mode = 2
-sky = SubResource("Sky_4wyf3")
+[sub_resource type="SphereShape3D" id="SphereShape3D_hcpl8"]
 
 [node name="GarbagePile" type="Area3D"]
+process_physics_priority = -1
 script = ExtResource("1_q8hls")
 radius = 0.5
 depth = 0.2
-depth_modulate = Color(0.486689, 0.208729, 0.182552, 1)
+depth_modulate = Color(0.486275, 0.207843, 0.184314, 1)
 depth_unmodulated = 0.0
 sprites = 20
+scatter_sprites = 10
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_hcpl8")
 
 [node name="Sprites" type="Node3D" parent="."]
 transform = Transform3D(0.959314, 0, -0.282342, 0, 1, 0, 0.282342, 0, 0.959314, 0, 0, 0)
@@ -50,14 +45,5 @@ texture = ExtResource("2_hcpl8")
 hframes = 2
 frame = 1
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.976897, 0.213712, 0, -0.213712, 0.976897, 0, 0.585207, 1.53704)
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_hcpl8")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
-light_energy = 0.354
-shadow_enabled = true
-directional_shadow_mode = 1
+[node name="Shadow" parent="." instance=ExtResource("3_rixy6")]
+size = Vector3(1.4, 5, 1.4)

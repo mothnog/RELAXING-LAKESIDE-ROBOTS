@@ -1,7 +1,11 @@
-extends Area3D
+extends Interactable
+class_name GarbagePile
+
 
 @onready var sprite_types_parent = $SpriteTypes
 @onready var sprites_parent = $Sprites
+@onready var collision = $CollisionShape3D
+@onready var shadow = $Shadow
 
 
 @export var seed: int = 0
@@ -15,13 +19,23 @@ extends Area3D
 
 var rng = RandomNumberGenerator.new()
 
+# PHYSICS VARIABLES
+var vel_y: float = 0
+const GRAVITY_STRENGTH: float = 10
+const SCATTER_STRENGTH: float = 0.08
+var sprite_directions: Array[Vector3]
+const LIFETIME: float = 2
+@export var scatter_sprites: int = 5
+
 
 func _ready():
+	super()
 	rng.seed = seed
+	collision.shape.radius = radius
 	
 	create_pile()
 
-
+# CREATING THE PILE
 func create_pile() -> void:
 	
 	for s in sprites_parent.get_children(): s.queue_free()
@@ -50,6 +64,8 @@ func create_pile() -> void:
 		sprite.position = vec
 		sprites_parent.add_child(sprite)
 		
+		sprite_directions.append(vec.normalized())
+		
 		# apply depth modulate
 		if depth_amount > depth * depth_unmodulated:
 			var modulate_amount = (depth_amount - depth_unmodulated) / (depth - depth_unmodulated)
@@ -61,10 +77,32 @@ func create_pile() -> void:
 		sprite.transform.basis.y = vec
 		sprite.transform.basis.x = -sprite.transform.basis.z.cross(vec)
 		sprite.transform.basis = sprite.transform.basis.orthonormalized()
-		
-		# also face up
-		sprite.transform = sprite.transform.rotated(Vector3.BACK, rot2)
 
 
 func random_value() -> float:
 	return rng.randf()
+
+# PHYSICS
+func _physics_process(delta):
+	# Scattering after interacting
+	if interacted == true:
+		
+		vel_y -= GRAVITY_STRENGTH * delta
+		
+		for i in sprites_parent.get_child_count():
+			var s: Node3D = sprites_parent.get_child(i)
+			var vel: Vector3 = sprite_directions[i] * SCATTER_STRENGTH + (Vector3.UP * vel_y) * delta
+			s.position += vel
+
+
+func _interaction() -> void:
+	
+	# get rid of some unneeded sprites
+	for i in sprites_parent.get_child_count():
+		if i > scatter_sprites:
+			sprites_parent.get_child(i).queue_free()
+	
+	shadow.hide()
+	
+	await get_tree().create_timer(LIFETIME).timeout
+	queue_free()

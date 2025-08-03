@@ -43,8 +43,7 @@ shape = SubResource("CylinderShape3D_g2els")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 offset = Vector2(0, 37)
-billboard = 2
-no_depth_test = true
+billboard = 1
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_qlg0r")
 animation = &"idle"

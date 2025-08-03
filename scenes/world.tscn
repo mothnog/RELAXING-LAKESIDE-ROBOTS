@@ -182,7 +182,4 @@ environment = SubResource("Environment_k0juu")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.05591, 0, -2.42764)
 
 [node name="GarbagePile" parent="." instance=ExtResource("4_k0juu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1885, 0, 0)
-
-[node name="Shadow" parent="GarbagePile" instance=ExtResource("2_71j4m")]
-size = Vector3(1.4, 5, 1.4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.45843, 0, 0)

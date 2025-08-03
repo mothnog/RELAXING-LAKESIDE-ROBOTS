@@ -5,7 +5,7 @@ extends Camera3D
 
 var rotate_around: float = 0
 var rotation_dir: int = 0
-var rotation_speed: float = 2.3
+var rotation_speed: float = 2.0
 var rotation_vel: float = 0
 var rotation_accel: float = 12
 
