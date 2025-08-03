@@ -45,4 +45,11 @@ func _on_body_entered(body) -> void:
 
 
 func _on_body_exited(body) -> void:
-	if body is Player: player_colliding = false
+	if body is Player: 
+		_player_exited()
+		player_colliding = false
+
+
+func _player_exited() -> void:
+	# overwritten
+	pass

@@ -1,18 +1,29 @@
 @tool
 extends NinePatchRect
 
+@onready var label = $MarginContainer/Label
 @onready var arrow = $Arrow
 @onready var path = $Path2D
 @onready var arrow_target = $ArrowTarget
+@onready var portrait_sprite = $ArrowTarget/Portrait
 
 var path_points: Array[Vector2]
 
-const ARROW_EDGE_MARGIN = 5
-
+var res: TextBoxRes = null
 
 
 func _ready():
+	if res != null:
+		position = res.rect.position
+		size = res.rect.size
+		
+		label.text = res.text
+		portrait_sprite.texture = res.portrait
+		portrait_sprite.scale = Vector2.ONE * res.portrait_scale
+		arrow_target.position = res.portrait_offset
+	
 	update_curve()
+	update_arrow()
 
 
 func _on_resized():
@@ -21,7 +32,7 @@ func _on_resized():
 
 func _process(delta):
 	if Engine.is_editor_hint():
-		update_arrow(arrow_target.position)
+		update_arrow()
 
 
 
@@ -40,9 +51,9 @@ func update_curve() -> void:
 	
 	path.curve = curve
 
-func update_arrow(target: Vector2) -> void:
+func update_arrow() -> void:
 	# set arrow to closest point on curve to the target
-	var closest = path.curve.get_closest_point(target) 
+	var closest = path.curve.get_closest_point(arrow_target.position) 
 	arrow.position = closest - arrow.pivot_offset
 	
 	# set rotation by dotting position direction vector with direction vectors between points to know which side the arrow is on

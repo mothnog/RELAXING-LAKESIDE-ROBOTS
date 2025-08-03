@@ -78,7 +78,7 @@ autoplay = "path"
 speed_scale = 0.8
 
 [node name="CSGSphere3D" type="CSGSphere3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -1.27085e-30, -9.2466e-31)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2.8026e-45, 2.8026e-45)
 radius = 0.25
 
 [node name="Camera3D" type="Camera3D" parent="."]

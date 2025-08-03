@@ -4,7 +4,7 @@ class_name TextBoxRes
 @export_group("Box")
 @export var continue_input: bool = false
 @export var text: String
-@export var rect: Rect2
+@export var rect: Rect2 = Rect2(0, 0, 600, 300)
 
 @export_group("Portrait")
 @export var portrait: Texture2D

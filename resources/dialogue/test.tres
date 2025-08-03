@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="DialogueRes" load_steps=5 format=3 uid="uid://cb0cwmtar41d3"]
+
+[ext_resource type="Script" uid="uid://ynudbsppuko4" path="res://scenes/dialogue/dialogue_resource.gd" id="1_twnql"]
+[ext_resource type="Script" uid="uid://cn4fkxsiwgk47" path="res://scenes/dialogue/textbox_resource.gd" id="2_p76qe"]
+[ext_resource type="Texture2D" uid="uid://7eh67uxe1srp" path="res://assets/tmp/temp_person1.png" id="3_p76qe"]
+
+[sub_resource type="Resource" id="Resource_twnql"]
+script = ExtResource("2_p76qe")
+continue_input = false
+text = "Normally I'd say something, but this is just a test."
+rect = Rect2(200, 500, 500, 150)
+portrait = ExtResource("3_p76qe")
+portrait_scale = 2.0
+portrait_offset = Vector2(-70, 75)
+metadata/_custom_type_script = "uid://cn4fkxsiwgk47"
+
+[resource]
+script = ExtResource("1_twnql")
+textboxes = Array[ExtResource("2_p76qe")]([SubResource("Resource_twnql")])
+metadata/_custom_type_script = "uid://ynudbsppuko4"
