@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=3 uid="uid://fmsvur4h1s4r"]
+
+[ext_resource type="Texture2D" uid="uid://dusxu1nt6ofsx" path="res://assets/hud/dialogue_box.png" id="1_2mruj"]
+[ext_resource type="Script" uid="uid://c6oyyo7al1qa0" path="res://scenes/dialogue/textbox.gd" id="2_2xyhr"]
+[ext_resource type="Texture2D" uid="uid://etn6qggs8av6" path="res://assets/hud/dialogue_arrow.png" id="3_pe6lh"]
+[ext_resource type="Texture2D" uid="uid://do88tg5dcfx0c" path="res://assets/tmp/temp_person0.png" id="4_2xyhr"]
+
+[sub_resource type="Curve2D" id="Curve2D_2mruj"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 192, 0, 0, 0, 0, 0, 192, 100, 0, 0, 0, 0, 0, 100, 0, 0, 0, 0, 0, 0)
+}
+point_count = 5
+
+[node name="TextBox" type="NinePatchRect"]
+offset_right = 192.0
+offset_bottom = 100.0
+scale = Vector2(2, 2)
+texture = ExtResource("1_2mruj")
+patch_margin_left = 30
+patch_margin_top = 30
+patch_margin_right = 30
+patch_margin_bottom = 30
+axis_stretch_horizontal = 1
+script = ExtResource("2_2xyhr")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 26.5
+offset_top = 27.0
+offset_right = 136.5
+offset_bottom = 50.0
+text = "I'm a text box!"
+
+[node name="Arrow" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 183.0
+offset_top = 6.5
+offset_right = 196.0
+offset_bottom = 21.5
+rotation = 3.14159
+pivot_offset = Vector2(9, 7.5)
+texture = ExtResource("3_pe6lh")
+stretch_mode = 2
+
+[node name="Path2D" type="Path2D" parent="."]
+visible = false
+curve = SubResource("Curve2D_2mruj")
+
+[node name="ArrowTarget" type="Marker2D" parent="."]
+position = Vector2(295.5, 14)
+
+[node name="TempPerson0" type="Sprite2D" parent="ArrowTarget"]
+texture = ExtResource("4_2xyhr")
+offset = Vector2(0, 24)
+
+[connection signal="resized" from="." to="." method="_on_resized"]

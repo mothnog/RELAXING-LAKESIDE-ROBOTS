@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="DialogueRes" load_steps=4 format=3 uid="uid://calqnh8laqsrc"]
+
+[ext_resource type="Script" uid="uid://ynudbsppuko4" path="res://scenes/dialogue/dialogue_resource.gd" id="1_2hkr5"]
+[ext_resource type="Script" uid="uid://cn4fkxsiwgk47" path="res://scenes/dialogue/textbox_resource.gd" id="2_y40hs"]
+
+[sub_resource type="Resource" id="Resource_2hkr5"]
+script = ExtResource("2_y40hs")
+continue_input = false
+text = ""
+rect = Rect2(0, 0, 0, 0)
+portrait_scale = 1.0
+portrait_offset = Vector2(0, 0)
+metadata/_custom_type_script = "uid://cn4fkxsiwgk47"
+
+[resource]
+script = ExtResource("1_2hkr5")
+textboxes = Array[ExtResource("2_y40hs")]([SubResource("Resource_2hkr5"), null])
+metadata/_custom_type_script = "uid://ynudbsppuko4"
