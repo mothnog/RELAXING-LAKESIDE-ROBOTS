@@ -21,6 +21,7 @@ patch_margin_right = 30
 patch_margin_bottom = 30
 axis_stretch_horizontal = 1
 script = ExtResource("2_2xyhr")
+in_playground = null
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -43,9 +44,9 @@ autowrap_mode = 2
 [node name="Arrow" type="TextureRect" parent="."]
 layout_mode = 0
 offset_left = 183.0
-offset_top = 56.5
+offset_top = 48.5
 offset_right = 196.0
-offset_bottom = 71.5
+offset_bottom = 63.5
 rotation = 3.14159
 pivot_offset = Vector2(9, 7.5)
 texture = ExtResource("3_pe6lh")
@@ -56,7 +57,7 @@ visible = false
 curve = SubResource("Curve2D_2mruj")
 
 [node name="ArrowTarget" type="Marker2D" parent="."]
-position = Vector2(241, 64)
+position = Vector2(288, 56)
 
 [node name="Portrait" type="Sprite2D" parent="ArrowTarget"]
 texture = ExtResource("4_2xyhr")

@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="DialogueRes" load_steps=5 format=3 uid="uid://cb0cwmtar41d3"]
+[gd_resource type="Resource" script_class="DialogueRes" load_steps=6 format=3 uid="uid://cb0cwmtar41d3"]
 
 [ext_resource type="Script" uid="uid://ynudbsppuko4" path="res://scenes/dialogue/dialogue_resource.gd" id="1_twnql"]
 [ext_resource type="Script" uid="uid://cn4fkxsiwgk47" path="res://scenes/dialogue/textbox_resource.gd" id="2_p76qe"]
@@ -8,13 +8,22 @@
 script = ExtResource("2_p76qe")
 continue_input = false
 text = "Normally I'd say something, but this is just a test."
-rect = Rect2(200, 500, 500, 150)
+rect = Rect2(200, 100, 500, 150)
 portrait = ExtResource("3_p76qe")
 portrait_scale = 2.0
 portrait_offset = Vector2(-70, 75)
 metadata/_custom_type_script = "uid://cn4fkxsiwgk47"
 
+[sub_resource type="Resource" id="Resource_p76qe"]
+script = ExtResource("2_p76qe")
+continue_input = false
+text = "hello, this is nothingness. I'm also here to test"
+rect = Rect2(880, 200, 300, 150)
+portrait_scale = 1.0
+portrait_offset = Vector2(800, 75)
+metadata/_custom_type_script = "uid://cn4fkxsiwgk47"
+
 [resource]
 script = ExtResource("1_twnql")
-textboxes = Array[ExtResource("2_p76qe")]([SubResource("Resource_twnql")])
+textboxes = Array[ExtResource("2_p76qe")]([SubResource("Resource_twnql"), SubResource("Resource_p76qe")])
 metadata/_custom_type_script = "uid://ynudbsppuko4"

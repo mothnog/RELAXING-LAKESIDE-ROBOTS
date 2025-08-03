@@ -12,3 +12,13 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="InputPrompt" type="Label" parent="."]
+visible = false
+offset_left = 1120.0
+offset_top = 664.0
+offset_right = 1237.0
+offset_bottom = 687.0
+size_flags_horizontal = 10
+size_flags_vertical = 10
+text = "[press interact]"

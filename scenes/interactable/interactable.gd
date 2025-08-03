@@ -27,7 +27,6 @@ func _process(delta):
 
 func _on_interaction(body) -> void:
 	if body is Player or body == null:
-		print("yea")
 		interacted = true
 		player_interacting.emit()
 		_interaction()

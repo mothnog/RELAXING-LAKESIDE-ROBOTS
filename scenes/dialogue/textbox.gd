@@ -1,5 +1,7 @@
 @tool
 extends NinePatchRect
+class_name TextBox
+
 
 @onready var label = $MarginContainer/Label
 @onready var arrow = $Arrow
@@ -9,18 +11,15 @@ extends NinePatchRect
 
 var path_points: Array[Vector2]
 
-var res: TextBoxRes = null
+@export var res: TextBoxRes = null
 
+@export_group("Editor")
+@export var in_playground: bool = false
+@export var edit_position_in_editor: bool = true
 
 func _ready():
 	if res != null:
-		position = res.rect.position
-		size = res.rect.size
-		
-		label.text = res.text
-		portrait_sprite.texture = res.portrait
-		portrait_sprite.scale = Vector2.ONE * res.portrait_scale
-		arrow_target.position = res.portrait_offset
+		update_parameters()
 	
 	update_curve()
 	update_arrow()
@@ -30,10 +29,17 @@ func _on_resized():
 	update_curve()
 
 
-func _process(delta):
-	if Engine.is_editor_hint():
-		update_arrow()
-
+func update_parameters() -> void:
+		position = res.rect.position
+		size = res.rect.size
+		
+		res.rect.size = size
+		
+		
+		label.text = res.text
+		portrait_sprite.texture = res.portrait
+		portrait_sprite.scale = Vector2.ONE * res.portrait_scale
+		arrow_target.position = res.portrait_offset
 
 
 func update_curve() -> void:
@@ -74,3 +80,25 @@ func update_arrow() -> void:
 			break
 		else:
 			arrow.rotation_degrees += 90
+
+
+
+# IN-EDITOR TOOLS
+func _process(delta):
+	if Engine.is_editor_hint():
+		
+		# edit resources in the editor "playground"
+		if in_playground:
+			# create new resource
+			if res == null:
+				res = TextBoxRes.new()
+			else:
+				if edit_position_in_editor: res.rect.position = position
+				update_parameters()
+				update_curve()
+				
+				# set name to resource name
+				if res.resource_path.ends_with(".tres"):
+					name = res.resource_path.split("/")[-1].replace(".tres", "")
+		
+		update_arrow()
