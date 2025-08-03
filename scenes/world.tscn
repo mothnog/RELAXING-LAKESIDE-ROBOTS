@@ -1,9 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://io1f7pruchta"]
+[gd_scene load_steps=15 format=3 uid="uid://io1f7pruchta"]
 
 [ext_resource type="PackedScene" uid="uid://7ywfju4yjrve" path="res://scenes/player/player.tscn" id="1_nnsk1"]
+[ext_resource type="PackedScene" uid="uid://cpw84yq5ergmc" path="res://scenes/misc/shadow.tscn" id="2_71j4m"]
 [ext_resource type="Texture2D" uid="uid://b0smq1iefth8o" path="res://assets/tmp/building.png" id="2_rwgxs"]
 [ext_resource type="PackedScene" uid="uid://dlwuufevvxlfw" path="res://scenes/interactable/interact_question.tscn" id="3_4wyf3"]
-[ext_resource type="PackedScene" uid="uid://d3sjaioi0ueus" path="res://scenes/robots/bird.tscn" id="4_k0juu"]
+[ext_resource type="PackedScene" uid="uid://bd75fyaa41cwg" path="res://scenes/interactable/garbage_pile.tscn" id="4_k0juu"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nnsk1"]
 shading_mode = 2
@@ -35,12 +36,12 @@ ground_bottom_color = Color(0.384314, 0.454902, 0.54902, 1)
 ground_horizon_color = Color(0.384314, 0.454902, 0.54902, 1)
 ground_curve = 45.4479
 
-[sub_resource type="Sky" id="Sky_4wyf3"]
+[sub_resource type="Sky" id="Sky_k0juu"]
 sky_material = SubResource("ProceduralSkyMaterial_rwgxs")
 
 [sub_resource type="Environment" id="Environment_k0juu"]
 background_mode = 2
-sky = SubResource("Sky_4wyf3")
+sky = SubResource("Sky_k0juu")
 
 [node name="World" type="Node3D"]
 
@@ -62,7 +63,9 @@ skeleton = NodePath("../..")
 shape = SubResource("HeightMapShape3D_nnsk1")
 
 [node name="Player" parent="." instance=ExtResource("1_nnsk1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.86045, 3.70382)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.174396, 0.294008)
+
+[node name="Shadow" parent="Player" instance=ExtResource("2_71j4m")]
 
 [node name="Building" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.22927, 2, -2.15455)
@@ -178,5 +181,8 @@ environment = SubResource("Environment_k0juu")
 [node name="InteractQuestion" parent="." instance=ExtResource("3_4wyf3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.05591, 0, -2.42764)
 
-[node name="Bird" parent="." instance=ExtResource("4_k0juu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.68247, 2.72839)
+[node name="GarbagePile" parent="." instance=ExtResource("4_k0juu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1885, 0, 0)
+
+[node name="Shadow" parent="GarbagePile" instance=ExtResource("2_71j4m")]
+size = Vector3(1.4, 5, 1.4)
