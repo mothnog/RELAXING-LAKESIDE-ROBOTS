@@ -53,6 +53,13 @@ func update_arrow(target: Vector2) -> void:
 		var dot: float = path_dir_vec.dot(arrow_dir_vec)
 		
 		if dot == 1.0:
+			# also clamp position to not go off the box edges
+			# there's probably a better way to do this but cant think of it rn
+			if i == 0 or i == 2:
+				arrow.position.x = clamp(arrow.position.x, arrow.size.x/2 - arrow.pivot_offset.x, size.x - arrow.size.x/2 - arrow.pivot_offset.x)
+			else:
+				arrow.position.y = clamp(arrow.position.y, arrow.size.y/2 - arrow.pivot_offset.y, size.y - arrow.size.y/2 - arrow.pivot_offset.y)
+			
 			break
 		else:
 			arrow.rotation_degrees += 90

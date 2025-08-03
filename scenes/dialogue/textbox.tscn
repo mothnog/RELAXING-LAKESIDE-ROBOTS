@@ -33,11 +33,11 @@ text = "I'm a text box!"
 
 [node name="Arrow" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 183.0
-offset_top = 6.5
-offset_right = 196.0
-offset_bottom = 21.5
-rotation = 3.14159
+offset_left = -9.0
+offset_top = 57.5
+offset_right = 4.0
+offset_bottom = 72.5
+rotation = 6.28319
 pivot_offset = Vector2(9, 7.5)
 texture = ExtResource("3_pe6lh")
 stretch_mode = 2
@@ -47,7 +47,7 @@ visible = false
 curve = SubResource("Curve2D_2mruj")
 
 [node name="ArrowTarget" type="Marker2D" parent="."]
-position = Vector2(295.5, 14)
+position = Vector2(-63.5, 65)
 
 [node name="TempPerson0" type="Sprite2D" parent="ArrowTarget"]
 texture = ExtResource("4_2xyhr")
