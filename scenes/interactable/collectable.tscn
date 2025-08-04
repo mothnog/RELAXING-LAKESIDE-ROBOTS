@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://csuuoikcehw7c"]
+
+[ext_resource type="Script" uid="uid://cd05qm4h3p8a5" path="res://scenes/interactable/collectable.gd" id="1_j8isq"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_j8isq"]
+radius = 0.25
+
+[node name="Collectable" type="Area3D"]
+script = ExtResource("1_j8isq")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.234916, 0)
+shape = SubResource("SphereShape3D_j8isq")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.205711, 0)
+radius = 0.153
+height = 0.097

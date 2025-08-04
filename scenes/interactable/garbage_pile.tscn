@@ -15,6 +15,7 @@ depth_modulate = Color(0.486275, 0.207843, 0.184314, 1)
 depth_unmodulated = 0.0
 sprites = 20
 scatter_sprites = 10
+one_shot = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("SphereShape3D_hcpl8")

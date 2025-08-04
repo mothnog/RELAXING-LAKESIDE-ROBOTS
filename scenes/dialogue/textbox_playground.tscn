@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://fi6b40t2inpd"]
+[gd_scene load_steps=6 format=3 uid="uid://fi6b40t2inpd"]
 
 [ext_resource type="PackedScene" uid="uid://fmsvur4h1s4r" path="res://scenes/dialogue/textbox.tscn" id="1_1lmg1"]
 [ext_resource type="Script" uid="uid://ttlme6xxcd62" path="res://scenes/dialogue/textbox_playground.gd" id="1_nbhh0"]
-[ext_resource type="Resource" uid="uid://cy8h205nyu4yv" path="res://resources/textbox/testbox.tres" id="2_1lmg1"]
 [ext_resource type="Texture2D" uid="uid://crp00752o4jxw" path="res://screenshot.png" id="2_52b3k"]
+[ext_resource type="Resource" uid="uid://d1y6x1mgc2frk" path="res://resources/textbox/test1.tres" id="4_bnntd"]
+[ext_resource type="Resource" uid="uid://bl8nlaeqjdlkt" path="res://resources/textbox/test2.tres" id="5_m1k1c"]
 
 [node name="TextboxPlayground" type="CanvasLayer"]
 script = ExtResource("1_nbhh0")
@@ -17,12 +18,22 @@ grow_vertical = 2
 texture = ExtResource("2_52b3k")
 metadata/_edit_lock_ = true
 
-[node name="testbox" parent="." instance=ExtResource("1_1lmg1")]
-offset_left = 48.0
-offset_top = 72.0
-offset_right = 548.0
-offset_bottom = 372.0
-res = ExtResource("2_1lmg1")
+[node name="test1" parent="." instance=ExtResource("1_1lmg1")]
+offset_left = 200.0
+offset_top = 100.0
+offset_right = 700.0
+offset_bottom = 250.0
+res = ExtResource("4_bnntd")
 in_playground = true
+edit_position_in_editor = false
+
+[node name="test2" parent="." instance=ExtResource("1_1lmg1")]
+offset_left = 880.0
+offset_top = 200.0
+offset_right = 1180.0
+offset_bottom = 350.0
+res = ExtResource("5_m1k1c")
+in_playground = true
+edit_position_in_editor = false
 
 [connection signal="child_entered_tree" from="." to="." method="_on_child_entered_tree"]

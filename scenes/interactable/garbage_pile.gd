@@ -4,17 +4,19 @@ class_name GarbagePile
 
 @onready var sprite_types_parent = $SpriteTypes
 @onready var sprites_parent = $Sprites
-@onready var collision = $CollisionShape3D
+#@onready var collision = $CollisionShape3D
 @onready var shadow = $Shadow
 
+@export var hiding: Interactable = null
 
+@export_category("Pile")
 @export var seed: int = 0
-
 @export var radius: float = 1
 @export var depth: float = 0
 @export var depth_modulate: Color = Color.WHITE
 @export var depth_unmodulated: float = 0.5
 @export var sprites: int = 5
+@export var scatter_sprites: int = 5
 
 
 var rng = RandomNumberGenerator.new()
@@ -22,16 +24,24 @@ var rng = RandomNumberGenerator.new()
 # PHYSICS VARIABLES
 var vel_y: float = 0
 const GRAVITY_STRENGTH: float = 10
-const SCATTER_STRENGTH: float = 0.08
+const SCATTER_STRENGTH: float = 0.07
 var sprite_directions: Array[Vector3]
 const LIFETIME: float = 2
-@export var scatter_sprites: int = 5
+
+var hiding_collision_grace_period: float = 0.33
 
 
 func _ready():
 	super()
 	rng.seed = seed
 	collision.shape.radius = radius
+	
+	# prepare the object hidden under the pile
+	if hiding != null:
+		hiding.position = position
+		hiding.disabled = true
+		hiding.hide()
+	
 	
 	create_pile()
 
@@ -85,7 +95,7 @@ func random_value() -> float:
 # PHYSICS
 func _physics_process(delta):
 	# Scattering after interacting
-	if interacted == true:
+	if player_has_interacted == true:
 		
 		vel_y -= GRAVITY_STRENGTH * delta
 		
@@ -104,5 +114,15 @@ func _interaction() -> void:
 	
 	shadow.hide()
 	
-	await get_tree().create_timer(LIFETIME).timeout
+	
+	# unhide hiding object
+	if hiding != null:
+		hiding.show()
+		await get_tree().create_timer(hiding_collision_grace_period).timeout
+		hiding.disabled = false
+	else:
+		hiding_collision_grace_period = 0
+	
+	
+	await get_tree().create_timer(LIFETIME - hiding_collision_grace_period).timeout
 	queue_free()

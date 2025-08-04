@@ -15,7 +15,7 @@ var path_points: Array[Vector2]
 
 @export_group("Editor")
 @export var in_playground: bool = false
-@export var edit_position_in_editor: bool = true
+@export var edit_position_in_editor: bool = false
 
 func _ready():
 	if res != null:
@@ -40,6 +40,7 @@ func update_parameters() -> void:
 		portrait_sprite.texture = res.portrait
 		portrait_sprite.scale = Vector2.ONE * res.portrait_scale
 		arrow_target.position = res.portrait_offset
+		portrait_sprite.position = res.sprite_offset
 
 
 func update_curve() -> void:

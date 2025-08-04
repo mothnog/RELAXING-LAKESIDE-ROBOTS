@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="TextBoxRes" load_steps=3 format=3 uid="uid://d1y6x1mgc2frk"]
+
+[ext_resource type="Texture2D" uid="uid://7eh67uxe1srp" path="res://assets/tmp/temp_person1.png" id="1_3ayts"]
+[ext_resource type="Script" uid="uid://cn4fkxsiwgk47" path="res://scenes/dialogue/textbox_resource.gd" id="2_bjsmw"]
+
+[resource]
+script = ExtResource("2_bjsmw")
+continue_input = false
+text = "Normally I'd say something, but this is just a test."
+rect = Rect2(200, 100, 500, 150)
+portrait = ExtResource("1_3ayts")
+portrait_scale = 2.0
+portrait_offset = Vector2(-70, 33)
+sprite_offset = Vector2(0, 42)
+metadata/_custom_type_script = "uid://cn4fkxsiwgk47"
