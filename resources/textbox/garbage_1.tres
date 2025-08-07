@@ -1,12 +1,12 @@
-[gd_resource type="Resource" script_class="TextBoxRes" load_steps=2 format=3 uid="uid://curx5cx4usnww"]
+[gd_resource type="Resource" script_class="TextBoxRes" load_steps=2 format=3 uid="uid://deu0aih7k36dr"]
 
 [ext_resource type="Script" uid="uid://cn4fkxsiwgk47" path="res://scenes/dialogue/textbox_resource.gd" id="1_2og2g"]
 
 [resource]
 script = ExtResource("1_2og2g")
 continue_input = false
-text = ""
-rect = Rect2(0, 0, 600, 300)
+text = "Regrettably, it was only a Dialogue under the scrap pile."
+rect = Rect2(184, 80, 400, 120)
 portrait_scale = 1.0
-portrait_offset = Vector2(0, 0)
+portrait_offset = Vector2(250, 0)
 sprite_offset = Vector2(0, 0)

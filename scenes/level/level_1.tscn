@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cirpvdfconraw"]
+[gd_scene load_steps=18 format=3 uid="uid://cirpvdfconraw"]
 
 [ext_resource type="ArrayMesh" uid="uid://543tnerp4u33" path="res://assets/level/floor1.obj" id="1_ybxn4"]
 [ext_resource type="PackedScene" uid="uid://7ywfju4yjrve" path="res://scenes/player/player.tscn" id="2_ybxn4"]
@@ -21,6 +21,9 @@ size = Vector3(1.47337, 1, 5)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0f3yk"]
 size = Vector3(1, 7.925, 7.03)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2qg3m"]
+size = Vector3(2.4248, 2.71777, 1)
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_2lb6k"]
 sky_horizon_color = Color(0.384314, 0.454902, 0.54902, 1)
@@ -50,7 +53,6 @@ transform = Transform3D(0.85, 0, 0, 0, 0.85, 0, 0, 0, 0.85, 0, 0, 0)
 
 [node name="Collision" type="StaticBody3D" parent="."]
 transform = Transform3D(0.85, 0, 0, 0, 0.85, 0, 0, 0, 0.85, 0, 0, 0)
-visible = false
 
 [node name="Floor1" type="MeshInstance3D" parent="Collision"]
 visible = false
@@ -70,6 +72,10 @@ shape = SubResource("BoxShape3D_u8rbc")
 [node name="Exit" type="CollisionShape3D" parent="Collision"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.1584, 0, -7.6209)
 shape = SubResource("BoxShape3D_0f3yk")
+
+[node name="Roof" type="CollisionShape3D" parent="Collision"]
+transform = Transform3D(0.979577, 0, -0.201078, 0, 1, 0, 0.201078, 0, 0.979577, 5.59599, 3.6706, 4.65825)
+shape = SubResource("BoxShape3D_2qg3m")
 
 [node name="Player" parent="." instance=ExtResource("2_ybxn4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.1368, 1.73574, -4.2641)
@@ -124,7 +130,7 @@ transform = Transform3D(0.999712, 0, -0.0239785, 0, 1, 0, 0.0239785, 0, 0.999712
 strength = 9.0
 
 [node name="DoNotEnter" parent="." instance=ExtResource("4_xbhhu")]
-transform = Transform3D(-1.42718e-07, 0, -3.265, 0, 3.265, 0, 3.265, 0, -1.42718e-07, -15, 0, -6.914)
+transform = Transform3D(-1.42718e-07, 0, -3.265, 0, 3.265, 0, 3.265, 0, -1.42718e-07, -15, -0.412957, -6.914)
 separation = 0.18
 iterations = 4
 

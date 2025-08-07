@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="DialogueRes" load_steps=3 format=3 uid="uid://dcdecpxk48xxk"]
+[gd_resource type="Resource" script_class="DialogueRes" load_steps=5 format=3 uid="uid://dcdecpxk48xxk"]
 
 [ext_resource type="Script" uid="uid://ynudbsppuko4" path="res://scenes/dialogue/dialogue_resource.gd" id="1_sx7by"]
 [ext_resource type="Script" uid="uid://cn4fkxsiwgk47" path="res://scenes/dialogue/textbox_resource.gd" id="2_1unbu"]
+[ext_resource type="Resource" uid="uid://curx5cx4usnww" path="res://resources/textbox_backup/garbage_1.tres" id="3_meo0w"]
+[ext_resource type="Resource" uid="uid://dh3mcp0n13p4s" path="res://resources/textbox_backup/garbage_2.tres" id="4_jtxrh"]
 
 [resource]
 script = ExtResource("1_sx7by")
-textboxes = Array[ExtResource("2_1unbu")]([])
+textboxes = Array[ExtResource("2_1unbu")]([ExtResource("3_meo0w"), ExtResource("4_jtxrh")])
 metadata/_custom_type_script = "uid://ynudbsppuko4"

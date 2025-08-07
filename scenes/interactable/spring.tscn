@@ -50,7 +50,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"extend",
-"speed": 5.0
+"speed": 6.0
 }]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_2espj"]
@@ -68,6 +68,7 @@ texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_5io0k")
 animation = &"extend"
 frame = 5
+frame_progress = 1.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
