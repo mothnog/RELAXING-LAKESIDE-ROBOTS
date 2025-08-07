@@ -1,9 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://7ywfju4yjrve"]
+[gd_scene load_steps=8 format=3 uid="uid://7ywfju4yjrve"]
 
 [ext_resource type="Script" uid="uid://dl7hus5vm7a5e" path="res://scenes/player/player.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://do88tg5dcfx0c" path="res://assets/tmp/temp_person0.png" id="2_qhqgy"]
 [ext_resource type="Texture2D" uid="uid://7eh67uxe1srp" path="res://assets/tmp/temp_person1.png" id="3_dqkch"]
 [ext_resource type="PackedScene" uid="uid://m1vkpeis2d22" path="res://scenes/player/player_camera.tscn" id="4_dqkch"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_lvxji"]
+radius = 0.22
+height = 0.7
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_g2els"]
 height = 0.7
@@ -39,7 +43,12 @@ script = ExtResource("1_g2els")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.35, 0)
+shape = SubResource("CapsuleShape3D_lvxji")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.35, 0)
 shape = SubResource("CylinderShape3D_g2els")
+disabled = true
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 offset = Vector2(0, 37)
@@ -51,8 +60,8 @@ frame_progress = 0.0984042
 
 [node name="PlayerCamera" parent="." node_paths=PackedStringArray("raycast") instance=ExtResource("4_dqkch")]
 transform = Transform3D(1, 0, 0, 0, 0.992546, 0.121869, 0, -0.121869, 0.992546, 0, 1, 1.75)
-raycast = NodePath("../RayCast3D")
+raycast = NodePath("../CameraRayCast3D")
 
-[node name="RayCast3D" type="RayCast3D" parent="."]
+[node name="CameraRayCast3D" type="RayCast3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.58, 0)
 target_position = Vector3(0, 0, 0)

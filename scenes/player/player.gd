@@ -3,9 +3,10 @@ class_name Player
 
 @onready var camera = $PlayerCamera
 @onready var sprite = $AnimatedSprite3D
+@onready var collision = $CollisionShape3D
 
 
-@export var speed: float = 2
+@export var speed: float = 2.3
 @export var gravity: float = 0.2
 
 
@@ -13,6 +14,8 @@ var input_dir: Vector3
 var move_dir: Vector3
 var move_vec: Vector3
 var accel: float = 15
+
+@onready var stairs_ray_cast_magnitude = collision.shape.radius + 0.02
 
 
 

@@ -38,14 +38,14 @@ ground_bottom_color = Color(0.384314, 0.454902, 0.54902, 1)
 ground_horizon_color = Color(0.384314, 0.454902, 0.54902, 1)
 ground_curve = 45.4479
 
-[sub_resource type="Sky" id="Sky_k0juu"]
+[sub_resource type="Sky" id="Sky_i7141"]
 sky_material = SubResource("ProceduralSkyMaterial_rwgxs")
 
 [sub_resource type="Environment" id="Environment_k0juu"]
 background_mode = 2
-sky = SubResource("Sky_k0juu")
+sky = SubResource("Sky_i7141")
 
-[node name="World" type="Node3D"]
+[node name="testWorld" type="Node3D"]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)

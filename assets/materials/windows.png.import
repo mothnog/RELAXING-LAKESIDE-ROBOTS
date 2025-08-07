@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7eh67uxe1srp"
-path="res://.godot/imported/temp_person1.png-5c5b77d2c1156c762c1bb176d6f01667.ctex"
+uid="uid://bmt831btrq4ub"
+path="res://.godot/imported/windows.png-0936595b92cf3d1bec48e50fd5f7d773.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tmp/temp_person1.png"
-dest_files=["res://.godot/imported/temp_person1.png-5c5b77d2c1156c762c1bb176d6f01667.ctex"]
+source_file="res://assets/materials/windows.png"
+dest_files=["res://.godot/imported/windows.png-0936595b92cf3d1bec48e50fd5f7d773.ctex"]
 
 [params]
 
@@ -31,4 +31,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1

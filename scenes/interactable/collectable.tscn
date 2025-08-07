@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://cd05qm4h3p8a5" path="res://scenes/interactable/collectable.gd" id="1_j8isq"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_j8isq"]
-radius = 0.25
+radius = 0.15
 
 [node name="Collectable" type="Area3D"]
 script = ExtResource("1_j8isq")

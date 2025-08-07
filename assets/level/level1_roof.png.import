@@ -2,16 +2,19 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7eh67uxe1srp"
-path="res://.godot/imported/temp_person1.png-5c5b77d2c1156c762c1bb176d6f01667.ctex"
+uid="uid://df3rdwlyhlckv"
+path="res://.godot/imported/level1_roof.png-db60acc295259f47113bb0772f66342d.ctex"
 metadata={
 "vram_texture": false
+}
+generator_parameters={
+"md5": "f486416583f7126149a28a395d5ef182"
 }
 
 [deps]
 
-source_file="res://assets/tmp/temp_person1.png"
-dest_files=["res://.godot/imported/temp_person1.png-5c5b77d2c1156c762c1bb176d6f01667.ctex"]
+source_file="res://assets/level/level1_roof.png"
+dest_files=["res://.godot/imported/level1_roof.png-db60acc295259f47113bb0772f66342d.ctex"]
 
 [params]
 

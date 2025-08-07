@@ -3,26 +3,25 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b0smq1iefth8o"
-path.s3tc="res://.godot/imported/building.png-c0535d7a27cd874138ca31034a9e9bc1.s3tc.ctex"
+path="res://.godot/imported/building.png-c0535d7a27cd874138ca31034a9e9bc1.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://assets/tmp/building.png"
-dest_files=["res://.godot/imported/building.png-c0535d7a27cd874138ca31034a9e9bc1.s3tc.ctex"]
+dest_files=["res://.godot/imported/building.png-c0535d7a27cd874138ca31034a9e9bc1.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
