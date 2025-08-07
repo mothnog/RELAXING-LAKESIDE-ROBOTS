@@ -8,6 +8,7 @@ class_name GarbagePile
 @onready var shadow = $Shadow
 
 @export var hiding: Interactable = null
+@export var hiding_collision_grace_period: float = 0.5
 
 @export_category("Pile")
 @export var seed: int = 0
@@ -28,7 +29,7 @@ const SCATTER_STRENGTH: float = 0.07
 var sprite_directions: Array[Vector3]
 const LIFETIME: float = 2
 
-var hiding_collision_grace_period: float = 0.33
+
 
 
 func _ready():

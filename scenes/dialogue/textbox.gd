@@ -15,7 +15,7 @@ var path_points: Array[Vector2]
 
 @export_group("Editor")
 @export var in_playground: bool = false
-@export var edit_position_in_editor: bool = false
+@export var edit_position_in_editor: bool = true
 
 func _ready():
 	if res != null:

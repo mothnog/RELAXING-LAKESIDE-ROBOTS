@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="TextBoxRes" load_steps=2 format=3 uid="uid://dh3mcp0n13p4s"]
+
+[ext_resource type="Script" uid="uid://cn4fkxsiwgk47" path="res://scenes/dialogue/textbox_resource.gd" id="1_3f4k7"]
+
+[resource]
+script = ExtResource("1_3f4k7")
+continue_input = false
+text = ""
+rect = Rect2(0, 0, 600, 300)
+portrait_scale = 1.0
+portrait_offset = Vector2(0, 0)
+sprite_offset = Vector2(0, 0)

@@ -1,0 +1,74 @@
+[gd_scene load_steps=11 format=3 uid="uid://b8txuhufkfu28"]
+
+[ext_resource type="Script" uid="uid://bfqatp31jyrmh" path="res://scenes/interactable/spring.gd" id="1_dy87d"]
+[ext_resource type="Texture2D" uid="uid://bi34fc3taqagr" path="res://assets/interactables/spring.png" id="2_0cwlf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0cwlf"]
+atlas = ExtResource("2_0cwlf")
+region = Rect2(0, 0, 20, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wgwfh"]
+atlas = ExtResource("2_0cwlf")
+region = Rect2(20, 0, 20, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3u5am"]
+atlas = ExtResource("2_0cwlf")
+region = Rect2(40, 0, 20, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jradk"]
+atlas = ExtResource("2_0cwlf")
+region = Rect2(60, 0, 20, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sbfo8"]
+atlas = ExtResource("2_0cwlf")
+region = Rect2(80, 0, 20, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tubys"]
+atlas = ExtResource("2_0cwlf")
+region = Rect2(100, 0, 20, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5io0k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0cwlf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wgwfh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3u5am")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jradk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sbfo8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tubys")
+}],
+"loop": false,
+"name": &"extend",
+"speed": 5.0
+}]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_2espj"]
+height = 0.1
+radius = 0.25
+
+[node name="Spring" type="Area3D"]
+script = ExtResource("1_dy87d")
+
+[node name="Sprite" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
+offset = Vector2(0, 8)
+billboard = 2
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_5io0k")
+animation = &"extend"
+frame = 5
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+shape = SubResource("CylinderShape3D_2espj")

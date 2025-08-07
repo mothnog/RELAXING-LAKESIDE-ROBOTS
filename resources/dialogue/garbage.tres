@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueRes" load_steps=3 format=3 uid="uid://dcdecpxk48xxk"]
+
+[ext_resource type="Script" uid="uid://ynudbsppuko4" path="res://scenes/dialogue/dialogue_resource.gd" id="1_sx7by"]
+[ext_resource type="Script" uid="uid://cn4fkxsiwgk47" path="res://scenes/dialogue/textbox_resource.gd" id="2_1unbu"]
+
+[resource]
+script = ExtResource("1_sx7by")
+textboxes = Array[ExtResource("2_1unbu")]([])
+metadata/_custom_type_script = "uid://ynudbsppuko4"

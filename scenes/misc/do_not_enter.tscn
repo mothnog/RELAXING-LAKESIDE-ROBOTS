@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=3 uid="uid://cp3fqs0nn6j3u"]
+
+[ext_resource type="Script" uid="uid://c0dhcomtkwo7i" path="res://scenes/misc/do_not_enter.gd" id="1_3aeja"]
+[ext_resource type="Texture2D" uid="uid://dui8wvs7ltsab" path="res://assets/misc/donotenter.png" id="2_r2nl4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6vfo7"]
+atlas = ExtResource("2_r2nl4")
+region = Rect2(0, 0, 150, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cjdfn"]
+atlas = ExtResource("2_r2nl4")
+region = Rect2(150, 0, 150, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tct50"]
+atlas = ExtResource("2_r2nl4")
+region = Rect2(300, 0, 150, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y31yf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6vfo7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cjdfn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tct50")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[node name="DoNotEnter" type="Node3D"]
+script = ExtResource("1_3aeja")
+iterations = 3
+
+[node name="Sprite" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.103025)
+offset = Vector2(0, 36)
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_y31yf")
+autoplay = "default"
+frame_progress = 0.272965
+
+[node name="AdditionalSprites" type="Node3D" parent="."]
+
+[node name="Direction" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.201473)

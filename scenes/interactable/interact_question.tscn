@@ -31,7 +31,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 4.0
 }]
 
 [node name="InteractQuestion" type="Area3D"]
@@ -44,6 +44,7 @@ shape = SubResource("SphereShape3D_afyty")
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.391672, 0)
 billboard = 2
+shaded = true
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_xsvkd")
 autoplay = "default"

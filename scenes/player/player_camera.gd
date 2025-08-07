@@ -18,6 +18,11 @@ var look_return_accel: float = 5
 const WALL_PADDING = 0.07 # distance from walls when colliding
 
 
+var y_offset: float = 0
+var p_offset: Vector3
+var y_offset_ease_value: float = 3
+
+
 @onready var horizontal_dist: float = position.z
 @onready var height_vec: Vector3 = Vector3(0, position.y, 0)
 @onready var default_x_rotation: float = rotation.x
@@ -31,6 +36,7 @@ func _process(delta):
 	if ! Engine.is_editor_hint():
 		
 		if current:
+			
 			# rotating around the player
 			rotation_dir = Input.get_axis("cam_left", "cam_right")
 			

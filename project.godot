@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="bog jam summer 2025"
-run/main_scene="uid://io1f7pruchta"
+run/main_scene="uid://cirpvdfconraw"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -23,8 +23,6 @@ Dialogue="*res://autoload/dialogue.tscn"
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
-window/stretch/mode="viewport"
-window/stretch/scale_mode="integer"
 
 [filesystem]
 

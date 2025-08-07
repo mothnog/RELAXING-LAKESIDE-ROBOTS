@@ -15,8 +15,6 @@ var move_dir: Vector3
 var move_vec: Vector3
 var accel: float = 15
 
-@onready var stairs_ray_cast_magnitude = collision.shape.radius + 0.02
-
 
 
 func _physics_process(delta):
@@ -37,11 +35,11 @@ func _physics_process(delta):
 	velocity.x = move_vec.x
 	velocity.z = move_vec.z
 	
-	
 	# gravity
 	velocity.y -= 0.2
-	if is_on_floor(): 
-		velocity.y = -0.01
+	if is_on_floor():
+		if velocity.y < 0: 
+			velocity.y = -0.01
 	
 	move_and_slide()
 	

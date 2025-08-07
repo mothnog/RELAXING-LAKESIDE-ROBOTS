@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://etn6qggs8av6" path="res://assets/hud/dialogue_arrow.png" id="3_pe6lh"]
 [ext_resource type="Texture2D" uid="uid://do88tg5dcfx0c" path="res://assets/tmp/temp_person0.png" id="4_2xyhr"]
 
-[sub_resource type="Curve2D" id="Curve2D_2mruj"]
+[sub_resource type="Curve2D" id="Curve2D_2xyhr"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 192, 0, 0, 0, 0, 0, 192, 100, 0, 0, 0, 0, 0, 100, 0, 0, 0, 0, 0, 0)
 }
@@ -21,8 +21,7 @@ patch_margin_right = 30
 patch_margin_bottom = 30
 axis_stretch_horizontal = 1
 script = ExtResource("2_2xyhr")
-in_playground = null
-edit_position_in_editor = null
+edit_position_in_editor = false
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -55,7 +54,7 @@ stretch_mode = 2
 
 [node name="Path2D" type="Path2D" parent="."]
 visible = false
-curve = SubResource("Curve2D_2mruj")
+curve = SubResource("Curve2D_2xyhr")
 
 [node name="ArrowTarget" type="Marker2D" parent="."]
 position = Vector2(288, 56)
