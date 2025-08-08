@@ -1,11 +1,14 @@
-[gd_scene load_steps=18 format=3 uid="uid://cirpvdfconraw"]
+[gd_scene load_steps=28 format=3 uid="uid://cirpvdfconraw"]
 
 [ext_resource type="ArrayMesh" uid="uid://543tnerp4u33" path="res://assets/level/floor1.obj" id="1_ybxn4"]
 [ext_resource type="PackedScene" uid="uid://7ywfju4yjrve" path="res://scenes/player/player.tscn" id="2_ybxn4"]
 [ext_resource type="PackedScene" uid="uid://bdsiaes3y0p12" path="res://assets/level/level1.glb" id="3_ybxn4"]
 [ext_resource type="PackedScene" uid="uid://dlwuufevvxlfw" path="res://scenes/interactable/interact_question.tscn" id="4_u8rbc"]
+[ext_resource type="Texture2D" uid="uid://chsvlnd4aexwb" path="res://assets/things/leaf.png" id="4_wdc5c"]
 [ext_resource type="PackedScene" uid="uid://cp3fqs0nn6j3u" path="res://scenes/misc/do_not_enter.tscn" id="4_xbhhu"]
 [ext_resource type="Resource" uid="uid://cli6tmhh0o8qi" path="res://resources/dialogue/lake_entrance.tres" id="5_0f3yk"]
+[ext_resource type="Texture2D" uid="uid://esssacn2tj6s" path="res://assets/things/leaf_particle.png" id="5_ewor0"]
+[ext_resource type="Texture2D" uid="uid://cvcki8xcwkw7j" path="res://assets/things/leaf_particle2.png" id="6_lkxmd"]
 [ext_resource type="Resource" uid="uid://dcdecpxk48xxk" path="res://resources/dialogue/garbage.tres" id="6_so7sr"]
 [ext_resource type="PackedScene" uid="uid://bd75fyaa41cwg" path="res://scenes/interactable/garbage_pile.tscn" id="7_2qg3m"]
 [ext_resource type="PackedScene" uid="uid://b8txuhufkfu28" path="res://scenes/interactable/spring.tscn" id="8_2qg3m"]
@@ -24,6 +27,49 @@ size = Vector3(1, 7.925, 7.03)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2qg3m"]
 size = Vector3(2.4248, 2.71777, 1)
+
+[sub_resource type="Gradient" id="Gradient_ewor0"]
+offsets = PackedFloat32Array(0, 0.109091, 0.872727, 1)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_lkxmd"]
+gradient = SubResource("Gradient_ewor0")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_vigbq"]
+emission_shape_scale = Vector3(1.5, 0.51, 2)
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+direction = Vector3(0, -1, 0.25)
+spread = 12.0
+initial_velocity_min = 0.5
+initial_velocity_max = 0.7
+gravity = Vector3(0, 0, 0)
+scale_min = 0.1
+scale_max = 0.25
+color_ramp = SubResource("GradientTexture1D_lkxmd")
+turbulence_noise_strength = 0.2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g6sy5"]
+transparency = 1
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("5_ewor0")
+texture_filter = 0
+billboard_mode = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_q27gu"]
+material = SubResource("StandardMaterial3D_g6sy5")
+size = Vector2(0.25, 0.25)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m3417"]
+transparency = 1
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("6_lkxmd")
+texture_filter = 0
+billboard_mode = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_0alxl"]
+material = SubResource("StandardMaterial3D_m3417")
+size = Vector2(0.195, 0.33)
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_2lb6k"]
 sky_horizon_color = Color(0.384314, 0.454902, 0.54902, 1)
@@ -53,6 +99,7 @@ transform = Transform3D(0.85, 0, 0, 0, 0.85, 0, 0, 0, 0.85, 0, 0, 0)
 
 [node name="Collision" type="StaticBody3D" parent="."]
 transform = Transform3D(0.85, 0, 0, 0, 0.85, 0, 0, 0, 0.85, 0, 0, 0)
+visible = false
 
 [node name="Floor1" type="MeshInstance3D" parent="Collision"]
 visible = false
@@ -94,6 +141,180 @@ COTTAGES"
 font_size = 10
 outline_size = 0
 
+[node name="Tree" type="Node3D" parent="Environment"]
+
+[node name="Leaves" type="Node3D" parent="Environment/Tree"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.42403, 5.79601, -8.89521)
+
+[node name="1" type="Node3D" parent="Environment/Tree/Leaves"]
+transform = Transform3D(1.11725, 0.113105, 0.77651, -0.177538, 1.35243, 0.0584522, -0.764356, -0.148808, 1.12144, 1.11369, 0.0351501, -1.21182)
+
+[node name="Sprite3D" type="Sprite3D" parent="Environment/Tree/Leaves/1"]
+transform = Transform3D(4, 0, 0, 0, -1.74846e-07, -4, 0, 4, -1.74846e-07, 0, 0, 0)
+shaded = true
+texture_filter = 0
+texture = ExtResource("4_wdc5c")
+hframes = 2
+metadata/_edit_lock_ = true
+
+[node name="Sprite3D2" type="Sprite3D" parent="Environment/Tree/Leaves/1"]
+transform = Transform3D(3.88153, -0.00641572, 0.966272, -0.966272, -0.0523314, 3.88118, 0.00641632, -3.99965, -0.0523314, 1.41157, -0.123651, -0.0161533)
+shaded = true
+texture_filter = 0
+texture = ExtResource("4_wdc5c")
+hframes = 4
+frame = 2
+metadata/_edit_lock_ = true
+
+[node name="Sprite3D3" type="Sprite3D" parent="Environment/Tree/Leaves/1"]
+transform = Transform3D(3.40499, -0.0322245, 2.09881, -2.09881, -0.113668, 3.40325, 0.0322249, -3.99826, -0.113668, 2.02361, -0.367909, 0.0142927)
+shaded = true
+texture_filter = 0
+texture = ExtResource("4_wdc5c")
+hframes = 4
+frame = 3
+metadata/_edit_lock_ = true
+
+[node name="3" type="Node3D" parent="Environment/Tree/Leaves"]
+transform = Transform3D(1.07411, 0.274043, 0.256215, -0.306576, 1.08902, 0.12044, -0.216233, -0.182744, 1.10195, 0.875653, -0.658615, -0.840174)
+
+[node name="Sprite3D" type="Sprite3D" parent="Environment/Tree/Leaves/3"]
+transform = Transform3D(4, 0, 0, 0, -1.74846e-07, -4, 0, 4, -1.74846e-07, 0, 0, 0)
+shaded = true
+texture_filter = 0
+texture = ExtResource("4_wdc5c")
+hframes = 2
+metadata/_edit_lock_ = true
+
+[node name="Sprite3D2" type="Sprite3D" parent="Environment/Tree/Leaves/3"]
+transform = Transform3D(3.88153, -0.00641572, 0.966272, -0.966272, -0.0523314, 3.88118, 0.00641632, -3.99965, -0.0523314, 1.41157, -0.123651, -0.0161533)
+shaded = true
+texture_filter = 0
+texture = ExtResource("4_wdc5c")
+hframes = 4
+frame = 2
+metadata/_edit_lock_ = true
+
+[node name="Sprite3D3" type="Sprite3D" parent="Environment/Tree/Leaves/3"]
+transform = Transform3D(3.40499, -0.0322245, 2.09881, -2.09881, -0.113668, 3.40325, 0.0322249, -3.99826, -0.113668, 2.02361, -0.367909, 0.0142927)
+shaded = true
+texture_filter = 0
+texture = ExtResource("4_wdc5c")
+hframes = 4
+frame = 3
+metadata/_edit_lock_ = true
+
+[node name="4" type="Node3D" parent="Environment/Tree/Leaves"]
+transform = Transform3D(-1.11948, -0.151389, -0.135285, -0.171819, 1.1103, 0.179326, 0.108161, 0.196878, -1.11534, -0.695203, -0.425035, -0.957398)
+
+[node name="Sprite3D" type="Sprite3D" parent="Environment/Tree/Leaves/4"]
+transform = Transform3D(4, 0, 0, 0, -1.74846e-07, -4, 0, 4, -1.74846e-07, 0, 0, 0)
+shaded = true
+texture_filter = 0
+texture = ExtResource("4_wdc5c")
+hframes = 2
+metadata/_edit_lock_ = true
+
+[node name="Sprite3D2" type="Sprite3D" parent="Environment/Tree/Leaves/4"]
+transform = Transform3D(3.88153, -0.00641572, 0.966272, -0.966272, -0.0523314, 3.88118, 0.00641632, -3.99965, -0.0523314, 1.41157, -0.123651, -0.0161533)
+shaded = true
+texture_filter = 0
+texture = ExtResource("4_wdc5c")
+hframes = 4
+frame = 2
+metadata/_edit_lock_ = true
+
+[node name="Sprite3D3" type="Sprite3D" parent="Environment/Tree/Leaves/4"]
+transform = Transform3D(3.40499, -0.0322245, 2.09881, -2.09881, -0.113668, 3.40325, 0.0322249, -3.99826, -0.113668, 2.02361, -0.367909, 0.0142927)
+shaded = true
+texture_filter = 0
+texture = ExtResource("4_wdc5c")
+hframes = 4
+frame = 3
+metadata/_edit_lock_ = true
+
+[node name="2" type="Node3D" parent="Environment/Tree/Leaves"]
+transform = Transform3D(0.877956, 0.295204, -1.00302, -0.322501, 1.32234, 0.106895, 0.994584, 0.16819, 0.920068, 0.267439, -0.0694475, 1.47191)
+
+[node name="Sprite3D" type="Sprite3D" parent="Environment/Tree/Leaves/2"]
+transform = Transform3D(4, 0, 0, 0, -1.74846e-07, -4, 0, 4, -1.74846e-07, 0, 0, 0)
+shaded = true
+texture_filter = 0
+texture = ExtResource("4_wdc5c")
+hframes = 2
+metadata/_edit_lock_ = true
+
+[node name="Sprite3D2" type="Sprite3D" parent="Environment/Tree/Leaves/2"]
+transform = Transform3D(3.88153, -0.00641572, 0.966272, -0.966272, -0.0523314, 3.88118, 0.00641632, -3.99965, -0.0523314, 1.41157, -0.123651, -0.0161533)
+shaded = true
+texture_filter = 0
+texture = ExtResource("4_wdc5c")
+hframes = 4
+frame = 2
+metadata/_edit_lock_ = true
+
+[node name="Sprite3D3" type="Sprite3D" parent="Environment/Tree/Leaves/2"]
+transform = Transform3D(3.40499, -0.0322245, 2.09881, -2.09881, -0.113668, 3.40325, 0.0322249, -3.99826, -0.113668, 2.02361, -0.367909, 0.0142927)
+shaded = true
+texture_filter = 0
+texture = ExtResource("4_wdc5c")
+hframes = 4
+frame = 3
+metadata/_edit_lock_ = true
+
+[node name="5" type="Node3D" parent="Environment/Tree/Leaves"]
+transform = Transform3D(-0.842091, -0.276747, -0.713264, -0.429071, 1.04902, 0.0995488, 0.633429, 0.342671, -0.880793, -0.818023, -0.26261, 1.29894)
+
+[node name="Sprite3D" type="Sprite3D" parent="Environment/Tree/Leaves/5"]
+transform = Transform3D(4, 0, 0, 0, -1.74846e-07, -4, 0, 4, -1.74846e-07, 0, 0, 0)
+shaded = true
+texture_filter = 0
+texture = ExtResource("4_wdc5c")
+hframes = 2
+metadata/_edit_lock_ = true
+
+[node name="Sprite3D2" type="Sprite3D" parent="Environment/Tree/Leaves/5"]
+transform = Transform3D(3.88153, -0.00641572, 0.966272, -0.966272, -0.0523314, 3.88118, 0.00641632, -3.99965, -0.0523314, 1.41157, -0.123651, -0.0161533)
+shaded = true
+texture_filter = 0
+texture = ExtResource("4_wdc5c")
+hframes = 4
+frame = 2
+metadata/_edit_lock_ = true
+
+[node name="Sprite3D3" type="Sprite3D" parent="Environment/Tree/Leaves/5"]
+transform = Transform3D(3.40499, -0.0322245, 2.09881, -2.09881, -0.113668, 3.40325, 0.0322249, -3.99826, -0.113668, 2.02361, -0.367909, 0.0142927)
+shaded = true
+texture_filter = 0
+texture = ExtResource("4_wdc5c")
+hframes = 4
+frame = 3
+metadata/_edit_lock_ = true
+
+[node name="TreeParticles" type="GPUParticles3D" parent="Environment/Tree"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.70091, 5.04913, -7.73202)
+amount = 5
+lifetime = 10.0
+randomness = 1.0
+fixed_fps = 10
+process_material = SubResource("ParticleProcessMaterial_vigbq")
+draw_pass_1 = SubResource("QuadMesh_q27gu")
+
+[node name="TreeParticles2" type="GPUParticles3D" parent="Environment/Tree"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.7009, 3.97369, -7.81466)
+amount = 5
+lifetime = 10.0
+randomness = 1.0
+fixed_fps = 10
+process_material = SubResource("ParticleProcessMaterial_vigbq")
+draw_pass_1 = SubResource("QuadMesh_0alxl")
+
+[node name="TreeShadow" type="CSGCylinder3D" parent="Environment/Tree"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.39614, 11.0033, -12.6536)
+cast_shadow = 3
+radius = 4.915
+sides = 64
+
 [node name="Dialogue" type="Node3D" parent="."]
 
 [node name="LakeEntrance" parent="Dialogue" instance=ExtResource("4_u8rbc")]
@@ -112,7 +333,7 @@ hiding = NodePath("../../Dialogue/Garbage")
 hiding_collision_grace_period = 0.66
 
 [node name="CenterSpringPile" parent="GarbagePiles" node_paths=PackedStringArray("hiding") instance=ExtResource("7_2qg3m")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.44618, 0, -5.68686)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8354, 0, -5.40093)
 hiding = NodePath("../../Springs/CenterSpring")
 
 [node name="RoofSpringPile" parent="GarbagePiles" node_paths=PackedStringArray("hiding") instance=ExtResource("7_2qg3m")]
@@ -129,7 +350,7 @@ strength = 7.0
 transform = Transform3D(0.999712, 0, -0.0239785, 0, 1, 0, 0.0239785, 0, 0.999712, 4.73953, 1.26786, 0.431517)
 strength = 9.0
 
-[node name="DoNotEnter" parent="." instance=ExtResource("4_xbhhu")]
+[node name="LakeEntranceBlock" parent="." instance=ExtResource("4_xbhhu")]
 transform = Transform3D(-1.42718e-07, 0, -3.265, 0, 3.265, 0, 3.265, 0, -1.42718e-07, -15, -0.412957, -6.914)
 separation = 0.18
 iterations = 4
