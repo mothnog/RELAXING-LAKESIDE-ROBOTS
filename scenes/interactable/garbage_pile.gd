@@ -69,7 +69,6 @@ func create_pile() -> void:
 		vec = vec.rotated(Vector3.RIGHT, rot1).rotated(Vector3.UP, rot2)
 		
 		
-		
 		# add a sprite at the vector
 		var sprite: Node3D = sprite_types[hash(random_value()) % sprite_types.size()].duplicate()
 		sprite.position = vec
@@ -114,7 +113,6 @@ func _interaction() -> void:
 			sprites_parent.get_child(i).queue_free()
 	
 	shadow.hide()
-	
 	
 	# unhide hiding object
 	if hiding != null:

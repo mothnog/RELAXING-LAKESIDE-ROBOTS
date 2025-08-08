@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="DialogueRes" load_steps=4 format=3 uid="uid://bsm8xks7ojeuy"]
+
+[ext_resource type="Script" uid="uid://ynudbsppuko4" path="res://scenes/dialogue/dialogue_resource.gd" id="1_ol2ha"]
+[ext_resource type="Script" uid="uid://cn4fkxsiwgk47" path="res://scenes/dialogue/textbox_resource.gd" id="2_1r3gs"]
+[ext_resource type="Resource" uid="uid://dqvo85d5tclm" path="res://resources/textbox/outfit.tres" id="3_1r3gs"]
+
+[resource]
+script = ExtResource("1_ol2ha")
+textboxes = Array[ExtResource("2_1r3gs")]([ExtResource("3_1r3gs")])
+metadata/_custom_type_script = "uid://ynudbsppuko4"

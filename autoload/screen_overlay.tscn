@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dkknh7ai727sr"]
+
+[ext_resource type="Script" uid="uid://c53ycuk4yvr3w" path="res://autoload/screen_overlay.gd" id="1_ewrkx"]
+
+[node name="ScreenOverlay" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_ewrkx")

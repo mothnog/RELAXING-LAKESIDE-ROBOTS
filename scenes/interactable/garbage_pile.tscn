@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bd75fyaa41cwg"]
 
 [ext_resource type="Script" uid="uid://dcv646x01170x" path="res://scenes/interactable/garbage_pile.gd" id="1_q8hls"]
-[ext_resource type="Texture2D" uid="uid://bpt54ynojuuee" path="res://assets/misc/garbage.png" id="2_hcpl8"]
+[ext_resource type="Texture2D" uid="uid://chfw2stjpbahh" path="res://assets/interactables/scrap.png" id="2_rixy6"]
 [ext_resource type="PackedScene" uid="uid://cpw84yq5ergmc" path="res://scenes/misc/shadow.tscn" id="3_rixy6"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_hcpl8"]
@@ -36,17 +36,27 @@ pixel_size = 0.03
 axis = 1
 shaded = true
 texture_filter = 0
-texture = ExtResource("2_hcpl8")
-hframes = 2
+texture = ExtResource("2_rixy6")
+hframes = 6
+frame = 3
 
 [node name="Sprite3D2" type="Sprite3D" parent="SpriteTypes"]
 pixel_size = 0.03
 axis = 1
 shaded = true
 texture_filter = 0
-texture = ExtResource("2_hcpl8")
-hframes = 2
-frame = 1
+texture = ExtResource("2_rixy6")
+hframes = 6
+frame = 4
+
+[node name="Sprite3D3" type="Sprite3D" parent="SpriteTypes"]
+pixel_size = 0.03
+axis = 1
+shaded = true
+texture_filter = 0
+texture = ExtResource("2_rixy6")
+hframes = 6
+frame = 5
 
 [node name="Shadow" parent="." instance=ExtResource("3_rixy6")]
 size = Vector3(1.4, 5, 1.4)

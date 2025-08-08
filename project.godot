@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 Dialogue="*res://autoload/dialogue.tscn"
+ScreenOverlay="*res://autoload/screen_overlay.tscn"
 
 [display]
 

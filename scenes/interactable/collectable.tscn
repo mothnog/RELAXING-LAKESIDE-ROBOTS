@@ -1,20 +1,61 @@
-[gd_scene load_steps=3 format=3 uid="uid://csuuoikcehw7c"]
+[gd_scene load_steps=9 format=3 uid="uid://csuuoikcehw7c"]
 
 [ext_resource type="Script" uid="uid://cd05qm4h3p8a5" path="res://scenes/interactable/collectable.gd" id="1_j8isq"]
+[ext_resource type="Texture2D" uid="uid://chfw2stjpbahh" path="res://assets/interactables/scrap.png" id="2_dbc70"]
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_j8isq"]
-radius = 0.15
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_dbc70"]
+height = 0.3
+radius = 0.25
+
+[sub_resource type="Gradient" id="Gradient_gbdar"]
+offsets = PackedFloat32Array(0, 0.254545, 0.854545, 1)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_vx08p"]
+gradient = SubResource("Gradient_gbdar")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_cxxyu"]
+emission_shape = 3
+emission_box_extents = Vector3(0.125, 0.063, 0.125)
+direction = Vector3(0, 1, 0)
+spread = 10.0
+initial_velocity_min = 0.13
+initial_velocity_max = 0.13
+gravity = Vector3(0, 0, 0)
+color_ramp = SubResource("GradientTexture1D_vx08p")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gddj7"]
+transparency = 1
+shading_mode = 0
+vertex_color_use_as_albedo = true
+billboard_mode = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_ecig0"]
+material = SubResource("StandardMaterial3D_gddj7")
+size = Vector2(0.03, 0.03)
 
 [node name="Collectable" type="Area3D"]
 script = ExtResource("1_j8isq")
+one_shot = true
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+offset = Vector2(0, 10)
+pixel_size = 0.02
+billboard = 1
+texture_filter = 0
+texture = ExtResource("2_dbc70")
+hframes = 6
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.234916, 0)
-shape = SubResource("SphereShape3D_j8isq")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.23516, 0)
+shape = SubResource("CylinderShape3D_dbc70")
 
-[node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.205711, 0)
-radius = 0.153
-height = 0.097
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.182573, 0)
+visible = false
+amount = 3
+lifetime = 4.0
+randomness = 0.33
+process_material = SubResource("ParticleProcessMaterial_cxxyu")
+draw_pass_1 = SubResource("QuadMesh_ecig0")

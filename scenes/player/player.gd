@@ -6,7 +6,7 @@ class_name Player
 @onready var collision = $CollisionShape3D
 
 
-@export var speed: float = 2.3
+@export var speed: float = 2.4
 @export var gravity: float = 0.2
 
 
