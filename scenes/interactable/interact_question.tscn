@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://ex6ofx65qfnw" path="res://assets/hud/question.png" id="1_niix5"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_afyty"]
+radius = 0.6
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f4qvu"]
 atlas = ExtResource("1_niix5")

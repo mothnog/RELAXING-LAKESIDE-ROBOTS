@@ -5,11 +5,14 @@ extends CanvasLayer
 
 var current_dialogue: DialogueRes = null
 var waiting_for_input: bool = false
+var input_index: int = 0
 
 const TEXTBOX = preload("res://scenes/dialogue/textbox.tscn")
 
 signal continue_pressed
 signal dialogue_complete(path: String)
+
+@onready var input_prompt_text = input_prompt.text
 
 
 func _process(delta):
@@ -17,6 +20,7 @@ func _process(delta):
 		input_prompt.show()
 		if Input.is_action_just_pressed("interact"):
 			continue_pressed.emit()
+			input_index += 1
 	else:
 		input_prompt.hide()
 
@@ -31,8 +35,21 @@ func show_dialogue(res: DialogueRes) -> void:
 			_create_textbox(textbox)
 			if textbox.continue_input:
 				waiting_for_input = true
+				
+				if textbox.continue_text.is_empty():
+					input_prompt.text = input_prompt_text
+				else:
+					input_prompt.text = "[" + textbox.continue_text + "]" 
+				
+				
 				await continue_pressed
 				_clear_dialogue()
+				
+				if ! res.screen_overlay.is_empty() and res.overlay_index == input_index:
+					ScreenOverlay.show_overlay(res.screen_overlay)
+					waiting_for_input = false
+					await ScreenOverlay.finished
+				
 				if i == res.textboxes.size()-1:
 					hide_dialogue()
 		
@@ -45,6 +62,7 @@ func show_dialogue(res: DialogueRes) -> void:
 func hide_dialogue() -> void:
 	current_dialogue = null
 	waiting_for_input = false
+	input_index = 0
 	_clear_dialogue()
 
 

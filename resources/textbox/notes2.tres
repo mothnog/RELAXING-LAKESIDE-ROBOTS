@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_6oxab")
 text = "maybe not"
-rect = Rect2(304, 504, 400, 100)
+rect = Rect2(224, 512, 400, 100)
 continue_input = false
 continue_text = ""
 portrait_scale = 1.0

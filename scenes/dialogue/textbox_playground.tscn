@@ -83,19 +83,20 @@ in_playground = true
 edit_position_in_editor = true
 
 [node name="notes1" parent="." instance=ExtResource("1_1lmg1")]
-offset_left = 304.0
-offset_top = 504.0
-offset_right = 704.0
-offset_bottom = 604.0
+offset_left = 224.0
+offset_top = 512.0
+offset_right = 624.0
+offset_bottom = 627.0
 res = ExtResource("10_iq1c4")
 in_playground = true
 edit_position_in_editor = true
 
 [node name="notes2" parent="." instance=ExtResource("1_1lmg1")]
-offset_left = 304.0
-offset_top = 504.0
-offset_right = 704.0
-offset_bottom = 604.0
+visible = false
+offset_left = 224.0
+offset_top = 512.0
+offset_right = 624.0
+offset_bottom = 612.0
 res = ExtResource("11_4f8wq")
 in_playground = true
 edit_position_in_editor = true

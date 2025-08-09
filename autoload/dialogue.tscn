@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://deoq6q1mqh4ud" path="res://autoload/dialogue.gd" id="1_cpw6a"]
 
 [node name="Dialogue" type="CanvasLayer"]
+process_mode = 3
+layer = 2
 script = ExtResource("1_cpw6a")
 
 [node name="Textboxes" type="Control" parent="."]
@@ -14,11 +16,18 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="InputPrompt" type="Label" parent="."]
-visible = false
-offset_left = 1120.0
-offset_top = 664.0
-offset_right = 1237.0
-offset_bottom = 687.0
+anchors_preset = -1
+anchor_left = 0.969
+anchor_top = 0.938
+anchor_right = 0.969
+anchor_bottom = 0.938
+offset_left = -120.32
+offset_top = -11.36
+offset_right = -3.32007
+offset_bottom = 11.64
+grow_horizontal = 0
 size_flags_horizontal = 10
 size_flags_vertical = 10
 text = "[press interact]"
+horizontal_alignment = 2
+vertical_alignment = 1

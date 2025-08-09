@@ -131,8 +131,11 @@ shape = SubResource("BoxShape3D_0f3yk")
 transform = Transform3D(0.979577, 0, -0.201078, 0, 1, 0, 0.201078, 0, 0.979577, 5.59599, 3.6706, 4.65825)
 shape = SubResource("BoxShape3D_2qg3m")
 
+[node name="PlayerStartPos" type="Marker3D" parent="."]
+transform = Transform3D(-0.161604, 0, -0.986856, 0, 1, 0, 0.986856, 0, -0.161604, -12.3875, 3.9512, 9.66276)
+
 [node name="Player" parent="." instance=ExtResource("2_ybxn4")]
-transform = Transform3D(-0.161604, 0, -0.986856, 0, 1, 0, 0.986856, 0, -0.161604, -12.2089, 0.157305, 9.66276)
+transform = Transform3D(-0.161604, 0, -0.986856, 0, 1, 0, 0.986856, 0, -0.161604, 8.27768, 1.9716, -5.44141)
 floor_constant_speed = true
 
 [node name="Shadow" parent="Player" instance=ExtResource("4_lkxmd")]

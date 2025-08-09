@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_tktjo")
-text = "I thought I may as well pretend to be having an authentic experience here, so I put on this shirt and these sunglasses I found in my room."
+text = "I thought I may as well pretend to be having an authentic experience, so I put on this shirt and these sunglasses I found in my room."
 rect = Rect2(320, 128, 520, 150)
 continue_input = false
 continue_text = null

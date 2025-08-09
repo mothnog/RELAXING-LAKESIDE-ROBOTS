@@ -9,5 +9,5 @@ rect = Rect2(112, 80, 400, 120)
 continue_input = false
 continue_text = null
 portrait_scale = 1.0
-portrait_offset = Vector2(250, 0)
+portrait_offset = Vector2(130, 0)
 sprite_offset = Vector2(0, 0)
