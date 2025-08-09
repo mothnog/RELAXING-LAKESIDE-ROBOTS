@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Dialogue="*res://autoload/dialogue.tscn"
 ScreenOverlay="*res://autoload/screen_overlay.tscn"
+Levels="*res://autoload/Levels.gd"
 
 [display]
 

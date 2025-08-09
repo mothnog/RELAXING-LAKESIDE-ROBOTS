@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://fi6b40t2inpd"]
+[gd_scene load_steps=12 format=3 uid="uid://fi6b40t2inpd"]
 
 [ext_resource type="PackedScene" uid="uid://fmsvur4h1s4r" path="res://scenes/dialogue/textbox.tscn" id="1_1lmg1"]
 [ext_resource type="Script" uid="uid://ttlme6xxcd62" path="res://scenes/dialogue/textbox_playground.gd" id="1_nbhh0"]
@@ -9,6 +9,8 @@
 [ext_resource type="Resource" uid="uid://curx5cx4usnww" path="res://resources/textbox_backup/garbage_1.tres" id="7_idylw"]
 [ext_resource type="Resource" uid="uid://dh3mcp0n13p4s" path="res://resources/textbox_backup/garbage_2.tres" id="8_k5hhw"]
 [ext_resource type="Resource" uid="uid://dqvo85d5tclm" path="res://resources/textbox/outfit.tres" id="9_k5hhw"]
+[ext_resource type="Resource" uid="uid://dasimypgawswy" path="res://resources/textbox/notes1.tres" id="10_iq1c4"]
+[ext_resource type="Resource" uid="uid://cga2jran67yce" path="res://resources/textbox/notes2.tres" id="11_4f8wq"]
 
 [node name="TextboxPlayground" type="CanvasLayer"]
 script = ExtResource("1_nbhh0")
@@ -52,9 +54,9 @@ edit_position_in_editor = true
 
 [node name="garbage_1" parent="." instance=ExtResource("1_1lmg1")]
 visible = false
-offset_left = 184.0
+offset_left = 112.0
 offset_top = 80.0
-offset_right = 584.0
+offset_right = 512.0
 offset_bottom = 200.0
 res = ExtResource("7_idylw")
 in_playground = true
@@ -71,11 +73,30 @@ in_playground = true
 edit_position_in_editor = true
 
 [node name="outfit" parent="." instance=ExtResource("1_1lmg1")]
+visible = false
 offset_left = 320.0
 offset_top = 128.0
 offset_right = 840.0
 offset_bottom = 278.0
 res = ExtResource("9_k5hhw")
+in_playground = true
+edit_position_in_editor = true
+
+[node name="notes1" parent="." instance=ExtResource("1_1lmg1")]
+offset_left = 304.0
+offset_top = 504.0
+offset_right = 704.0
+offset_bottom = 604.0
+res = ExtResource("10_iq1c4")
+in_playground = true
+edit_position_in_editor = true
+
+[node name="notes2" parent="." instance=ExtResource("1_1lmg1")]
+offset_left = 304.0
+offset_top = 504.0
+offset_right = 704.0
+offset_bottom = 604.0
+res = ExtResource("11_4f8wq")
 in_playground = true
 edit_position_in_editor = true
 

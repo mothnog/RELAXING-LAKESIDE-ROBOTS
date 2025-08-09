@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="TextBoxRes" load_steps=2 format=3 uid="uid://cga2jran67yce"]
+
+[ext_resource type="Script" uid="uid://cn4fkxsiwgk47" path="res://scenes/dialogue/textbox_resource.gd" id="1_6oxab"]
+
+[resource]
+script = ExtResource("1_6oxab")
+text = "maybe not"
+rect = Rect2(304, 504, 400, 100)
+continue_input = false
+continue_text = ""
+portrait_scale = 1.0
+portrait_offset = Vector2(-75, 50)
+sprite_offset = Vector2(0, 0)

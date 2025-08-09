@@ -51,6 +51,7 @@ shape = SubResource("CylinderShape3D_g2els")
 disabled = true
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+layers = 2
 offset = Vector2(0, 37)
 billboard = 1
 texture_filter = 0

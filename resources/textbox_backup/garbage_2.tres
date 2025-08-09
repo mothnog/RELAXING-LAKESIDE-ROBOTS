@@ -4,9 +4,10 @@
 
 [resource]
 script = ExtResource("1_6440t")
-continue_input = false
 text = "Wait, who said that??"
 rect = Rect2(832, 496, 300, 120)
+continue_input = false
+continue_text = null
 portrait_scale = 1.0
 portrait_offset = Vector2(350, 75)
 sprite_offset = Vector2(0, 0)

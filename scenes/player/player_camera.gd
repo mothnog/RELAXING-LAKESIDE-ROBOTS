@@ -29,7 +29,10 @@ var y_offset_ease_value: float = 3
 
 
 func _ready():
-	pass
+	# reset player initial rotation and apply to cam rotation
+	rotate_around = player.rotation.y
+	player.rotation.y = 0
+	
 
 
 func _process(delta):

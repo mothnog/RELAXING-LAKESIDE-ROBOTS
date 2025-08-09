@@ -8,8 +8,8 @@ class_name Collectable
 
 @export var sprite_frame: int = 0
 @export var sprite_scale: float = 1
-@export var floatiness: float = 0
-@export var float_speed: float = 1
+@export var floatiness: float = 3
+@export var float_speed: float = 1.5
 
 @onready var sprite_offset: float = sprite.offset.y
 
