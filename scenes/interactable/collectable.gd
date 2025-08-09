@@ -38,7 +38,8 @@ func _process(delta):
 func _interaction() -> void:
 	
 	# add to level completion
-	print("?heh?")
+	if Levels.current_level != null:
+		Levels.current_level.completion += 1
 	
 	queue_free()
 	

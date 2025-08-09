@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=3 uid="uid://8j0ltg6opn8a"]
+
+[ext_resource type="Script" uid="uid://df7yv15sribeu" path="res://scenes/interactable/level_completion.gd" id="1_kbwja"]
+[ext_resource type="Texture2D" uid="uid://dcrqg103s5e26" path="res://assets/interactables/gear_icon.png" id="2_2sqpl"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_kbwja"]
+radius = 0.6
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tlm6a"]
+atlas = ExtResource("2_2sqpl")
+region = Rect2(0, 0, 60, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lm8qt"]
+atlas = ExtResource("2_2sqpl")
+region = Rect2(60, 0, 60, 60)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6kxkr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tlm6a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lm8qt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[node name="LevelCompletion" type="Area3D"]
+script = ExtResource("1_kbwja")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_kbwja")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.391672, 0)
+modulate = Color(0.779291, 0.779291, 0.779291, 1)
+billboard = 2
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_6kxkr")
+autoplay = "default"
+frame_progress = 0.932804

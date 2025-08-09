@@ -36,7 +36,7 @@ func update_parameters() -> void:
 		res.rect.size = size
 		
 		
-		label.text = res.text
+		label.text = text_replacements(res.text)
 		portrait_sprite.texture = res.portrait
 		portrait_sprite.scale = Vector2.ONE * res.portrait_scale
 		arrow_target.position = res.portrait_offset
@@ -81,6 +81,14 @@ func update_arrow() -> void:
 			break
 		else:
 			arrow.rotation_degrees += 90
+
+
+func text_replacements(text: String) -> String:
+	if ! Engine.is_editor_hint():
+		text = text.replace("[Level.collectable_requirement]", var_to_str(Levels.current_level.collectable_requirement))
+		text = text.replace("[Level.completion]", var_to_str(Levels.current_level.completion))
+		text = text.replace("[Level.remaining_collectables]", var_to_str(Levels.current_level.remaining_collectables))
+	return text
 
 
 

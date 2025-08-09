@@ -9,12 +9,17 @@ var current_overlay: Node = null
 var _previous_overlay: Node = null
 var hide_dialogue_after: bool = false
 
-const SCRAP_GET_TIME = 3.0
 
+const SCRAP_GET_TIME = 3.0
 enum OVERLAY {NOTE}
 
 
 signal finished
+
+
+func _ready():
+	for i in get_children():
+		i.hide()
 
 
 
@@ -47,10 +52,14 @@ func show_overlay(name: String) -> void:
 		print("overlay does not exist")
 
 
-func _overlay_things() -> void:
+func _overlay_things(time: float = 0) -> void:
 	get_tree().paused = true
-	awaiting_input = true
-	input_prompt.show()
+	if time == 0:
+		awaiting_input = true
+		input_prompt.show()
+	else:
+		await get_tree().create_timer(time).timeout
+		hide_overlay()
 
 
 func hide_overlay() -> void:

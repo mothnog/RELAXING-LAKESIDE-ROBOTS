@@ -59,6 +59,9 @@ func show_dialogue(res: DialogueRes) -> void:
 		print("no dialogue assigned")
 
 
+
+
+
 func hide_dialogue() -> void:
 	current_dialogue = null
 	waiting_for_input = false
