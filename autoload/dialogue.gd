@@ -27,6 +27,7 @@ func _process(delta):
 
 func show_dialogue(res: DialogueRes) -> void:
 	if res != null:
+		
 		current_dialogue = res
 		
 		for i in res.textboxes.size():
@@ -43,24 +44,28 @@ func show_dialogue(res: DialogueRes) -> void:
 				
 				
 				await continue_pressed
+				
+				if current_dialogue != res:
+					return
+				
 				_clear_dialogue()
 				
 				if ! res.screen_overlay.is_empty() and res.overlay_index == input_index:
 					ScreenOverlay.show_overlay(res.screen_overlay)
 					waiting_for_input = false
 					await ScreenOverlay.finished
+					
+					if current_dialogue != res:
+						return
+					
 				
 				if i == res.textboxes.size()-1:
 					hide_dialogue()
 		
-		if current_dialogue != null: # this fixes a bug where cutscene triggers after going from complete dialogue to notes dialogue 
-			dialogue_complete.emit(res.resource_path)
+		dialogue_complete.emit(res.resource_path)
 		
 	else:
 		print("no dialogue assigned")
-
-
-
 
 
 func hide_dialogue() -> void:
