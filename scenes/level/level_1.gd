@@ -3,6 +3,7 @@ extends Level
 
 @onready var player: Player = $Player
 @onready var cutscene_camera = $CutsceneCamera
+@onready var bird = $Bird
 
 const COMPLETE_DIALOGUE_PATH = "res://resources/dialogue/level_complete.tres"
 
@@ -34,3 +35,9 @@ func end_cutscene() -> void:
 	# disable player movement
 	player.disable_movement = true
 	
+	# fade to black
+	ScreenOverlay.fade_to_black(2, 1, 1)
+	
+	await ScreenOverlay.fade_to_black_out
+	
+	bird.show()

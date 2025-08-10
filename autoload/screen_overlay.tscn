@@ -15,6 +15,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="NoteOverlay" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -42,6 +43,15 @@ text = "The fascinating origin story of RELAXING LAKESIDE COTTAGES!! A message f
 
 hello— wait, you're telling me I have to verify my age by uploading a selfie in case I write any swear words? goddamnit. okay, well, as you can now see, this is [BUSINESSMAN], founder of yadayada you know already. you may have noticed that humanity has \"collapsed\" and maybe you aren't very happy about it. I, however, see it as an opportunity. that's what sets Me apart from all of you. with the uptick in people feeling scared, fearful, nervous, etc., I had one simple yet intelligent idea — I could make a whole lot of money from this situation. after some brainstorming, RELAXING LAKESIDE COTTAGES was the avenue I deemed most profitable."
 autowrap_mode = 2
+
+[node name="FadeColorRect" type="ColorRect" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
 
 [node name="InputPrompt" type="Label" parent="."]
 visible = false

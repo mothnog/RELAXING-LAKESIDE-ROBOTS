@@ -524,6 +524,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.56145, 0.262267, -4.15421)
 
 [node name="Bird" parent="." instance=ExtResource("20_4n8ks")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.829, 2.5, -5.784)
+visible = false
 speed_mult = 0.75
 noise_speed = 37.5
 
