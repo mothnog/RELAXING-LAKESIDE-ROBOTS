@@ -1,12 +1,11 @@
-@tool
 extends Node3D
 
 
-@onready var sprite = $CSGSphere3D
+@onready var sprite = $AnimatedSprite3D
 @onready var anim = $AnimationPlayer
 
 
-
+@export var speed_mult: float = 1
 
 @export var path_progress: float = 0
 @export var path_mirror: int = 1
@@ -20,8 +19,15 @@ var noise3d: NoiseTexture3D = NoiseTexture3D.new()
 @export var noise_amplitude: Vector3 = Vector3(1, 0.2, 2)
 
 
+var frame_reduction: int = 8
+var frame: int = 0
+
+@onready var lerp_position = sprite.position
+
+
 func _ready():
 	noise3d.noise = FastNoiseLite.new()
+	anim.speed_scale *= speed_mult
 
 
 func _process(delta):
@@ -40,6 +46,10 @@ func _process(delta):
 		offset.z
 	)
 	
+	lerp_position = lerp(lerp_position, target_position, 10 * delta)
 	
-	sprite.position = lerp(sprite.position, target_position, 10 * delta)
+	frame += 1
+	
+	if frame % frame_reduction == 0:
+		sprite.position = lerp_position
 	

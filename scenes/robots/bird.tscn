@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://d3sjaioi0ueus"]
+[gd_scene load_steps=7 format=3 uid="uid://d3sjaioi0ueus"]
 
 [ext_resource type="Script" uid="uid://cx4gbpk4vd4k1" path="res://scenes/robots/bird.gd" id="1_8jfiy"]
+[ext_resource type="Texture2D" uid="uid://dvjwgc0o8dver" path="res://assets/characters/bird.png" id="2_fch6v"]
 
 [sub_resource type="Animation" id="Animation_fch6v"]
 length = 0.001
@@ -63,10 +64,22 @@ _data = {
 &"path": SubResource("Animation_8jfiy")
 }
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_ynjs5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fch6v")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Bird" type="Node3D"]
 script = ExtResource("1_8jfiy")
 path_mirror = 0
-path_height = 0.3
+path_height = 0.25
+path_width = 1.0
 noise_speed = 50.0
 noise_amplitude = Vector3(1, 0.2, 1)
 
@@ -78,8 +91,15 @@ autoplay = "path"
 speed_scale = 0.8
 
 [node name="CSGSphere3D" type="CSGSphere3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2.8026e-45, 2.8026e-45)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1374, 0.0450689, 0.215769)
+visible = false
 radius = 0.25
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.74621)
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+pixel_size = 0.018
+billboard = 1
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_ynjs5")

@@ -1,1 +1,36 @@
 extends Level
+
+
+@onready var player: Player = $Player
+@onready var cutscene_camera = $CutsceneCamera
+
+const COMPLETE_DIALOGUE_PATH = "res://resources/dialogue/level_complete.tres"
+
+var cutscene_interpolate_camera = InterpolateCamera.new()
+
+
+func _ready():
+	super()
+	Dialogue.dialogue_complete.connect(_on_dialogue_complete)
+
+
+func _on_dialogue_complete(path: String) -> void:
+	print(path)
+	if path == COMPLETE_DIALOGUE_PATH:
+		#print(path)
+		end_cutscene()
+
+
+func end_cutscene() -> void:
+	
+	# interpolate to the cutscene camera
+	cutscene_interpolate_camera.global_transform = player.camera.global_transform
+	cutscene_interpolate_camera.current_on_start = true
+	cutscene_interpolate_camera.target_camera = cutscene_camera
+	cutscene_interpolate_camera.time = 3
+	cutscene_interpolate_camera.fov = player.camera.fov
+	add_child(cutscene_interpolate_camera)
+	
+	# disable player movement
+	player.disable_movement = true
+	

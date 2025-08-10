@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="DialogueRes" load_steps=4 format=3 uid="uid://ca71ms6cngoqn"]
+
+[ext_resource type="Script" uid="uid://ynudbsppuko4" path="res://scenes/dialogue/dialogue_resource.gd" id="1_vrcnj"]
+[ext_resource type="Script" uid="uid://cn4fkxsiwgk47" path="res://scenes/dialogue/textbox_resource.gd" id="2_lb0y1"]
+[ext_resource type="Resource" uid="uid://bdjyvdafdrjlg" path="res://resources/textbox/level_complete.tres" id="3_e8fsg"]
+
+[resource]
+script = ExtResource("1_vrcnj")
+textboxes = Array[ExtResource("2_lb0y1")]([ExtResource("3_e8fsg")])
+screen_overlay = ""
+overlay_index = 0
+metadata/_custom_type_script = "uid://ynudbsppuko4"

@@ -53,7 +53,8 @@ func show_dialogue(res: DialogueRes) -> void:
 				if i == res.textboxes.size()-1:
 					hide_dialogue()
 		
-		dialogue_complete.emit(res.resource_path)
+		if current_dialogue != null: # this fixes a bug where cutscene triggers after going from complete dialogue to notes dialogue 
+			dialogue_complete.emit(res.resource_path)
 		
 	else:
 		print("no dialogue assigned")

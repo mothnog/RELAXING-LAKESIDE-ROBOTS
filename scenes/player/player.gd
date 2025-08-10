@@ -15,25 +15,30 @@ var move_dir: Vector3
 var move_vec: Vector3
 var accel: float = 15
 
+var disable_movement: bool = false
+
 
 
 func _physics_process(delta):
 	
 	
 	# applying movement
-	
-	input_dir = Vector3(
-		Input.get_axis("left", "right"),
-		0,
-		Input.get_axis("forward", "backward")
-	).normalized()
-	
-	move_dir = input_dir.rotated(Vector3.UP, camera.rotation.y)
-	
-	move_vec = lerp(move_vec, move_dir * speed, accel * delta)
-	
-	velocity.x = move_vec.x
-	velocity.z = move_vec.z
+	if ! disable_movement:
+		input_dir = Vector3(
+			Input.get_axis("left", "right"),
+			0,
+			Input.get_axis("forward", "backward")
+		).normalized()
+		
+		move_dir = input_dir.rotated(Vector3.UP, camera.rotation.y)
+		
+		move_vec = lerp(move_vec, move_dir * speed, accel * delta)
+		
+		velocity.x = move_vec.x
+		velocity.z = move_vec.z
+	else:
+		velocity.x = 0
+		velocity.z = 0
 	
 	# gravity
 	velocity.y -= 0.2

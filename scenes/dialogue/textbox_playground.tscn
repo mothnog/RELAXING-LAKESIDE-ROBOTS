@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://fi6b40t2inpd"]
+[gd_scene load_steps=14 format=3 uid="uid://fi6b40t2inpd"]
 
 [ext_resource type="PackedScene" uid="uid://fmsvur4h1s4r" path="res://scenes/dialogue/textbox.tscn" id="1_1lmg1"]
 [ext_resource type="Script" uid="uid://ttlme6xxcd62" path="res://scenes/dialogue/textbox_playground.gd" id="1_nbhh0"]
@@ -12,6 +12,7 @@
 [ext_resource type="Resource" uid="uid://dasimypgawswy" path="res://resources/textbox/notes1.tres" id="10_iq1c4"]
 [ext_resource type="Resource" uid="uid://cga2jran67yce" path="res://resources/textbox/notes2.tres" id="11_4f8wq"]
 [ext_resource type="Resource" uid="uid://owuhanhmcudp" path="res://resources/textbox/level_completion.tres" id="12_kiq46"]
+[ext_resource type="Resource" uid="uid://bdjyvdafdrjlg" path="res://resources/textbox/level_complete.tres" id="13_5j0ku"]
 
 [node name="TextboxPlayground" type="CanvasLayer"]
 script = ExtResource("1_nbhh0")
@@ -104,11 +105,22 @@ in_playground = true
 edit_position_in_editor = true
 
 [node name="level_completion" parent="." instance=ExtResource("1_1lmg1")]
+visible = false
 offset_left = 144.0
 offset_top = 376.0
 offset_right = 494.0
 offset_bottom = 491.0
 res = ExtResource("12_kiq46")
+in_playground = true
+edit_position_in_editor = true
+
+[node name="level_complete" parent="." instance=ExtResource("1_1lmg1")]
+visible = false
+offset_left = 144.0
+offset_top = 376.0
+offset_right = 494.0
+offset_bottom = 491.0
+res = ExtResource("13_5j0ku")
 in_playground = true
 edit_position_in_editor = true
 

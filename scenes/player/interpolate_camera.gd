@@ -1,10 +1,11 @@
 extends Camera3D
+class_name InterpolateCamera
 
 
 @export var player: Player = null
 @export var target_camera: Camera3D = null
 @export var time: float = 2
-@export var require_movement: bool = true
+@export var require_movement: bool = false
 @export var current_on_start: bool = false
 @export var easing: bool = true
 
@@ -19,6 +20,7 @@ func _ready():
 	else: target_camera_real = player.camera
 	
 	fov = target_camera_real.fov
+	
 	if current_on_start: current = true
 
 
