@@ -6,6 +6,7 @@ class_name GarbagePile
 @onready var sprites_parent = $Sprites
 #@onready var collision = $CollisionShape3D
 @onready var shadow = $Shadow
+@onready var interact_sound = $InteractSound
 
 @export var hiding: Interactable = null
 @export var hiding_collision_grace_period: float = 0.5
@@ -113,6 +114,9 @@ func _interaction() -> void:
 			sprites_parent.get_child(i).queue_free()
 	
 	shadow.hide()
+	
+	AudioPlayer.play_3d(interact_sound)
+	
 	
 	# unhide hiding object
 	if hiding != null:

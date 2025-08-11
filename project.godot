@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 Dialogue="*res://autoload/dialogue.tscn"
 ScreenOverlay="*res://autoload/screen_overlay.tscn"
 Levels="*res://autoload/Levels.gd"
+AudioPlayer="*res://autoload/audio_player.gd"
 
 [display]
 

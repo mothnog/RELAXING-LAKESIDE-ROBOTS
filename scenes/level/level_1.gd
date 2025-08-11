@@ -4,6 +4,8 @@ extends Level
 @onready var player: Player = $Player
 @onready var cutscene_camera = $CutsceneCamera
 @onready var bird = $Bird
+@onready var robot_build_sound = $RobotBuildSound
+
 
 const COMPLETE_DIALOGUE_PATH = "res://resources/dialogue/level_complete.tres"
 
@@ -16,13 +18,13 @@ func _ready():
 
 
 func _on_dialogue_complete(path: String) -> void:
-	print(path)
 	if path == COMPLETE_DIALOGUE_PATH:
-		#print(path)
 		end_cutscene()
 
 
 func end_cutscene() -> void:
+	
+	
 	
 	# interpolate to the cutscene camera
 	cutscene_interpolate_camera.global_transform = player.camera.global_transform
@@ -35,8 +37,12 @@ func end_cutscene() -> void:
 	# disable player movement
 	player.disable_movement = true
 	
+	
 	# fade to black
-	ScreenOverlay.fade_to_black(2, 1, 1)
+	ScreenOverlay.fade_to_black(2, 2, 2)
+	
+	await ScreenOverlay.fade_to_black_in
+	robot_build_sound.play()
 	
 	await ScreenOverlay.fade_to_black_out
 	

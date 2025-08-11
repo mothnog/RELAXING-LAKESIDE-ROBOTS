@@ -79,13 +79,13 @@ func hide_overlay() -> void:
 
 
 func fade_to_black(in_time: float, hold_time: float, out_time: float) -> void:
-	fade_to_black_in.emit()
 	var tween = get_tree().create_tween()
 	
 	fade_color_rect.color.a = 0
 	fade_color_rect.show()
 	
 	tween.tween_property(fade_color_rect, "color:a", 1, in_time)
+	tween.tween_callback(fade_to_black_in.emit)
 	tween.tween_interval(hold_time)
 	tween.tween_callback(fade_to_black_out.emit)
 	tween.tween_property(fade_color_rect, "color:a", 0, in_time)

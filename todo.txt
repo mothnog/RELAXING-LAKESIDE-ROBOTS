@@ -1,0 +1,7 @@
+SFX:
+	Footstep
+	Spring Bounce
+	Spring Mid-air (riser)
+	REDO Scrap scatter
+	Scrap Get
+	Interact Question

@@ -1,8 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://bd75fyaa41cwg"]
+[gd_scene load_steps=9 format=3 uid="uid://bd75fyaa41cwg"]
 
 [ext_resource type="Script" uid="uid://dcv646x01170x" path="res://scenes/interactable/garbage_pile.gd" id="1_q8hls"]
 [ext_resource type="Texture2D" uid="uid://chfw2stjpbahh" path="res://assets/interactables/scrap.png" id="2_rixy6"]
 [ext_resource type="PackedScene" uid="uid://cpw84yq5ergmc" path="res://scenes/misc/shadow.tscn" id="3_rixy6"]
+[ext_resource type="Script" uid="uid://dhuh7vkm1uje1" path="res://scenes/misc/audio_stream_3d_better.gd" id="4_67pin"]
+[ext_resource type="AudioStream" uid="uid://2di62pomjorh" path="res://sound/sfx/scrap_scatter_1.wav" id="5_qa87b"]
+[ext_resource type="AudioStream" uid="uid://ddbykfv62hbn4" path="res://sound/sfx/scrap_scatter_2.wav" id="6_soutb"]
+[ext_resource type="AudioStream" uid="uid://i1m0udhca0uj" path="res://sound/sfx/scrap_scatter_3.wav" id="7_qa87b"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_hcpl8"]
 
@@ -60,3 +64,10 @@ frame = 5
 
 [node name="Shadow" parent="." instance=ExtResource("3_rixy6")]
 size = Vector3(1.4, 5, 1.4)
+
+[node name="InteractSound" type="AudioStreamPlayer3D" parent="."]
+panning_strength = 0.25
+script = ExtResource("4_67pin")
+multi_stream = Array[AudioStream]([ExtResource("5_qa87b"), ExtResource("6_soutb"), ExtResource("7_qa87b")])
+max_pitch = 1.02
+metadata/_custom_type_script = "uid://dhuh7vkm1uje1"
