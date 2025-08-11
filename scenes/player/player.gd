@@ -4,6 +4,7 @@ class_name Player
 @onready var camera = $PlayerCamera
 @onready var sprite = $AnimatedSprite3D
 @onready var collision = $CollisionShape3D
+@onready var footstep_sound = $FootstepSound
 
 
 @export var speed: float = 2.4
@@ -17,6 +18,12 @@ var accel: float = 15
 
 var disable_movement: bool = false
 
+var foot_step_time: float = 0.4
+var foot_step_timer: float = 0
+
+var is_spring_jumping: bool = false
+var is_spring_jump_frame: bool = false
+signal landed_after_spring
 
 
 func _physics_process(delta):
@@ -36,6 +43,16 @@ func _physics_process(delta):
 		
 		velocity.x = move_vec.x
 		velocity.z = move_vec.z
+		
+		# footstep sounds
+		if input_dir != Vector3.ZERO and is_on_floor():
+			foot_step_timer += delta
+			if foot_step_timer >= foot_step_time:
+				AudioPlayer.play(footstep_sound)
+				foot_step_timer = 0
+		else:
+			foot_step_timer = 0
+		
 	else:
 		velocity.x = 0
 		velocity.z = 0
@@ -45,11 +62,19 @@ func _physics_process(delta):
 	if is_on_floor():
 		if velocity.y < 0: 
 			velocity.y = -0.01
+		
+		if is_spring_jumping and ! is_spring_jump_frame:
+			AudioPlayer.play(footstep_sound)
+			landed_after_spring.emit()
+			is_spring_jumping = false
 	
 	move_and_slide()
 	
 	# animations
 	set_animations()
+	
+	# random stuff
+	is_spring_jump_frame = false
 
 
 func set_animations() -> void:

@@ -1,7 +1,5 @@
 SFX:
-	Footstep
 	Spring Bounce
 	Spring Mid-air (riser)
-	> Add longer layers to scrap scatter sound
 	Scrap Get
 	Interact Question

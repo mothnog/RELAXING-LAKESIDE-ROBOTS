@@ -68,7 +68,8 @@ size = Vector3(1.4, 5, 1.4)
 [node name="InteractSound" type="AudioStreamPlayer3D" parent="."]
 volume_db = 8.0
 panning_strength = 0.25
+bus = &"SFX"
 script = ExtResource("4_67pin")
 multi_stream = Array[AudioStream]([ExtResource("5_qa87b"), ExtResource("6_soutb"), ExtResource("7_qa87b")])
-min_pitch = 0.95
+max_pitch = 1.05
 metadata/_custom_type_script = "uid://dhuh7vkm1uje1"

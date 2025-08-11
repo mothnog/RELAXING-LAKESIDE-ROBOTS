@@ -1,0 +1,543 @@
+[gd_scene load_steps=21 format=3 uid="uid://f5xyf4k5e6is"]
+
+[ext_resource type="PackedScene" uid="uid://bdsiaes3y0p12" path="res://assets/level/level1.glb" id="1_luhhk"]
+[ext_resource type="Texture2D" uid="uid://chsvlnd4aexwb" path="res://assets/things/leaf.png" id="2_y5r2x"]
+[ext_resource type="Texture2D" uid="uid://esssacn2tj6s" path="res://assets/things/leaf_particle.png" id="3_ueyut"]
+[ext_resource type="Texture2D" uid="uid://cvcki8xcwkw7j" path="res://assets/things/leaf_particle2.png" id="4_umgbj"]
+[ext_resource type="Texture2D" uid="uid://duswx4geubohm" path="res://assets/things/note.png" id="5_cu086"]
+[ext_resource type="Texture2D" uid="uid://c1cdwseglk8r1" path="res://assets/things/door_2.png" id="6_3xa4y"]
+[ext_resource type="Texture2D" uid="uid://b56hal2po0xbp" path="res://assets/things/door_1.png" id="7_s5olp"]
+[ext_resource type="Texture2D" uid="uid://b2am3skm26chx" path="res://assets/things/window.png" id="8_w30ad"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xt0ir"]
+sky_top_color = Color(0.283698, 0.45926, 0.65871, 1)
+sky_horizon_color = Color(0.446327, 0.200338, 0.224258, 1)
+sky_energy_multiplier = 0.2
+ground_bottom_color = Color(0.447059, 0.2, 0.223529, 1)
+ground_horizon_color = Color(0.447059, 0.2, 0.223529, 1)
+ground_energy_multiplier = 0.2
+
+[sub_resource type="Sky" id="Sky_ed718"]
+sky_material = SubResource("ProceduralSkyMaterial_xt0ir")
+
+[sub_resource type="Environment" id="Environment_wiql3"]
+background_mode = 2
+sky = SubResource("Sky_ed718")
+ssao_enabled = true
+ssao_intensity = 1.0
+glow_enabled = true
+glow_intensity = 0.46
+glow_strength = 2.0
+glow_bloom = 0.05
+fog_mode = 1
+fog_light_color = Color(0.455144, 0.219738, 0.428632, 1)
+fog_density = 1.0
+fog_depth_end = 33.0
+volumetric_fog_sky_affect = 0.0
+
+[sub_resource type="Gradient" id="Gradient_eeheb"]
+offsets = PackedFloat32Array(0, 0.109091, 0.872727, 1)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_lkxmd"]
+gradient = SubResource("Gradient_eeheb")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_lyft7"]
+emission_shape_scale = Vector3(1.5, 0.51, 2)
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+direction = Vector3(0, -1, 0.25)
+spread = 12.0
+initial_velocity_min = 0.5
+initial_velocity_max = 0.7
+gravity = Vector3(0, 0, 0)
+scale_min = 0.07
+scale_max = 0.25
+color_ramp = SubResource("GradientTexture1D_lkxmd")
+turbulence_noise_strength = 0.2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g6sy5"]
+transparency = 1
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("3_ueyut")
+texture_filter = 0
+billboard_mode = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_xtu20"]
+material = SubResource("StandardMaterial3D_g6sy5")
+size = Vector2(0.25, 0.25)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m3417"]
+transparency = 1
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("4_umgbj")
+texture_filter = 0
+billboard_mode = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_ugwyl"]
+material = SubResource("StandardMaterial3D_m3417")
+size = Vector2(0.195, 0.33)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v1mkj"]
+shading_mode = 0
+albedo_color = Color(0.131301, 0.0967231, 0.10778, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ccok0"]
+size = Vector2(200, 200)
+
+[node name="IntroCutscene" type="Node3D"]
+
+[node name="level1" parent="." instance=ExtResource("1_luhhk")]
+transform = Transform3D(0.85, 0, 0, 0, 0.85, 0, 0, 0, 0.85, 0, 0, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_wiql3")
+
+[node name="Environment" type="Node3D" parent="."]
+transform = Transform3D(0.85, 0, 0, 0, 0.85, 0, 0, 0, 0.85, 0, 0, 0)
+
+[node name="BuildingLogo" type="Label3D" parent="Environment"]
+transform = Transform3D(-11.5911, 0, 3.10583, 0, 12, 0, -3.10583, 0, -11.5911, -10.3779, 11.0855, -0.683951)
+texture_filter = 0
+modulate = Color(0.41598, 0.41598, 0.41598, 1)
+text = "RELAXING
+LAKESIDE 
+COTTAGES"
+font_size = 10
+outline_size = 0
+
+[node name="Tree" type="Node3D" parent="Environment"]
+
+[node name="Leaves" type="Node3D" parent="Environment/Tree"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.42403, 5.79601, -8.89521)
+
+[node name="1" type="Node3D" parent="Environment/Tree/Leaves"]
+transform = Transform3D(1.11725, 0.113105, 0.77651, -0.177538, 1.35243, 0.0584522, -0.764356, -0.148808, 1.12144, 1.11369, 0.0351501, -1.21182)
+
+[node name="Sprite3D" type="Sprite3D" parent="Environment/Tree/Leaves/1"]
+transform = Transform3D(4, 0, 0, 0, -1.74846e-07, -4, 0, 4, -1.74846e-07, 0, 0, 0)
+shaded = true
+texture_filter = 0
+texture = ExtResource("2_y5r2x")
+hframes = 2
+metadata/_edit_lock_ = true
+
+[node name="Sprite3D2" type="Sprite3D" parent="Environment/Tree/Leaves/1"]
+transform = Transform3D(3.88153, -0.00641572, 0.966272, -0.966272, -0.0523314, 3.88118, 0.00641632, -3.99965, -0.0523314, 1.41157, -0.123651, -0.0161533)
+shaded = true
+texture_filter = 0
+texture = ExtResource("2_y5r2x")
+hframes = 4
+frame = 2
+metadata/_edit_lock_ = true
+
+[node name="Sprite3D3" type="Sprite3D" parent="Environment/Tree/Leaves/1"]
+transform = Transform3D(3.40499, -0.0322245, 2.09881, -2.09881, -0.113668, 3.40325, 0.0322249, -3.99826, -0.113668, 2.02361, -0.367909, 0.0142927)
+shaded = true
+texture_filter = 0
+texture = ExtResource("2_y5r2x")
+hframes = 4
+frame = 3
+metadata/_edit_lock_ = true
+
+[node name="3" type="Node3D" parent="Environment/Tree/Leaves"]
+transform = Transform3D(1.07411, 0.274043, 0.256215, -0.306576, 1.08902, 0.12044, -0.216233, -0.182744, 1.10195, 0.875653, -0.658615, -0.840174)
+
+[node name="Sprite3D" type="Sprite3D" parent="Environment/Tree/Leaves/3"]
+transform = Transform3D(4, 0, 0, 0, -1.74846e-07, -4, 0, 4, -1.74846e-07, 0, 0, 0)
+shaded = true
+texture_filter = 0
+texture = ExtResource("2_y5r2x")
+hframes = 2
+metadata/_edit_lock_ = true
+
+[node name="Sprite3D2" type="Sprite3D" parent="Environment/Tree/Leaves/3"]
+transform = Transform3D(3.88153, -0.00641572, 0.966272, -0.966272, -0.0523314, 3.88118, 0.00641632, -3.99965, -0.0523314, 1.41157, -0.123651, -0.0161533)
+shaded = true
+texture_filter = 0
+texture = ExtResource("2_y5r2x")
+hframes = 4
+frame = 2
+metadata/_edit_lock_ = true
+
+[node name="Sprite3D3" type="Sprite3D" parent="Environment/Tree/Leaves/3"]
+transform = Transform3D(3.40499, -0.0322245, 2.09881, -2.09881, -0.113668, 3.40325, 0.0322249, -3.99826, -0.113668, 2.02361, -0.367909, 0.0142927)
+shaded = true
+texture_filter = 0
+texture = ExtResource("2_y5r2x")
+hframes = 4
+frame = 3
+metadata/_edit_lock_ = true
+
+[node name="4" type="Node3D" parent="Environment/Tree/Leaves"]
+transform = Transform3D(-1.11948, -0.151389, -0.135285, -0.171819, 1.1103, 0.179326, 0.108161, 0.196878, -1.11534, -0.695203, -0.425035, -0.957398)
+
+[node name="Sprite3D" type="Sprite3D" parent="Environment/Tree/Leaves/4"]
+transform = Transform3D(4, 0, 0, 0, -1.74846e-07, -4, 0, 4, -1.74846e-07, 0, 0, 0)
+shaded = true
+texture_filter = 0
+texture = ExtResource("2_y5r2x")
+hframes = 2
+metadata/_edit_lock_ = true
+
+[node name="Sprite3D2" type="Sprite3D" parent="Environment/Tree/Leaves/4"]
+transform = Transform3D(3.88153, -0.00641572, 0.966272, -0.966272, -0.0523314, 3.88118, 0.00641632, -3.99965, -0.0523314, 1.41157, -0.123651, -0.0161533)
+shaded = true
+texture_filter = 0
+texture = ExtResource("2_y5r2x")
+hframes = 4
+frame = 2
+metadata/_edit_lock_ = true
+
+[node name="Sprite3D3" type="Sprite3D" parent="Environment/Tree/Leaves/4"]
+transform = Transform3D(3.40499, -0.0322245, 2.09881, -2.09881, -0.113668, 3.40325, 0.0322249, -3.99826, -0.113668, 2.02361, -0.367909, 0.0142927)
+shaded = true
+texture_filter = 0
+texture = ExtResource("2_y5r2x")
+hframes = 4
+frame = 3
+metadata/_edit_lock_ = true
+
+[node name="2" type="Node3D" parent="Environment/Tree/Leaves"]
+transform = Transform3D(0.877956, 0.295204, -1.00302, -0.322501, 1.32234, 0.106895, 0.994584, 0.16819, 0.920068, 0.267439, -0.0694475, 1.47191)
+
+[node name="Sprite3D" type="Sprite3D" parent="Environment/Tree/Leaves/2"]
+transform = Transform3D(4, 0, 0, 0, -1.74846e-07, -4, 0, 4, -1.74846e-07, 0, 0, 0)
+shaded = true
+texture_filter = 0
+texture = ExtResource("2_y5r2x")
+hframes = 2
+metadata/_edit_lock_ = true
+
+[node name="Sprite3D2" type="Sprite3D" parent="Environment/Tree/Leaves/2"]
+transform = Transform3D(3.88153, -0.00641572, 0.966272, -0.966272, -0.0523314, 3.88118, 0.00641632, -3.99965, -0.0523314, 1.41157, -0.123651, -0.0161533)
+shaded = true
+texture_filter = 0
+texture = ExtResource("2_y5r2x")
+hframes = 4
+frame = 2
+metadata/_edit_lock_ = true
+
+[node name="Sprite3D3" type="Sprite3D" parent="Environment/Tree/Leaves/2"]
+transform = Transform3D(3.40499, -0.0322245, 2.09881, -2.09881, -0.113668, 3.40325, 0.0322249, -3.99826, -0.113668, 2.02361, -0.367909, 0.0142927)
+shaded = true
+texture_filter = 0
+texture = ExtResource("2_y5r2x")
+hframes = 4
+frame = 3
+metadata/_edit_lock_ = true
+
+[node name="5" type="Node3D" parent="Environment/Tree/Leaves"]
+transform = Transform3D(-0.842091, -0.276747, -0.713264, -0.429071, 1.04902, 0.0995488, 0.633429, 0.342671, -0.880793, -0.818023, -0.26261, 1.29894)
+
+[node name="Sprite3D" type="Sprite3D" parent="Environment/Tree/Leaves/5"]
+transform = Transform3D(4, 0, 0, 0, -1.74846e-07, -4, 0, 4, -1.74846e-07, 0, 0, 0)
+shaded = true
+texture_filter = 0
+texture = ExtResource("2_y5r2x")
+hframes = 2
+metadata/_edit_lock_ = true
+
+[node name="Sprite3D2" type="Sprite3D" parent="Environment/Tree/Leaves/5"]
+transform = Transform3D(3.88153, -0.00641572, 0.966272, -0.966272, -0.0523314, 3.88118, 0.00641632, -3.99965, -0.0523314, 1.41157, -0.123651, -0.0161533)
+shaded = true
+texture_filter = 0
+texture = ExtResource("2_y5r2x")
+hframes = 4
+frame = 2
+metadata/_edit_lock_ = true
+
+[node name="Sprite3D3" type="Sprite3D" parent="Environment/Tree/Leaves/5"]
+transform = Transform3D(3.40499, -0.0322245, 2.09881, -2.09881, -0.113668, 3.40325, 0.0322249, -3.99826, -0.113668, 2.02361, -0.367909, 0.0142927)
+shaded = true
+texture_filter = 0
+texture = ExtResource("2_y5r2x")
+hframes = 4
+frame = 3
+metadata/_edit_lock_ = true
+
+[node name="TreeParticles" type="GPUParticles3D" parent="Environment/Tree"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.70091, 5.04913, -7.73202)
+amount = 5
+lifetime = 10.0
+randomness = 1.0
+fixed_fps = 10
+process_material = SubResource("ParticleProcessMaterial_lyft7")
+draw_pass_1 = SubResource("QuadMesh_xtu20")
+
+[node name="TreeParticles2" type="GPUParticles3D" parent="Environment/Tree"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.7009, 3.97369, -7.81466)
+amount = 5
+lifetime = 10.0
+randomness = 1.0
+fixed_fps = 10
+process_material = SubResource("ParticleProcessMaterial_lyft7")
+draw_pass_1 = SubResource("QuadMesh_ugwyl")
+
+[node name="TreeShadow" type="CSGCylinder3D" parent="Environment/Tree"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.39614, 11.0033, -12.6536)
+cast_shadow = 3
+radius = 4.915
+sides = 64
+
+[node name="Notes" type="Node3D" parent="Environment"]
+
+[node name="Main" type="Node3D" parent="Environment/Notes"]
+
+[node name="Decal" type="Decal" parent="Environment/Notes/Main"]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 14.0457, 2.85555, -4.39879)
+size = Vector3(0.5, 0.5, 0.5)
+texture_albedo = ExtResource("5_cu086")
+cull_mask = 1048573
+
+[node name="Decal2" type="Decal" parent="Environment/Notes/Main"]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0.518236, -6.00365e-08, -0.855238, 0.855238, -1.47308e-08, 0.518236, 13.9536, 2.7132, -5.19533)
+size = Vector3(0.5, 0.5, 0.5)
+texture_albedo = ExtResource("5_cu086")
+cull_mask = 1048573
+
+[node name="Decal7" type="Decal" parent="Environment/Notes/Main"]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0.096141, -4.77114e-08, -0.995369, 0.995369, -3.93065e-08, 0.096141, 13.7403, 2.16211, -6.20968)
+size = Vector3(0.5, 0.5, 0.5)
+texture_albedo = ExtResource("5_cu086")
+cull_mask = 1048573
+
+[node name="Decal15" type="Decal" parent="Environment/Notes/Main"]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0.096141, -4.77114e-08, -0.995369, 0.995369, -3.93065e-08, 0.096141, 14.0612, 2.47048, -3.15327)
+sorting_offset = 0.74
+size = Vector3(0.5, 0.5, 0.5)
+texture_albedo = ExtResource("5_cu086")
+cull_mask = 1048573
+
+[node name="Decal16" type="Decal" parent="Environment/Notes/Main"]
+transform = Transform3D(-0.889663, -0.403148, -0.214419, 0.306781, -0.179911, -0.934624, 0.338215, -0.897277, 0.283738, 13.5094, 2.0911, -2.15771)
+sorting_offset = 0.74
+size = Vector3(0.5, 0.5, 0.5)
+texture_albedo = ExtResource("5_cu086")
+cull_mask = 1048573
+
+[node name="Decal10" type="Decal" parent="Environment/Notes/Main"]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0.0229142, -4.47016e-08, -0.999739, 0.999739, -4.26984e-08, 0.0229142, 14.0312, 1.97122, -5.06783)
+size = Vector3(0.5, 0.5, 0.5)
+texture_albedo = ExtResource("5_cu086")
+cull_mask = 1048573
+
+[node name="Decal13" type="Decal" parent="Environment/Notes/Main"]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0.464147, -5.90063e-08, -0.88576, 0.88576, -1.84293e-08, 0.464147, 13.913, 3.09852, -5.88661)
+size = Vector3(0.5, 0.5, 0.5)
+texture_albedo = ExtResource("5_cu086")
+cull_mask = 1048573
+
+[node name="Decal14" type="Decal" parent="Environment/Notes/Main"]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0.115388, -4.84633e-08, -0.993323, 0.993323, -3.83758e-08, 0.115388, 13.6126, 3.27409, -7.87262)
+size = Vector3(0.5, 0.5, 0.5)
+texture_albedo = ExtResource("5_cu086")
+cull_mask = 1048573
+
+[node name="Decal17" type="Decal" parent="Environment/Notes/Main"]
+transform = Transform3D(0.98745, -0.157734, 0.00826874, 0.0110511, 0.0167706, -0.999801, 0.157564, 0.98734, 0.0183032, 13.1282, 2.54048, -8.62438)
+size = Vector3(0.5, 0.5, 0.5)
+texture_albedo = ExtResource("5_cu086")
+cull_mask = 1048573
+
+[node name="Decal11" type="Decal" parent="Environment/Notes/Main"]
+transform = Transform3D(0.00125876, -0.999998, -0.00171732, 0.454938, 0.00210197, -0.890523, 0.890524, 0.000339682, 0.45494, 14.1208, 2.92366, -3.01448)
+size = Vector3(0.5, 0.5, 0.5)
+texture_albedo = ExtResource("5_cu086")
+cull_mask = 1048573
+
+[node name="Decal8" type="Decal" parent="Environment/Notes/Main"]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0.293073, -5.46027e-08, -0.956091, 0.956091, -2.89815e-08, 0.293073, 13.7403, 2.82317, -6.57755)
+size = Vector3(0.5, 0.5, 0.5)
+texture_albedo = ExtResource("5_cu086")
+cull_mask = 1048573
+
+[node name="Decal9" type="Decal" parent="Environment/Notes/Main"]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, -0.0395566, -4.19482e-08, -0.999219, 0.999219, -4.54063e-08, -0.0395566, 13.7403, 2.64681, -7.16267)
+size = Vector3(0.5, 0.5, 0.5)
+texture_albedo = ExtResource("5_cu086")
+cull_mask = 1048573
+
+[node name="Decal3" type="Decal" parent="Environment/Notes/Main"]
+transform = Transform3D(-1.46974e-08, -1.25, 5.46386e-08, 0.34723, -5.65709e-08, -1.2008, 1.2008, 1.05871e-09, 0.34723, 14.0457, 3.21082, -4.76907)
+size = Vector3(0.5, 0.5, 0.5)
+texture_albedo = ExtResource("5_cu086")
+cull_mask = 1048573
+
+[node name="Decal4" type="Decal" parent="Environment/Notes/Main"]
+transform = Transform3D(-1.46974e-08, -1.25, 5.46386e-08, 0.379189, -5.65224e-08, -1.1911, 1.1911, 2.56978e-09, 0.379189, 14.0457, 2.86804, -3.51206)
+size = Vector3(0.5, 0.5, 0.5)
+texture_albedo = ExtResource("5_cu086")
+cull_mask = 1048573
+
+[node name="Decal5" type="Decal" parent="Environment/Notes/Main"]
+transform = Transform3D(-1.46975e-08, -1.25, 5.46386e-08, 0.360495, -5.65558e-08, -1.19689, 1.19689, 1.68461e-09, 0.360495, 13.7415, 2.30379, -6.75813)
+size = Vector3(0.5, 0.5, 0.5)
+texture_albedo = ExtResource("5_cu086")
+cull_mask = 1048573
+
+[node name="Decal12" type="Decal" parent="Environment/Notes/Main"]
+transform = Transform3D(-1.46975e-08, -1.25, 5.46387e-08, -0.0187186, -5.44124e-08, -1.24986, 1.24986, -1.5514e-08, -0.0187186, 13.7415, 2.0313, -7.63918)
+size = Vector3(0.5, 0.5, 0.5)
+texture_albedo = ExtResource("5_cu086")
+cull_mask = 1048573
+
+[node name="Decal6" type="Decal" parent="Environment/Notes/Main"]
+transform = Transform3D(-1.46975e-08, -1.25, 5.46387e-08, -0.085368, -5.35073e-08, -1.24708, 1.24708, -1.83947e-08, -0.085368, 14.1839, 2.04597, -3.74252)
+size = Vector3(0.5, 0.5, 0.5)
+texture_albedo = ExtResource("5_cu086")
+cull_mask = 1048573
+
+[node name="Doors" type="Node3D" parent="Environment"]
+
+[node name="Decal" type="Decal" parent="Environment/Doors"]
+transform = Transform3D(0.290702, 0.956814, -4.18237e-08, 0, -4.37114e-08, -1, -0.956814, 0.290702, -1.2707e-08, -17.0019, -0.398166, 10.3972)
+size = Vector3(1.8, 0.4, 1.8)
+texture_albedo = ExtResource("6_3xa4y")
+upper_fade = 0.0609189
+lower_fade = 0.0274516
+cull_mask = 1048573
+
+[node name="Decal2" type="Decal" parent="Environment/Doors"]
+transform = Transform3D(0.998608, 0.0410519, 0.0334741, 0.0330828, 0.0101826, -0.999402, -0.0413682, 0.999117, 0.00881016, -8.92452, 0.110168, 9.92735)
+size = Vector3(1.8, 0.4, 1.8)
+texture_albedo = ExtResource("7_s5olp")
+upper_fade = 0.0609189
+lower_fade = 0.0274516
+cull_mask = 1048573
+
+[node name="Decal5" type="Decal" parent="Environment/Doors"]
+transform = Transform3D(0.857106, 0.515156, 0.00294106, -0.00182316, 0.00874231, -0.999962, -0.515161, 0.857066, 0.0084321, -3.00613, 0.584516, 8.36004)
+size = Vector3(1.8, 0.4, 1.8)
+texture_albedo = ExtResource("7_s5olp")
+upper_fade = 0.0609189
+lower_fade = 0.0274516
+cull_mask = 1048573
+
+[node name="Decal6" type="Decal" parent="Environment/Doors"]
+transform = Transform3D(-0.0357174, 0.999336, 0.00880177, -0.00182316, 0.00874231, -0.999962, -0.999373, -0.0357321, 0.00150966, 0.66953, 0.915751, 2.2043)
+size = Vector3(1.8, 0.4, 1.8)
+texture_albedo = ExtResource("7_s5olp")
+upper_fade = 0.0609189
+lower_fade = 0.0274516
+cull_mask = 1048573
+
+[node name="Decal8" type="Decal" parent="Environment/Doors"]
+transform = Transform3D(-0.0357174, 0.999336, 0.00880177, -0.00182316, 0.00874231, -0.999963, -0.999373, -0.0357321, 0.00150966, -13.243, 0.915752, -13.8638)
+size = Vector3(1.8, 0.4, 1.8)
+texture_albedo = ExtResource("7_s5olp")
+upper_fade = 0.0609189
+lower_fade = 0.0274516
+cull_mask = 1048573
+
+[node name="Decal9" type="Decal" parent="Environment/Doors"]
+transform = Transform3D(0.992877, -0.119219, -0.00285247, -0.00182316, 0.00874231, -0.999963, 0.11924, 0.992843, 0.00846248, -3.53288, 0.915752, -15.4055)
+size = Vector3(1.8, 0.4, 1.8)
+texture_albedo = ExtResource("7_s5olp")
+upper_fade = 0.0609189
+lower_fade = 0.0274516
+cull_mask = 1048573
+
+[node name="Decal14" type="Decal" parent="Environment/Doors"]
+transform = Transform3D(0.99277, 0.120148, -0.000759625, -0.00182316, 0.00874231, -0.999964, -0.120136, 0.992731, 0.00889794, -5.27182, 5.02267, -17.3897)
+size = Vector3(1.8, 0.4, 1.8)
+texture_albedo = ExtResource("7_s5olp")
+upper_fade = 0.0609189
+lower_fade = 0.0274516
+cull_mask = 1048573
+
+[node name="Decal12" type="Decal" parent="Environment/Doors"]
+transform = Transform3D(0.99286, -0.119286, 0.00524556, 0.00621746, 0.00777656, -0.999954, 0.11924, 0.992843, 0.00846249, 6.50654, 2.41252, -9.48079)
+size = Vector3(1.8, 0.4, 1.8)
+texture_albedo = ExtResource("7_s5olp")
+upper_fade = 0.0609189
+lower_fade = 0.0274516
+cull_mask = 1048573
+
+[node name="Decal13" type="Decal" parent="Environment/Doors"]
+transform = Transform3D(0.998582, 0.0531017, 0.00662175, 0.00621747, 0.00777657, -0.999954, -0.0531504, 0.998573, 0.00743519, 7.97292, 2.41252, -0.480508)
+size = Vector3(1.8, 0.4, 1.8)
+texture_albedo = ExtResource("7_s5olp")
+upper_fade = 0.0609189
+lower_fade = 0.0274516
+cull_mask = 1048573
+
+[node name="Decal11" type="Decal" parent="Environment/Doors"]
+transform = Transform3D(0.992878, -0.119219, -0.00285247, -0.00182316, 0.00874231, -0.999963, 0.11924, 0.992843, 0.00846248, -4.43385, 0.915752, -1.3391)
+size = Vector3(1.8, 0.4, 1.8)
+texture_albedo = ExtResource("7_s5olp")
+upper_fade = 0.0609189
+lower_fade = 0.0274516
+cull_mask = 1048573
+
+[node name="Decal10" type="Decal" parent="Environment/Doors"]
+transform = Transform3D(0.999727, -0.023877, -0.00203144, -0.00182316, 0.00874231, -0.999964, 0.023894, 0.999691, 0.00869618, -9.6538, 0.915753, -21.4577)
+size = Vector3(1.8, 0.4, 1.8)
+texture_albedo = ExtResource("7_s5olp")
+upper_fade = 0.0609189
+lower_fade = 0.0274516
+cull_mask = 1048573
+
+[node name="Decal3" type="Decal" parent="Environment/Doors"]
+transform = Transform3D(0.963146, 0.269044, 0.000596112, -0.00182317, 0.00874231, -0.999967, -0.269038, 0.963107, 0.00891038, -4.67576, 0.328411, 12.7883)
+size = Vector3(1.8, 0.4, 1.8)
+texture_albedo = ExtResource("7_s5olp")
+upper_fade = 0.0609189
+lower_fade = 0.0274516
+cull_mask = 1048573
+
+[node name="Decal4" type="Decal" parent="Environment/Doors"]
+transform = Transform3D(0.743848, 0.66836, 0.00448692, -0.00182317, 0.00874231, -0.999968, -0.668373, 0.74381, 0.00772125, 2.11151, 0.60781, 8.88858)
+size = Vector3(1.8, 0.4, 1.8)
+texture_albedo = ExtResource("7_s5olp")
+upper_fade = 0.0609189
+lower_fade = 0.0274516
+cull_mask = 1048573
+
+[node name="Windows" type="Node3D" parent="Environment"]
+
+[node name="Decal" type="Decal" parent="Environment/Windows"]
+transform = Transform3D(-0.290368, -0.956919, 4.18281e-08, -4.21094e-22, -4.37114e-08, -1, 0.956919, -0.290368, 1.26924e-08, -16.9765, 2.48267, 10.3738)
+size = Vector3(2.52, 0.4, 2.52)
+texture_albedo = ExtResource("8_w30ad")
+upper_fade = 0.0609189
+lower_fade = 0.0274516
+cull_mask = 1048573
+
+[node name="Decal2" type="Decal" parent="Environment/Windows"]
+transform = Transform3D(-0.0348997, 0.999402, -4.36848e-08, 0, -4.37117e-08, -1, -0.999402, -0.0348997, 1.5255e-09, 1.40582, 3.25342, -12.074)
+size = Vector3(2.19629, 0.4, 2.65015)
+texture_albedo = ExtResource("8_w30ad")
+upper_fade = 0.0609189
+lower_fade = 0.0274516
+cull_mask = 1048573
+
+[node name="Decal4" type="Decal" parent="Environment/Windows"]
+transform = Transform3D(-0.88993, -0.0111527, 4.87499e-10, 0, -3.89031e-08, -0.89, 0.0111527, -0.88993, 3.89001e-08, -13.0776, 4.67602, -18.0196)
+size = Vector3(2.52, 0.4, 2.52)
+texture_albedo = ExtResource("8_w30ad")
+upper_fade = 0.0609189
+lower_fade = 0.0274516
+cull_mask = 1048573
+
+[node name="Decal5" type="Decal" parent="Environment/Windows"]
+transform = Transform3D(0.945328, -0.326148, 1.42563e-08, 2.42329e-16, -4.37117e-08, -1, 0.326148, 0.945328, -4.13213e-08, -14.9672, 3.46598, -1.99315)
+size = Vector3(2.52, 0.4, 1.82813)
+texture_albedo = ExtResource("8_w30ad")
+upper_fade = 0.0609189
+lower_fade = 0.0274516
+cull_mask = 1048573
+
+[node name="Decal3" type="Decal" parent="Environment/Windows"]
+transform = Transform3D(-0.123724, 0.992327, -4.33756e-08, 2.39982e-16, -4.37117e-08, -1, -0.992327, -0.123724, 5.4081e-09, 14.2199, 2.80037, -4.86788)
+sorting_offset = -0.405
+size = Vector3(3.29271, 0.4, 2.52)
+texture_albedo = ExtResource("8_w30ad")
+upper_fade = 0.0609189
+lower_fade = 0.0274516
+cull_mask = 1048573
+
+[node name="GroundPlane" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0062933, -1.31429, 0.020237)
+material_override = SubResource("StandardMaterial3D_v1mkj")
+mesh = SubResource("PlaneMesh_ccok0")

@@ -1,9 +1,14 @@
-[gd_scene load_steps=8 format=3 uid="uid://7ywfju4yjrve"]
+[gd_scene load_steps=13 format=3 uid="uid://7ywfju4yjrve"]
 
 [ext_resource type="Script" uid="uid://dl7hus5vm7a5e" path="res://scenes/player/player.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://do88tg5dcfx0c" path="res://assets/tmp/temp_person0.png" id="2_qhqgy"]
 [ext_resource type="Texture2D" uid="uid://7eh67uxe1srp" path="res://assets/tmp/temp_person1.png" id="3_dqkch"]
 [ext_resource type="PackedScene" uid="uid://m1vkpeis2d22" path="res://scenes/player/player_camera.tscn" id="4_dqkch"]
+[ext_resource type="Script" uid="uid://glf2ew4st8qb" path="res://scenes/misc/audio_stream_better.gd" id="5_5gtgg"]
+[ext_resource type="AudioStream" uid="uid://mo01qfuyymb4" path="res://sound/sfx/footstep_1.wav" id="6_h17s1"]
+[ext_resource type="AudioStream" uid="uid://c3qyi2g0ompqu" path="res://sound/sfx/footstep_2.wav" id="7_je7p5"]
+[ext_resource type="AudioStream" uid="uid://obx6gt33k385" path="res://sound/sfx/footstep_3.wav" id="8_fm80t"]
+[ext_resource type="AudioStream" uid="uid://bl1qyl0p57o3r" path="res://sound/sfx/footstep_4.wav" id="9_gx1jg"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_lvxji"]
 radius = 0.22
@@ -70,3 +75,11 @@ target_position = Vector3(0, 0, 0)
 
 [node name="AudioListener3D" type="AudioListener3D" parent="."]
 current = true
+
+[node name="FootstepSound" type="AudioStreamPlayer" parent="."]
+volume_db = -40.0
+bus = &"SFX"
+script = ExtResource("5_5gtgg")
+multi_stream = Array[AudioStream]([ExtResource("6_h17s1"), ExtResource("7_je7p5"), ExtResource("8_fm80t"), ExtResource("9_gx1jg")])
+max_pitch = 1.1
+metadata/_custom_type_script = "uid://glf2ew4st8qb"

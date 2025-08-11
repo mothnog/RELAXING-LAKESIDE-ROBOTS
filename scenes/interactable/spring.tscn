@@ -1,7 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://b8txuhufkfu28"]
+[gd_scene load_steps=14 format=3 uid="uid://b8txuhufkfu28"]
 
 [ext_resource type="Script" uid="uid://bfqatp31jyrmh" path="res://scenes/interactable/spring.gd" id="1_dy87d"]
 [ext_resource type="Texture2D" uid="uid://bi34fc3taqagr" path="res://assets/interactables/spring.png" id="2_0cwlf"]
+[ext_resource type="AudioStream" uid="uid://c2ciqkxtw11t1" path="res://sound/sfx/spring_jump.wav" id="3_3u5am"]
+[ext_resource type="Script" uid="uid://glf2ew4st8qb" path="res://scenes/misc/audio_stream_better.gd" id="4_3u5am"]
+[ext_resource type="AudioStream" uid="uid://cb11w38hc65k5" path="res://sound/sfx/spring air.wav" id="5_jradk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0cwlf"]
 atlas = ExtResource("2_0cwlf")
@@ -58,6 +61,8 @@ height = 0.1
 radius = 0.25
 
 [node name="Spring" type="Area3D"]
+process_priority = -1
+process_physics_priority = -1
 script = ExtResource("1_dy87d")
 
 [node name="Sprite" type="AnimatedSprite3D" parent="."]
@@ -73,3 +78,18 @@ frame_progress = 1.0
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
 shape = SubResource("CylinderShape3D_2espj")
+
+[node name="SpringJumpSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_3u5am")
+volume_db = -8.0
+bus = &"SFX"
+script = ExtResource("4_3u5am")
+min_pitch = 0.92
+metadata/_custom_type_script = "uid://glf2ew4st8qb"
+
+[node name="SpringAirSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_jradk")
+volume_db = -6.0
+bus = &"SFX"
+script = ExtResource("4_3u5am")
+metadata/_custom_type_script = "uid://glf2ew4st8qb"
