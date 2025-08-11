@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://cirpvdfconraw"]
+[gd_scene load_steps=42 format=3 uid="uid://cirpvdfconraw"]
 
 [ext_resource type="Script" uid="uid://cxa6etye7cpsv" path="res://scenes/level/level_1.gd" id="1_0alxl"]
 [ext_resource type="ArrayMesh" uid="uid://543tnerp4u33" path="res://assets/level/floor1.obj" id="1_ybxn4"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://b8txuhufkfu28" path="res://scenes/interactable/spring.tscn" id="8_2qg3m"]
 [ext_resource type="Texture2D" uid="uid://duswx4geubohm" path="res://assets/things/note.png" id="8_q27gu"]
 [ext_resource type="Resource" uid="uid://bsm8xks7ojeuy" path="res://resources/dialogue/outfit.tres" id="9_g6sy5"]
+[ext_resource type="Texture2D" uid="uid://c1cdwseglk8r1" path="res://assets/things/door_2.png" id="10_13hc6"]
 [ext_resource type="Texture2D" uid="uid://b56hal2po0xbp" path="res://assets/things/door_1.png" id="10_m5nsq"]
 [ext_resource type="Texture2D" uid="uid://b2am3skm26chx" path="res://assets/things/window.png" id="11_8e0j7"]
 [ext_resource type="Resource" uid="uid://dfs15v0olo4lc" path="res://resources/dialogue/notes1.tres" id="13_m3417"]
@@ -112,6 +113,7 @@ size = Vector2(200, 200)
 
 [node name="Level1" type="Node3D"]
 script = ExtResource("1_0alxl")
+collectable_requirement = 3
 
 [node name="level1" parent="." instance=ExtResource("3_ybxn4")]
 transform = Transform3D(0.85, 0, 0, 0, 0.85, 0, 0, 0, 0.85, 0, 0, 0)
@@ -450,9 +452,9 @@ cull_mask = 1048573
 [node name="Doors" type="Node3D" parent="Environment"]
 
 [node name="Decal" type="Decal" parent="Environment/Doors"]
-transform = Transform3D(-0.290368, -0.956916, 4.18281e-08, -4.21093e-22, -4.37114e-08, -1, 0.956916, -0.290368, 1.26924e-08, -17.0019, -0.398166, 10.5161)
+transform = Transform3D(0.290702, 0.956814, -4.18237e-08, 0, -4.37114e-08, -1, -0.956814, 0.290702, -1.2707e-08, -17.0019, -0.398166, 10.3972)
 size = Vector3(1.8, 0.4, 1.8)
-texture_albedo = ExtResource("10_m5nsq")
+texture_albedo = ExtResource("10_13hc6")
 upper_fade = 0.0609189
 lower_fade = 0.0274516
 cull_mask = 1048573
@@ -548,8 +550,41 @@ cull_mask = 1048573
 [node name="Windows" type="Node3D" parent="Environment"]
 
 [node name="Decal" type="Decal" parent="Environment/Windows"]
-transform = Transform3D(-0.290368, -0.956919, 4.18281e-08, -4.21094e-22, -4.37114e-08, -1, 0.956919, -0.290368, 1.26924e-08, -16.9765, 1.92457, 10.3738)
+transform = Transform3D(-0.290368, -0.956919, 4.18281e-08, -4.21094e-22, -4.37114e-08, -1, 0.956919, -0.290368, 1.26924e-08, -16.9765, 2.48267, 10.3738)
 size = Vector3(2.52, 0.4, 2.52)
+texture_albedo = ExtResource("11_8e0j7")
+upper_fade = 0.0609189
+lower_fade = 0.0274516
+cull_mask = 1048573
+
+[node name="Decal2" type="Decal" parent="Environment/Windows"]
+transform = Transform3D(-0.0348997, 0.999402, -4.36848e-08, 0, -4.37117e-08, -1, -0.999402, -0.0348997, 1.5255e-09, 1.40582, 3.25342, -12.074)
+size = Vector3(2.19629, 0.4, 2.65015)
+texture_albedo = ExtResource("11_8e0j7")
+upper_fade = 0.0609189
+lower_fade = 0.0274516
+cull_mask = 1048573
+
+[node name="Decal4" type="Decal" parent="Environment/Windows"]
+transform = Transform3D(-0.999929, -0.0125313, 5.47757e-10, 1.30536e-16, -4.37117e-08, -1, 0.0125313, -0.999929, 4.3708e-08, -13.0776, 4.67602, -18.0196)
+size = Vector3(2.52, 0.4, 2.52)
+texture_albedo = ExtResource("11_8e0j7")
+upper_fade = 0.0609189
+lower_fade = 0.0274516
+cull_mask = 1048573
+
+[node name="Decal5" type="Decal" parent="Environment/Windows"]
+transform = Transform3D(0.945328, -0.326148, 1.42563e-08, 2.42329e-16, -4.37117e-08, -1, 0.326148, 0.945328, -4.13213e-08, -14.9672, 3.46598, -1.99315)
+size = Vector3(2.52, 0.4, 1.82813)
+texture_albedo = ExtResource("11_8e0j7")
+upper_fade = 0.0609189
+lower_fade = 0.0274516
+cull_mask = 1048573
+
+[node name="Decal3" type="Decal" parent="Environment/Windows"]
+transform = Transform3D(-0.123724, 0.992327, -4.33756e-08, 2.39982e-16, -4.37117e-08, -1, -0.992327, -0.123724, 5.4081e-09, 14.2199, 2.80037, -4.86788)
+sorting_offset = -0.405
+size = Vector3(3.29271, 0.4, 2.52)
 texture_albedo = ExtResource("11_8e0j7")
 upper_fade = 0.0609189
 lower_fade = 0.0274516
@@ -636,6 +671,10 @@ sprite_frame = 1
 
 [node name="CenterSpring" parent="Springs" instance=ExtResource("8_2qg3m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.1629, 0, -9.62108)
+strength = 6.0
+
+[node name="CenterSpring2" parent="Springs" instance=ExtResource("8_2qg3m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.27314, 0.67853, -9.19219)
 strength = 6.0
 
 [node name="RoofSpring" parent="Springs" instance=ExtResource("8_2qg3m")]
