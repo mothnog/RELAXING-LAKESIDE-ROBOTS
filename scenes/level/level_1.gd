@@ -1,10 +1,13 @@
 extends Level
 
 
+@export var start_player_at_start: bool = true
+
 @onready var player: Player = $Player
 @onready var cutscene_camera = $CutsceneCamera
 @onready var bird = $Bird
 @onready var robot_build_sound = $RobotBuildSound
+@onready var player_start_pos = $PlayerStartPos
 
 
 const COMPLETE_DIALOGUE_PATH = "res://resources/dialogue/level_complete.tres"
@@ -14,6 +17,7 @@ var cutscene_interpolate_camera = InterpolateCamera.new()
 
 func _ready():
 	super()
+	if start_player_at_start: player.position = player_start_pos.position
 	Dialogue.dialogue_complete.connect(_on_dialogue_complete)
 
 
