@@ -14,6 +14,8 @@ class_name InterpolateCamera
 var target_camera_real: Camera3D
 var progress: float = 0
 
+signal finished
+
 
 func _ready():
 	if player == null: target_camera_real = target_camera
@@ -43,4 +45,5 @@ func _process(delta):
 		
 		if progress == time:
 			target_camera_real.current = true
+			finished.emit()
 			queue_free()

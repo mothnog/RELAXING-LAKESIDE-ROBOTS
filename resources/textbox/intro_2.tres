@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="TextBoxRes" load_steps=2 format=3 uid="uid://21g6y7xjhsn2"]
+
+[ext_resource type="Script" uid="uid://cn4fkxsiwgk47" path="res://scenes/dialogue/textbox_resource.gd" id="1_pjh8h"]
+
+[resource]
+script = ExtResource("1_pjh8h")
+text = "This place is such a mess"
+rect = Rect2(232, 496, 250, 80)
+continue_input = true
+continue_text = ""
+portrait_scale = 1.0
+portrait_offset = Vector2(0, 40)
+sprite_offset = Vector2(0, 0)

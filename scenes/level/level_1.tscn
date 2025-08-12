@@ -734,7 +734,7 @@ playback_type = 1
 
 [node name="Ambience" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("25_swapm")
-volume_db = -30.0
+volume_db = -29.0
 autoplay = true
 script = ExtResource("26_hkufj")
 metadata/_custom_type_script = "uid://glf2ew4st8qb"

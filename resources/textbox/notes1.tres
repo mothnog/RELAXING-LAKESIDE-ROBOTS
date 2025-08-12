@@ -4,8 +4,8 @@
 
 [resource]
 script = ExtResource("1_gjg86")
-text = "There are [long pause as ? counts] 17 copies of the same note plastered to the wall. I guess it's important?"
-rect = Rect2(224, 512, 400, 115)
+text = "There are..... 17 copies of the same note plastered to the wall. I guess it must be important?"
+rect = Rect2(232, 504, 400, 115)
 continue_input = true
 continue_text = "press interact to read"
 portrait_scale = 1.0

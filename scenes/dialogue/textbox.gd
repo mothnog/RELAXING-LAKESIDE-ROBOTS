@@ -85,9 +85,10 @@ func update_arrow() -> void:
 
 func text_replacements(text: String) -> String:
 	if ! Engine.is_editor_hint():
-		text = text.replace("[Level.collectable_requirement]", var_to_str(Levels.current_level.collectable_requirement))
-		text = text.replace("[Level.completion]", var_to_str(Levels.current_level.completion))
-		text = text.replace("[Level.remaining_collectables]", var_to_str(Levels.current_level.remaining_collectables))
+		if Levels.current_level != null:
+			text = text.replace("[Level.collectable_requirement]", var_to_str(Levels.current_level.collectable_requirement))
+			text = text.replace("[Level.completion]", var_to_str(Levels.current_level.completion))
+			text = text.replace("[Level.remaining_collectables]", var_to_str(Levels.current_level.remaining_collectables))
 	return text
 
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://fi6b40t2inpd"]
+[gd_scene load_steps=17 format=3 uid="uid://fi6b40t2inpd"]
 
 [ext_resource type="PackedScene" uid="uid://fmsvur4h1s4r" path="res://scenes/dialogue/textbox.tscn" id="1_1lmg1"]
 [ext_resource type="Script" uid="uid://ttlme6xxcd62" path="res://scenes/dialogue/textbox_playground.gd" id="1_nbhh0"]
@@ -13,6 +13,9 @@
 [ext_resource type="Resource" uid="uid://cga2jran67yce" path="res://resources/textbox/notes2.tres" id="11_4f8wq"]
 [ext_resource type="Resource" uid="uid://owuhanhmcudp" path="res://resources/textbox/level_completion.tres" id="12_kiq46"]
 [ext_resource type="Resource" uid="uid://bdjyvdafdrjlg" path="res://resources/textbox/level_complete.tres" id="13_5j0ku"]
+[ext_resource type="Resource" uid="uid://cgix40gynoxds" path="res://resources/textbox/intro_1.tres" id="14_ep4ra"]
+[ext_resource type="Resource" uid="uid://21g6y7xjhsn2" path="res://resources/textbox/intro_2.tres" id="15_xyol1"]
+[ext_resource type="Resource" uid="uid://cvcix4n6msdoi" path="res://resources/textbox/intro_3.tres" id="16_4h2s2"]
 
 [node name="TextboxPlayground" type="CanvasLayer"]
 script = ExtResource("1_nbhh0")
@@ -86,10 +89,10 @@ edit_position_in_editor = true
 
 [node name="notes1" parent="." instance=ExtResource("1_1lmg1")]
 visible = false
-offset_left = 224.0
-offset_top = 512.0
-offset_right = 624.0
-offset_bottom = 627.0
+offset_left = 232.0
+offset_top = 504.0
+offset_right = 632.0
+offset_bottom = 619.0
 res = ExtResource("10_iq1c4")
 in_playground = true
 edit_position_in_editor = true
@@ -121,6 +124,36 @@ offset_top = 376.0
 offset_right = 494.0
 offset_bottom = 491.0
 res = ExtResource("13_5j0ku")
+in_playground = true
+edit_position_in_editor = true
+
+[node name="intro_1" parent="." instance=ExtResource("1_1lmg1")]
+visible = false
+offset_left = 232.0
+offset_top = 456.0
+offset_right = 732.0
+offset_bottom = 606.0
+res = ExtResource("14_ep4ra")
+in_playground = true
+edit_position_in_editor = true
+
+[node name="intro_2" parent="." instance=ExtResource("1_1lmg1")]
+visible = false
+offset_left = 232.0
+offset_top = 496.0
+offset_right = 482.0
+offset_bottom = 576.0
+res = ExtResource("15_xyol1")
+in_playground = true
+edit_position_in_editor = true
+
+[node name="intro_3" parent="." instance=ExtResource("1_1lmg1")]
+visible = false
+offset_left = 232.0
+offset_top = 456.0
+offset_right = 732.0
+offset_bottom = 606.0
+res = ExtResource("16_4h2s2")
 in_playground = true
 edit_position_in_editor = true
 

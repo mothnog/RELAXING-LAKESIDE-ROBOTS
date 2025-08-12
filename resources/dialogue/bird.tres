@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DialogueRes" load_steps=3 format=3 uid="uid://c6eb5vkrxt6nt"]
+
+[ext_resource type="Script" uid="uid://ynudbsppuko4" path="res://scenes/dialogue/dialogue_resource.gd" id="1_p72ge"]
+[ext_resource type="Script" uid="uid://cn4fkxsiwgk47" path="res://scenes/dialogue/textbox_resource.gd" id="2_ovxat"]
+
+[resource]
+script = ExtResource("1_p72ge")
+textboxes = Array[ExtResource("2_ovxat")]([])
+screen_overlay = ""
+overlay_index = 0
+metadata/_custom_type_script = "uid://ynudbsppuko4"

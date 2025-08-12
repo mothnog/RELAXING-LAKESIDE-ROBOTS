@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_6oxab")
-text = "maybe not"
+text = "maybe I had overly high expectations for Relaxing Lakeside Cottages"
 rect = Rect2(224, 512, 400, 100)
 continue_input = false
 continue_text = ""
