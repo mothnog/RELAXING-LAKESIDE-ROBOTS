@@ -6,10 +6,10 @@
 [resource]
 script = ExtResource("1_pnphq")
 text = "It seems even \"Relaxing Lakeside Cottages\" couldn't escape the collapse of humanity."
-rect = Rect2(384, 448, 500, 150)
+rect = Rect2(424, 408, 360, 150)
 continue_input = true
 continue_text = ""
 portrait = ExtResource("1_m6n7d")
 portrait_scale = 4.0
-portrait_offset = Vector2(-120, 75)
-sprite_offset = Vector2(0, 0)
+portrait_offset = Vector2(-150.725, 91.88)
+sprite_offset = Vector2(0, 12.26)

@@ -1,0 +1,68 @@
+[gd_scene load_steps=2 format=3 uid="uid://b4ssphoib3d3u"]
+
+[ext_resource type="Texture2D" uid="uid://b44jppcdt5qlu" path="res://assets/misc/cottage_scene.png" id="1_sqe0f"]
+
+[node name="BillboardGraphic" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_sqe0f")
+stretch_mode = 5
+
+[node name="Text" type="Control" parent="."]
+modulate = Color(1, 1, 1, 0.733333)
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Label" type="Label" parent="Text"]
+layout_mode = 0
+offset_left = 312.0
+offset_top = 80.0
+offset_right = 411.0
+offset_bottom = 103.0
+scale = Vector2(2.835, 2.645)
+text = "forget about"
+
+[node name="Label2" type="Label" parent="Text"]
+layout_mode = 0
+offset_left = 736.0
+offset_top = 24.0
+offset_right = 849.0
+offset_bottom = 73.0
+scale = Vector2(2.785, 5.295)
+theme_override_constants/line_spacing = -5
+text = "THE COLLAPSE
+OF HUMANITY"
+
+[node name="Label3" type="Label" parent="Text"]
+layout_mode = 0
+offset_left = 456.0
+offset_top = 568.0
+offset_right = 499.0
+offset_bottom = 591.0
+scale = Vector2(2.235, 2.375)
+text = "enjoy"
+
+[node name="Label4" type="Label" parent="Text"]
+layout_mode = 0
+offset_left = 720.0
+offset_top = 488.0
+offset_right = 802.0
+offset_bottom = 563.0
+scale = Vector2(3, 3)
+theme_override_constants/line_spacing = -2
+text = "RELAXING 
+LAKESIDE 
+COTTAGES"

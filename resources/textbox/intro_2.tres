@@ -6,10 +6,10 @@
 [resource]
 script = ExtResource("1_pjh8h")
 text = "This place is such a mess"
-rect = Rect2(376, 480, 250, 80)
+rect = Rect2(416, 464, 250, 80)
 continue_input = true
 continue_text = ""
 portrait = ExtResource("1_s8rpm")
 portrait_scale = 4.0
-portrait_offset = Vector2(-114, 40)
-sprite_offset = Vector2(0, 0)
+portrait_offset = Vector2(-138.44, 43.72)
+sprite_offset = Vector2(0, 5.835)

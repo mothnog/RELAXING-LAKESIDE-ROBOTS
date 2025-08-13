@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://f5xyf4k5e6is"]
+[gd_scene load_steps=26 format=3 uid="uid://f5xyf4k5e6is"]
 
 [ext_resource type="PackedScene" uid="uid://bdsiaes3y0p12" path="res://assets/level/level1.glb" id="1_luhhk"]
 [ext_resource type="Script" uid="uid://d3xrovbwfy4f" path="res://scenes/level/intro_cutscene.gd" id="1_ueyut"]
@@ -12,6 +12,7 @@
 [ext_resource type="Script" uid="uid://bf3a3cnik3nmt" path="res://scenes/player/interpolate_camera.gd" id="9_y5r2x"]
 [ext_resource type="AudioStream" uid="uid://bcmucjomclay6" path="res://sound/sfx/ambience.wav" id="11_cu086"]
 [ext_resource type="Script" uid="uid://glf2ew4st8qb" path="res://scenes/misc/audio_stream_better.gd" id="12_3xa4y"]
+[ext_resource type="PackedScene" uid="uid://r24r3y6khmy5" path="res://scenes/misc/billboard.tscn" id="13_3xa4y"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xt0ir"]
 sky_top_color = Color(0.283698, 0.45926, 0.65871, 1)
@@ -559,7 +560,7 @@ material_override = SubResource("StandardMaterial3D_v1mkj")
 mesh = SubResource("PlaneMesh_ccok0")
 
 [node name="InterpolateCamera" type="Camera3D" parent="." node_paths=PackedStringArray("target_camera")]
-transform = Transform3D(-0.544566, 0, 0.838718, 0, 1, 0, -0.838718, 0, -0.544566, 10.1327, 6.12375, 8.01508)
+transform = Transform3D(-0.707687, 0, 0.706526, 0, 1, 0, -0.706526, 0, -0.707687, 10.1327, 6.12375, 7.39863)
 script = ExtResource("9_y5r2x")
 target_camera = NodePath("../Camera3D")
 time = 5.0
@@ -568,7 +569,7 @@ current_on_start = true
 metadata/_custom_type_script = "uid://bf3a3cnik3nmt"
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9.54798, 2.19808, 9.20583)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9.54798, 2.19808, 9.53661)
 
 [node name="Ambience" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_cu086")
@@ -579,3 +580,6 @@ metadata/_custom_type_script = "uid://glf2ew4st8qb"
 
 [node name="tmpcam" type="Camera3D" parent="."]
 transform = Transform3D(-0.953181, 0.0147491, 0.30204, 0, 0.99881, -0.0487734, -0.3024, -0.0464899, -0.952047, -0.033669, 5.29334, -14.6288)
+
+[node name="Billboard" parent="." instance=ExtResource("13_3xa4y")]
+transform = Transform3D(-0.762714, 0, 0.646737, 0, 1, 0, -0.646737, 0, -0.762714, 8.4647, 0.0376682, 11.4129)
