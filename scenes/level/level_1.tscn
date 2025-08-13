@@ -115,7 +115,6 @@ size = Vector2(200, 200)
 
 [node name="Level1" type="Node3D"]
 script = ExtResource("1_0alxl")
-start_player_at_start = false
 collectable_requirement = 3
 
 [node name="level1" parent="." instance=ExtResource("3_ybxn4")]

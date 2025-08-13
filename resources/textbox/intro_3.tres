@@ -1,13 +1,15 @@
-[gd_resource type="Resource" script_class="TextBoxRes" load_steps=2 format=3 uid="uid://cvcix4n6msdoi"]
+[gd_resource type="Resource" script_class="TextBoxRes" load_steps=3 format=3 uid="uid://cvcix4n6msdoi"]
 
+[ext_resource type="Texture2D" uid="uid://b3s4xqydsurx6" path="res://assets/characters/portraits1.png" id="1_dp5no"]
 [ext_resource type="Script" uid="uid://cn4fkxsiwgk47" path="res://scenes/dialogue/textbox_resource.gd" id="1_xqqk2"]
 
 [resource]
 script = ExtResource("1_xqqk2")
 text = "I've taken up the hobby of building little robots out of all the scrap metal lying around here to try livening it up a bit."
-rect = Rect2(232, 456, 500, 150)
+rect = Rect2(368, 448, 500, 150)
 continue_input = true
 continue_text = ""
-portrait_scale = 1.0
-portrait_offset = Vector2(0, 75)
+portrait = ExtResource("1_dp5no")
+portrait_scale = 4.0
+portrait_offset = Vector2(-107, 75)
 sprite_offset = Vector2(0, 0)

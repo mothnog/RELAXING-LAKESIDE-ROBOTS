@@ -71,16 +71,15 @@ edit_position_in_editor = true
 
 [node name="garbage_2" parent="." instance=ExtResource("1_1lmg1")]
 visible = false
-offset_left = 832.0
-offset_top = 496.0
-offset_right = 1132.0
-offset_bottom = 616.0
+offset_left = 720.0
+offset_top = 456.0
+offset_right = 1020.0
+offset_bottom = 576.0
 res = ExtResource("8_k5hhw")
 in_playground = true
 edit_position_in_editor = true
 
 [node name="outfit" parent="." instance=ExtResource("1_1lmg1")]
-visible = false
 offset_left = 320.0
 offset_top = 128.0
 offset_right = 840.0
@@ -131,30 +130,29 @@ edit_position_in_editor = true
 
 [node name="intro_1" parent="." instance=ExtResource("1_1lmg1")]
 visible = false
-offset_left = 232.0
-offset_top = 456.0
-offset_right = 732.0
-offset_bottom = 606.0
+offset_left = 384.0
+offset_top = 448.0
+offset_right = 884.0
+offset_bottom = 598.0
 res = ExtResource("14_ep4ra")
 in_playground = true
-edit_position_in_editor = true
 
 [node name="intro_2" parent="." instance=ExtResource("1_1lmg1")]
 visible = false
-offset_left = 232.0
-offset_top = 496.0
-offset_right = 482.0
-offset_bottom = 576.0
+offset_left = 376.0
+offset_top = 480.0
+offset_right = 626.0
+offset_bottom = 560.0
 res = ExtResource("15_xyol1")
 in_playground = true
 edit_position_in_editor = true
 
 [node name="intro_3" parent="." instance=ExtResource("1_1lmg1")]
 visible = false
-offset_left = 232.0
-offset_top = 456.0
-offset_right = 732.0
-offset_bottom = 606.0
+offset_left = 368.0
+offset_top = 448.0
+offset_right = 868.0
+offset_bottom = 598.0
 res = ExtResource("16_4h2s2")
 in_playground = true
 edit_position_in_editor = true

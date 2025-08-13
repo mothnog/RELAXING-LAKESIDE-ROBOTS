@@ -1,13 +1,15 @@
-[gd_resource type="Resource" script_class="TextBoxRes" load_steps=2 format=3 uid="uid://dh3mcp0n13p4s"]
+[gd_resource type="Resource" script_class="TextBoxRes" load_steps=3 format=3 uid="uid://dh3mcp0n13p4s"]
 
 [ext_resource type="Script" uid="uid://cn4fkxsiwgk47" path="res://scenes/dialogue/textbox_resource.gd" id="1_6440t"]
+[ext_resource type="Texture2D" uid="uid://my1hgxw7ljm7" path="res://assets/characters/portraits3.png" id="1_j8t00"]
 
 [resource]
 script = ExtResource("1_6440t")
 text = "Wait, who said that??"
-rect = Rect2(832, 496, 300, 120)
+rect = Rect2(720, 456, 300, 120)
 continue_input = false
-continue_text = null
-portrait_scale = 1.0
-portrait_offset = Vector2(350, 75)
-sprite_offset = Vector2(0, 0)
+continue_text = ""
+portrait = ExtResource("1_j8t00")
+portrait_scale = 4.0
+portrait_offset = Vector2(410, 66)
+sprite_offset = Vector2(0, 25)
