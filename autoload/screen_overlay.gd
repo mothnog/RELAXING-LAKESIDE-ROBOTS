@@ -2,6 +2,8 @@ extends CanvasLayer
 
 @onready var note_overlay = $NoteOverlay
 @onready var fade_color_rect = $FadeColorRect
+@onready var scrap_overlay = $Scrap
+@onready var scrap_sprite = $Scrap/ScrapSprite
 
 @onready var input_prompt = $InputPrompt
 
@@ -21,7 +23,6 @@ signal fade_to_black_in
 signal fade_to_black_out
 
 
-
 func _ready():
 	for i in get_children():
 		i.hide()
@@ -35,13 +36,19 @@ func _process(delta):
 	_previous_overlay = current_overlay
 
 
-func show_scrap_get(texture: Texture2D, time: float = SCRAP_GET_TIME, dialogue: DialogueRes = null) -> void:
-	Dialogue.show_dialogue(dialogue)
+func show_scrap_get(frame: int, time: float = SCRAP_GET_TIME, dialogue_path: String = "") -> void:
+	if ! dialogue_path.is_empty():
+		Dialogue.show_dialogue(load(dialogue_path))
+		awaiting_input = true
+	
 	hide_dialogue_after = true
 	
-	_overlay_things()
+	current_overlay = scrap_overlay
+	scrap_sprite.frame = frame
+	scrap_overlay.show()
 	
 	
+	_overlay_things(time, false)
 
 
 func show_overlay(name: String) -> void:
@@ -57,8 +64,8 @@ func show_overlay(name: String) -> void:
 		print("overlay does not exist")
 
 
-func _overlay_things(time: float = 0) -> void:
-	get_tree().paused = true
+func _overlay_things(time: float = 0, pause: bool = true) -> void:
+	if pause: get_tree().paused = true
 	if time == 0:
 		awaiting_input = true
 		input_prompt.show()

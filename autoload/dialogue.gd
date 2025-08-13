@@ -28,6 +28,8 @@ func _process(delta):
 func show_dialogue(res: DialogueRes) -> void:
 	if res != null:
 		
+		hide_dialogue()
+		
 		current_dialogue = res
 		
 		for i in res.textboxes.size():

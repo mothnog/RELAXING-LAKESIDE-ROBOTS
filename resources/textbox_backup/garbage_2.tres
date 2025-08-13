@@ -5,11 +5,11 @@
 
 [resource]
 script = ExtResource("1_6440t")
-text = "Wait, who said that??"
-rect = Rect2(720, 456, 300, 120)
+text = "who said that??"
+rect = Rect2(744, 456, 276, 120)
 continue_input = false
 continue_text = ""
 portrait = ExtResource("1_j8t00")
 portrait_scale = 4.0
-portrait_offset = Vector2(410, 66)
+portrait_offset = Vector2(393.7, 66)
 sprite_offset = Vector2(0, 25)

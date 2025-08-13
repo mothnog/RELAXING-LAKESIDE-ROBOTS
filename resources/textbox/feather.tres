@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="TextBoxRes" load_steps=2 format=3 uid="uid://clj1l8x0ckmak"]
+
+[ext_resource type="Script" uid="uid://cn4fkxsiwgk47" path="res://scenes/dialogue/textbox_resource.gd" id="1_idpbc"]
+
+[resource]
+script = ExtResource("1_idpbc")
+text = "Hey, this one kind of looks like a feather. that gives me an idea.."
+rect = Rect2(808, 448, 352, 108)
+continue_input = false
+continue_text = ""
+portrait_scale = 1.0
+portrait_offset = Vector2(0, 48)
+sprite_offset = Vector2(0, 0)

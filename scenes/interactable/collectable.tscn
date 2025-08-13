@@ -1,8 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://csuuoikcehw7c"]
+[gd_scene load_steps=12 format=3 uid="uid://csuuoikcehw7c"]
 
 [ext_resource type="Script" uid="uid://cd05qm4h3p8a5" path="res://scenes/interactable/collectable.gd" id="1_j8isq"]
 [ext_resource type="Texture2D" uid="uid://bskd4le7agsej" path="res://assets/things/scrap.png" id="2_gbdar"]
 [ext_resource type="PackedScene" uid="uid://cpw84yq5ergmc" path="res://scenes/misc/shadow.tscn" id="3_gbdar"]
+[ext_resource type="AudioStream" uid="uid://d0ub7dexri1wf" path="res://sound/sfx/scrap_get.wav" id="4_cxxyu"]
+[ext_resource type="Script" uid="uid://glf2ew4st8qb" path="res://scenes/misc/audio_stream_better.gd" id="5_gddj7"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_dbc70"]
 height = 0.3
@@ -63,3 +65,10 @@ draw_pass_1 = SubResource("QuadMesh_ecig0")
 
 [node name="Shadow" parent="." instance=ExtResource("3_gbdar")]
 size = Vector3(0.5, 5, 0.5)
+
+[node name="ScrapGetSound" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("4_cxxyu")
+volume_db = -6.0
+script = ExtResource("5_gddj7")
+metadata/_custom_type_script = "uid://glf2ew4st8qb"

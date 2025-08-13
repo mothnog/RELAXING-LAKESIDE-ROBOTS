@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://fi6b40t2inpd"]
+[gd_scene load_steps=22 format=3 uid="uid://fi6b40t2inpd"]
 
 [ext_resource type="PackedScene" uid="uid://fmsvur4h1s4r" path="res://scenes/dialogue/textbox.tscn" id="1_1lmg1"]
 [ext_resource type="Script" uid="uid://ttlme6xxcd62" path="res://scenes/dialogue/textbox_playground.gd" id="1_nbhh0"]
@@ -20,6 +20,7 @@
 [ext_resource type="Resource" uid="uid://d3y510epjp4wn" path="res://resources/textbox/review_0.tres" id="17_x3fdx"]
 [ext_resource type="Resource" uid="uid://cdbnriduy2uuq" path="res://resources/textbox/review_2.tres" id="18_x3fdx"]
 [ext_resource type="Resource" uid="uid://b1lbtst026t60" path="res://resources/textbox/bird_1.tres" id="20_agda5"]
+[ext_resource type="Resource" uid="uid://clj1l8x0ckmak" path="res://resources/textbox/feather.tres" id="21_yh5r4"]
 
 [node name="TextboxPlayground" type="CanvasLayer"]
 script = ExtResource("1_nbhh0")
@@ -73,7 +74,7 @@ edit_position_in_editor = true
 
 [node name="garbage_2" parent="." instance=ExtResource("1_1lmg1")]
 visible = false
-offset_left = 720.0
+offset_left = 744.0
 offset_top = 456.0
 offset_right = 1020.0
 offset_bottom = 576.0
@@ -196,6 +197,15 @@ offset_top = 184.0
 offset_right = 1024.0
 offset_bottom = 256.0
 res = ExtResource("20_agda5")
+in_playground = true
+edit_position_in_editor = true
+
+[node name="feather" parent="." instance=ExtResource("1_1lmg1")]
+offset_left = 808.0
+offset_top = 448.0
+offset_right = 1160.0
+offset_bottom = 556.0
+res = ExtResource("21_yh5r4")
 in_playground = true
 edit_position_in_editor = true
 
