@@ -37,6 +37,7 @@ shape = SubResource("SphereShape3D_kbwja")
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.391672, 0)
 modulate = Color(0.779291, 0.779291, 0.779291, 1)
+pixel_size = 0.0125
 billboard = 2
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_6kxkr")

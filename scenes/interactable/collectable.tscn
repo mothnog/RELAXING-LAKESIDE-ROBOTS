@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://csuuoikcehw7c"]
 
 [ext_resource type="Script" uid="uid://cd05qm4h3p8a5" path="res://scenes/interactable/collectable.gd" id="1_j8isq"]
-[ext_resource type="Texture2D" uid="uid://chfw2stjpbahh" path="res://assets/interactables/scrap.png" id="2_dbc70"]
+[ext_resource type="Texture2D" uid="uid://bskd4le7agsej" path="res://assets/things/scrap.png" id="2_gbdar"]
 [ext_resource type="PackedScene" uid="uid://cpw84yq5ergmc" path="res://scenes/misc/shadow.tscn" id="3_gbdar"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_dbc70"]
@@ -42,10 +42,10 @@ one_shot = true
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
 offset = Vector2(0, 11)
-pixel_size = 0.02
+pixel_size = 0.025
 billboard = 1
 texture_filter = 0
-texture = ExtResource("2_dbc70")
+texture = ExtResource("2_gbdar")
 hframes = 6
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

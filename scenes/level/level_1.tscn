@@ -115,7 +115,7 @@ size = Vector2(200, 200)
 
 [node name="Level1" type="Node3D"]
 script = ExtResource("1_0alxl")
-collectable_requirement = 3
+start_player_at_start = false
 
 [node name="level1" parent="." instance=ExtResource("3_ybxn4")]
 transform = Transform3D(0.85, 0, 0, 0, 0.85, 0, 0, 0, 0.85, 0, 0, 0)
@@ -151,7 +151,7 @@ shape = SubResource("BoxShape3D_2qg3m")
 transform = Transform3D(-0.161604, 0, -0.986856, 0, 1, 0, 0.986856, 0, -0.161604, -12.3875, -0.369244, 9.66276)
 
 [node name="Player" parent="." instance=ExtResource("2_ybxn4")]
-transform = Transform3D(-0.161604, 0, -0.986856, 0, 1, 0, 0.986856, 0, -0.161604, -1.8423, 0.119469, -3.85545)
+transform = Transform3D(-0.161604, 0, -0.986856, 0, 1, 0, 0.986856, 0, -0.161604, -1.8423, 0.119469, -8.31599)
 floor_constant_speed = true
 
 [node name="Shadow" parent="Player" instance=ExtResource("4_lkxmd")]
@@ -677,6 +677,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.14089, -0.301059, 6.80061)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.85306, 3.33919, 2.65357)
 sprite_frame = 1
 
+[node name="TreeCollectable" parent="Collectables" instance=ExtResource("14_vigbq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.31337, 3.10533, -7.36685)
+sprite_frame = 2
+
 [node name="Springs" type="Node3D" parent="."]
 
 [node name="CenterSpring" parent="Springs" instance=ExtResource("8_2qg3m")]
@@ -685,7 +689,7 @@ strength = 6.0
 
 [node name="CenterSpring2" parent="Springs" instance=ExtResource("8_2qg3m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.27314, 0.67853, -9.19219)
-strength = 7.2
+strength = 8.5
 
 [node name="RoofSpring" parent="Springs" instance=ExtResource("8_2qg3m")]
 transform = Transform3D(0.999712, 0, -0.0239785, 0, 1, 0, 0.0239785, 0, 0.999712, 4.73953, 1.26786, 0.431517)

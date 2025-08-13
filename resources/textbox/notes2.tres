@@ -5,9 +5,9 @@
 [resource]
 script = ExtResource("1_6oxab")
 text = "maybe I had overly high expectations for Relaxing Lakeside Cottages"
-rect = Rect2(224, 512, 400, 100)
+rect = Rect2(200, 512, 400, 100)
 continue_input = false
 continue_text = ""
 portrait_scale = 1.0
-portrait_offset = Vector2(-75, 50)
+portrait_offset = Vector2(425, 50)
 sprite_offset = Vector2(0, 0)

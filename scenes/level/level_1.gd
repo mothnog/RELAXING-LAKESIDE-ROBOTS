@@ -10,6 +10,8 @@ extends Level
 @onready var player_start_pos = $PlayerStartPos
 
 
+const BIRD_DIALOGGUE = preload("res://resources/dialogue/bird.tres")
+
 const COMPLETE_DIALOGUE_PATH = "res://resources/dialogue/level_complete.tres"
 
 var cutscene_interpolate_camera = InterpolateCamera.new()
@@ -43,7 +45,7 @@ func end_cutscene() -> void:
 	
 	
 	# fade to black
-	ScreenOverlay.fade_to_black(2, 2, 2)
+	ScreenOverlay.fade_to_black(2, 2, 1)
 	
 	await ScreenOverlay.fade_to_black_in
 	robot_build_sound.play()
@@ -51,3 +53,14 @@ func end_cutscene() -> void:
 	await ScreenOverlay.fade_to_black_out
 	
 	bird.show()
+	
+	await ScreenOverlay.finished
+	
+	Dialogue.show_dialogue(BIRD_DIALOGGUE)
+	
+	await Dialogue.dialogue_complete
+	
+	ScreenOverlay.fade_to_black(2, 2, 1)
+	
+	await ScreenOverlay.fade_to_black_out
+	get_tree().change_scene_to_file("res://scenes/level/review_time.tscn")

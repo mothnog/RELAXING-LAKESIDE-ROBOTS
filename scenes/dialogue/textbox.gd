@@ -103,7 +103,7 @@ func _process(delta):
 			if res == null:
 				res = TextBoxRes.new()
 			else:
-				if edit_position_in_editor: res.rect.position = position
+				if edit_position_in_editor: res.rect = get_rect()
 				update_parameters()
 				update_curve()
 				
