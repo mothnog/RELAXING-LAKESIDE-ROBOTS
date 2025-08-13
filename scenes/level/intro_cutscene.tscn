@@ -576,3 +576,6 @@ volume_db = -29.0
 autoplay = true
 script = ExtResource("12_3xa4y")
 metadata/_custom_type_script = "uid://glf2ew4st8qb"
+
+[node name="tmpcam" type="Camera3D" parent="."]
+transform = Transform3D(-0.953181, 0.0147491, 0.30204, 0, 0.99881, -0.0487734, -0.3024, -0.0464899, -0.952047, -0.033669, 5.29334, -14.6288)

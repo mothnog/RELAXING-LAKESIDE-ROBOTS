@@ -81,10 +81,9 @@ shape = SubResource("CylinderShape3D_2espj")
 
 [node name="SpringJumpSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_3u5am")
-volume_db = -8.0
+volume_db = 8.0
 bus = &"SFX"
 script = ExtResource("4_3u5am")
-min_pitch = 0.92
 metadata/_custom_type_script = "uid://glf2ew4st8qb"
 
 [node name="SpringAirSound" type="AudioStreamPlayer" parent="."]

@@ -1,5 +1,4 @@
 SFX:
-	Spring Bounce
-	Spring Mid-air (riser)
 	Scrap Get
-	Interact Question
+	Spring Impact
+	REDO spring jump??

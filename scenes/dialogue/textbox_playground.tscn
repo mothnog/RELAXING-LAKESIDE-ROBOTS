@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://fi6b40t2inpd"]
+[gd_scene load_steps=19 format=3 uid="uid://fi6b40t2inpd"]
 
 [ext_resource type="PackedScene" uid="uid://fmsvur4h1s4r" path="res://scenes/dialogue/textbox.tscn" id="1_1lmg1"]
 [ext_resource type="Script" uid="uid://ttlme6xxcd62" path="res://scenes/dialogue/textbox_playground.gd" id="1_nbhh0"]
@@ -16,6 +16,8 @@
 [ext_resource type="Resource" uid="uid://cgix40gynoxds" path="res://resources/textbox/intro_1.tres" id="14_ep4ra"]
 [ext_resource type="Resource" uid="uid://21g6y7xjhsn2" path="res://resources/textbox/intro_2.tres" id="15_xyol1"]
 [ext_resource type="Resource" uid="uid://cvcix4n6msdoi" path="res://resources/textbox/intro_3.tres" id="16_4h2s2"]
+[ext_resource type="Resource" uid="uid://db66duh4wvykf" path="res://resources/textbox/review_1.tres" id="17_4h2s2"]
+[ext_resource type="Resource" uid="uid://cdbnriduy2uuq" path="res://resources/textbox/review_2.tres" id="18_x3fdx"]
 
 [node name="TextboxPlayground" type="CanvasLayer"]
 script = ExtResource("1_nbhh0")
@@ -154,6 +156,26 @@ offset_top = 456.0
 offset_right = 732.0
 offset_bottom = 606.0
 res = ExtResource("16_4h2s2")
+in_playground = true
+edit_position_in_editor = true
+
+[node name="review_1" parent="." instance=ExtResource("1_1lmg1")]
+visible = false
+offset_left = 216.0
+offset_top = 496.0
+offset_right = 516.0
+offset_bottom = 576.0
+res = ExtResource("17_4h2s2")
+in_playground = true
+edit_position_in_editor = true
+
+[node name="review_2" parent="." instance=ExtResource("1_1lmg1")]
+visible = false
+offset_left = 232.0
+offset_top = 488.0
+offset_right = 492.0
+offset_bottom = 588.0
+res = ExtResource("18_x3fdx")
 in_playground = true
 edit_position_in_editor = true
 

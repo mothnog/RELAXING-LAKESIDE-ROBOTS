@@ -1,0 +1,147 @@
+[gd_scene load_steps=4 format=3 uid="uid://cc0fm0bqwghj2"]
+
+[ext_resource type="Script" uid="uid://dshfijolkrxp6" path="res://scenes/level/review_time.gd" id="1_um10y"]
+[ext_resource type="Texture2D" uid="uid://crlxe6gnfc3xo" path="res://assets/misc/star.png" id="2_h6ubb"]
+[ext_resource type="Texture2D" uid="uid://5cbv5w1yslkd" path="res://assets/misc/night_screenshot.png" id="2_lpxs0"]
+
+[node name="ReviewTime" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_um10y")
+
+[node name="BG" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="RLC_BG" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.313726)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_lpxs0")
+
+[node name="Review" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Review"]
+layout_mode = 1
+offset_left = 163.0
+offset_top = 88.0
+offset_right = 744.0
+offset_bottom = 122.0
+theme_override_font_sizes/font_size = 24
+text = "Leave a review for RELAXING LAKESIDE COTTAGES"
+
+[node name="ButtonPrompt" type="Label" parent="Review"]
+layout_mode = 1
+offset_left = 166.0
+offset_top = 142.0
+offset_right = 512.0
+offset_bottom = 176.0
+text = "(left/right to chose rating, interact to submit)"
+
+[node name="Stars" type="Node2D" parent="Review"]
+position = Vector2(640, 360)
+
+[node name="Sprite2D" type="Sprite2D" parent="Review/Stars"]
+scale = Vector2(3, 3)
+texture = ExtResource("2_h6ubb")
+offset = Vector2(-34, 0)
+hframes = 3
+frame = 2
+
+[node name="Sprite2D2" type="Sprite2D" parent="Review/Stars"]
+scale = Vector2(3, 3)
+texture = ExtResource("2_h6ubb")
+offset = Vector2(-17, 0)
+hframes = 3
+frame = 2
+
+[node name="Sprite2D3" type="Sprite2D" parent="Review/Stars"]
+scale = Vector2(3, 3)
+texture = ExtResource("2_h6ubb")
+hframes = 3
+frame = 1
+
+[node name="Sprite2D4" type="Sprite2D" parent="Review/Stars"]
+scale = Vector2(3, 3)
+texture = ExtResource("2_h6ubb")
+offset = Vector2(17, 0)
+hframes = 3
+
+[node name="Sprite2D5" type="Sprite2D" parent="Review/Stars"]
+scale = Vector2(3, 3)
+texture = ExtResource("2_h6ubb")
+offset = Vector2(34, 0)
+hframes = 3
+
+[node name="Writing" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Text" type="Control" parent="Writing"]
+anchors_preset = 0
+offset_left = 173.0
+offset_top = 279.0
+offset_right = 843.0
+offset_bottom = 710.0
+metadata/_edit_lock_ = true
+
+[node name="Bad" type="Label" parent="Writing/Text"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "horrible place built by horrible people. i did not feel relaxed and those buildings were not even cottages. and i don't even like robots that much.
+
+Okay, for real though
+
+Having said that, considering the complaints above, I can't give Relaxing Lakeside Cottages more than [rating] stars."
+autowrap_mode = 2
+
+[node name="Mid" type="Label" parent="Writing/Text"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "I'm a bit surprised to be giving this place [rating] stars, since it failed at basically everything it promised: it wasn't particularly relaxing and under no reasonable definition could those buildings be considered cottages. 
+
+However, it did serve well as a canvas for my robots. This excursion was made worthwhile by the reassurance that even a deteriorated, uncared for space can house the creation of something new. Somehow, Relaxing Lakeside Cottages unintentionally turned out way more purposeful than any manufactured feeling of comfort it was originally hoping to provide."
+autowrap_mode = 2
+
+[node name="Good" type="Label" parent="Writing/Text"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "I'm a bit surprised to be giving this place [rating] stars, since it failed at basically everything it promised: it wasn't particularly relaxing and under no reasonable definition could those buildings be considered cottages. 
+
+However, it did serve well as a canvas for my robots. This excursion was made worthwhile by the reassurance that even a deteriorated, uncared for space can house the creation of something new. Somehow, Relaxing Lakeside Cottages unintentionally turned out way more purposeful than any manufactured feeling of comfort it was originally hoping to provide."
+autowrap_mode = 2
