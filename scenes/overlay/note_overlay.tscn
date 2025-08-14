@@ -1,0 +1,106 @@
+[gd_scene load_steps=8 format=3 uid="uid://c8a1jlpk6chbo"]
+
+[ext_resource type="Texture2D" uid="uid://cporxwmsplgat" path="res://assets/overlays/note_overlay2.png" id="1_7frh6"]
+[ext_resource type="Script" uid="uid://cjj4gmbvxyoec" path="res://scenes/overlay/note_overlay.gd" id="1_bfiqq"]
+[ext_resource type="Texture2D" uid="uid://i2xeqs17jre4" path="res://assets/misc/arrow_indicator.png" id="2_kkrwj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bfiqq"]
+atlas = ExtResource("2_kkrwj")
+region = Rect2(0, 0, 20, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f1ti2"]
+atlas = ExtResource("2_kkrwj")
+region = Rect2(20, 0, 20, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2v1rt"]
+atlas = ExtResource("2_kkrwj")
+region = Rect2(40, 0, 20, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5r1mu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bfiqq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f1ti2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2v1rt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[node name="NoteOverlay" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bfiqq")
+
+[node name="BG" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.756863, 0.745098, 0.517647, 1)
+
+[node name="ArrowIndicator" type="AnimatedSprite2D" parent="."]
+position = Vector2(422, 645)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_5r1mu")
+autoplay = "default"
+frame_progress = 0.608156
+
+[node name="Note" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_right = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Note2" type="Sprite2D" parent="Note"]
+position = Vector2(852, 458)
+scale = Vector2(4.5, 4.5)
+texture = ExtResource("1_7frh6")
+
+[node name="Title" type="Label" parent="Note"]
+offset_left = 551.0
+offset_top = 113.0
+offset_right = 1201.0
+offset_bottom = 227.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 26
+text = "The fascinating origin story of RELAXING LAKESIDE COTTAGES!! A message from its creator:"
+autowrap_mode = 2
+
+[node name="Content" type="Label" parent="Note"]
+offset_left = 552.0
+offset_top = 237.0
+offset_right = 1165.0
+offset_bottom = 1084.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 22
+text = "hello— wait, you're telling me I have to verify my age by uploading a selfie in case I write any swear words? goddamnit. okay, well, as you can now see, this is Maxi Million, founder of yadayada you know already
+
+
+
+
+
+
+
+
+
+
+
+you may have noticed that humanity has \"collapsed\" and maybe you aren't very happy about it. I, however, see it as an opportunity. that's what sets Me apart from all of you. with the uptick in people feeling scared, fearful, nervous, etc., I had one simple yet intelligent idea — I could make a lot of money from this situation. after some brainstorming, RELAXING LAKESIDE COTTAGES was the avenue I deemed most profitable."
+autowrap_mode = 2

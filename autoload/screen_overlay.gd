@@ -7,6 +7,7 @@ extends CanvasLayer
 
 @onready var input_prompt = $InputPrompt
 
+
 var awaiting_input: bool = false
 var current_overlay: Node = null
 var _previous_overlay: Node = null
@@ -30,7 +31,8 @@ func _ready():
 
 
 func _process(delta):
-	if current_overlay != null and Input.is_action_just_pressed("interact") and note_overlay == _previous_overlay:
+	input_prompt.visible = awaiting_input
+	if current_overlay != null and Input.is_action_just_pressed("interact") and note_overlay == _previous_overlay and awaiting_input:
 		hide_overlay()
 	
 	_previous_overlay = current_overlay
@@ -53,9 +55,10 @@ func show_scrap_get(frame: int, time: float = SCRAP_GET_TIME, dialogue_path: Str
 
 func show_overlay(name: String) -> void:
 	
-	_overlay_things()
+	#_overlay_things()
 	
 	if name == "note":
+		get_tree().paused = true
 		current_overlay = note_overlay
 		note_overlay.show()
 	
@@ -68,7 +71,6 @@ func _overlay_things(time: float = 0, pause: bool = true) -> void:
 	if pause: get_tree().paused = true
 	if time == 0:
 		awaiting_input = true
-		input_prompt.show()
 	else:
 		await get_tree().create_timer(time).timeout
 		hide_overlay()
@@ -79,6 +81,7 @@ func hide_overlay() -> void:
 	input_prompt.hide()
 	current_overlay.hide()
 	current_overlay = null
+	awaiting_input = false
 	get_tree().paused = false
 	if hide_dialogue_after:
 		Dialogue.hide_dialogue()
