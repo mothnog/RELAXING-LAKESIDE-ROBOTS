@@ -20,8 +20,8 @@ grow_vertical = 2
 
 [node name="Shadow" type="Sprite2D" parent="Scrap"]
 modulate = Color(1, 1, 1, 0.368627)
-position = Vector2(361, 257)
-scale = Vector2(5.21, 5)
+position = Vector2(374, 249)
+scale = Vector2(5.25, 5.25)
 texture = ExtResource("2_508sp")
 
 [node name="ScrapSprite" type="Sprite2D" parent="Scrap"]

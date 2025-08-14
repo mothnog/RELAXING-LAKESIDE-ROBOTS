@@ -4,6 +4,7 @@ extends CanvasLayer
 @onready var fade_color_rect = $FadeColorRect
 @onready var scrap_overlay = $Scrap
 @onready var scrap_sprite = $Scrap/ScrapSprite
+@onready var scrap_shadow = $Scrap/Shadow
 
 @onready var input_prompt = $InputPrompt
 
@@ -35,18 +36,22 @@ func _process(delta):
 	if current_overlay != null and Input.is_action_just_pressed("interact") and note_overlay == _previous_overlay and awaiting_input:
 		hide_overlay()
 	
+	
+	scrap_shadow.rotation += delta / 6
+	
+	
 	_previous_overlay = current_overlay
 
 
 func show_scrap_get(frame: int, time: float = SCRAP_GET_TIME, dialogue_path: String = "") -> void:
 	if ! dialogue_path.is_empty():
 		Dialogue.show_dialogue(load(dialogue_path))
-		awaiting_input = true
 	
 	hide_dialogue_after = true
 	
 	current_overlay = scrap_overlay
 	scrap_sprite.frame = frame
+	scrap_shadow.rotation = 0
 	scrap_overlay.show()
 	
 	

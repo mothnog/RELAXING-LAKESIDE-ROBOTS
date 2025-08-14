@@ -56,7 +56,7 @@ position = Vector2(422, 645)
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_5r1mu")
 autoplay = "default"
-frame_progress = 0.608156
+frame_progress = 0.638376
 
 [node name="Note" type="Control" parent="."]
 layout_mode = 1

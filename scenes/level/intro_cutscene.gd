@@ -1,15 +1,19 @@
 extends Node3D
 
 @onready var interpolate_camera = $InterpolateCamera
+@onready var arrow_indicator = $CanvasLayer/ArrowIndicator
 
 const INTRO = preload("res://resources/dialogue/intro.tres")
 const LEVEL_1_PATH = "res://scenes/level/level_1.tscn"
+
 
 func _ready():
 	interpolate_camera.finished.connect(start_dialogue)
 	Dialogue.dialogue_complete.connect(transition_to_level)
 
+
 func start_dialogue() -> void:
+	arrow_indicator.hide()
 	Dialogue.show_dialogue(INTRO)
 
 

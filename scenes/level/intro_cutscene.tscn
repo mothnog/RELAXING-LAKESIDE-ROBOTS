@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://f5xyf4k5e6is"]
+[gd_scene load_steps=31 format=3 uid="uid://f5xyf4k5e6is"]
 
 [ext_resource type="PackedScene" uid="uid://bdsiaes3y0p12" path="res://assets/level/level1.glb" id="1_luhhk"]
 [ext_resource type="Script" uid="uid://d3xrovbwfy4f" path="res://scenes/level/intro_cutscene.gd" id="1_ueyut"]
@@ -13,6 +13,7 @@
 [ext_resource type="AudioStream" uid="uid://bcmucjomclay6" path="res://sound/sfx/ambience.wav" id="11_cu086"]
 [ext_resource type="Script" uid="uid://glf2ew4st8qb" path="res://scenes/misc/audio_stream_better.gd" id="12_3xa4y"]
 [ext_resource type="PackedScene" uid="uid://r24r3y6khmy5" path="res://scenes/misc/billboard.tscn" id="13_3xa4y"]
+[ext_resource type="Texture2D" uid="uid://i2xeqs17jre4" path="res://assets/misc/arrow_indicator.png" id="14_s5olp"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xt0ir"]
 sky_top_color = Color(0.283698, 0.45926, 0.65871, 1)
@@ -95,6 +96,35 @@ albedo_color = Color(0.131301, 0.0967231, 0.10778, 1)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_ccok0"]
 size = Vector2(200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bfiqq"]
+atlas = ExtResource("14_s5olp")
+region = Rect2(0, 0, 20, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f1ti2"]
+atlas = ExtResource("14_s5olp")
+region = Rect2(20, 0, 20, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2v1rt"]
+atlas = ExtResource("14_s5olp")
+region = Rect2(40, 0, 20, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w30ad"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bfiqq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f1ti2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2v1rt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
 
 [node name="IntroCutscene" type="Node3D"]
 script = ExtResource("1_ueyut")
@@ -583,3 +613,13 @@ transform = Transform3D(-0.953181, 0.0147491, 0.30204, 0, 0.99881, -0.0487734, -
 
 [node name="Billboard" parent="." instance=ExtResource("13_3xa4y")]
 transform = Transform3D(-0.762714, 0, 0.646737, 0, 1, 0, -0.646737, 0, -0.762714, 8.4647, 0.0376682, 11.4129)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ArrowIndicator" type="AnimatedSprite2D" parent="CanvasLayer"]
+modulate = Color(0.4431, 0.343852, 0.405676, 1)
+position = Vector2(1173, 622)
+rotation = 3.14159
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_w30ad")
+autoplay = "default"
