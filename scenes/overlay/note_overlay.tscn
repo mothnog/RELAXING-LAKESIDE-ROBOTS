@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://c8a1jlpk6chbo"]
+[gd_scene load_steps=9 format=3 uid="uid://c8a1jlpk6chbo"]
 
 [ext_resource type="Texture2D" uid="uid://cporxwmsplgat" path="res://assets/overlays/note_overlay2.png" id="1_7frh6"]
 [ext_resource type="Script" uid="uid://cjj4gmbvxyoec" path="res://scenes/overlay/note_overlay.gd" id="1_bfiqq"]
 [ext_resource type="Texture2D" uid="uid://i2xeqs17jre4" path="res://assets/misc/arrow_indicator.png" id="2_kkrwj"]
+[ext_resource type="Texture2D" uid="uid://b0t72b6dygbag" path="res://assets/characters/maxi.png" id="4_f1ti2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bfiqq"]
 atlas = ExtResource("2_kkrwj")
@@ -74,6 +75,7 @@ scale = Vector2(4.5, 4.5)
 texture = ExtResource("1_7frh6")
 
 [node name="Title" type="Label" parent="Note"]
+layout_mode = 0
 offset_left = 551.0
 offset_top = 113.0
 offset_right = 1201.0
@@ -84,13 +86,14 @@ text = "The fascinating origin story of RELAXING LAKESIDE COTTAGES!! A message f
 autowrap_mode = 2
 
 [node name="Content" type="Label" parent="Note"]
+layout_mode = 0
 offset_left = 552.0
 offset_top = 237.0
 offset_right = 1165.0
 offset_bottom = 1084.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 22
-text = "hello— wait, you're telling me I have to verify my age by uploading a selfie in case I write any swear words? goddamnit. okay, well, as you can now see, this is Maxi Million, founder of yadayada you know already
+text = "hello— wait, you're telling me I have to verify my age by uploading a selfie in case I write any swear words? goddamnit. okay, well, as you can now see, this is MAXI MILLION, founder of yadayada you know already
 
 
 
@@ -103,4 +106,20 @@ text = "hello— wait, you're telling me I have to verify my age by uploading a 
 
 
 you may have noticed that humanity has \"collapsed\" and maybe you aren't very happy about it. I, however, see it as an opportunity. that's what sets Me apart from all of you. with the uptick in people feeling scared, fearful, nervous, etc., I had one simple yet intelligent idea — I could make a lot of money from this situation. after some brainstorming, RELAXING LAKESIDE COTTAGES was the avenue I deemed most profitable."
+autowrap_mode = 2
+
+[node name="pic" type="Sprite2D" parent="Note"]
+position = Vector2(866, 535)
+scale = Vector2(4.5, 4.5)
+texture = ExtResource("4_f1ti2")
+
+[node name="extra" type="Label" parent="Note"]
+layout_mode = 0
+offset_left = 760.0
+offset_top = 641.0
+offset_right = 1030.0
+offset_bottom = 672.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = "I am literally so awesome"
 autowrap_mode = 2
