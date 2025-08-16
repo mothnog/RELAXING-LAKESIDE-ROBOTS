@@ -9,7 +9,7 @@ script = ExtResource("1_vnik8")
 
 [node name="Review" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_v77v8")
-volume_db = 4.0
+volume_db = 6.0
 bus = &"Music"
 
 [node name="Nighttime" type="AudioStreamPlayer" parent="."]

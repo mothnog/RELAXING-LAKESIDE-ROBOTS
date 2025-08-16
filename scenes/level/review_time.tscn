@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://cc0fm0bqwghj2"]
+[gd_scene load_steps=7 format=3 uid="uid://cc0fm0bqwghj2"]
 
 [ext_resource type="Script" uid="uid://dshfijolkrxp6" path="res://scenes/level/review_time.gd" id="1_um10y"]
 [ext_resource type="Texture2D" uid="uid://crlxe6gnfc3xo" path="res://assets/misc/star.png" id="2_h6ubb"]
+[ext_resource type="AudioStream" uid="uid://dafjd4exovecq" path="res://sound/sfx/review_noise.wav" id="3_lpxs0"]
+[ext_resource type="AudioStream" uid="uid://cds30fxlvqjh4" path="res://sound/sfx/review_bloops.wav" id="4_1k8x8"]
+[ext_resource type="AudioStream" uid="uid://dg2dqu6asvs2l" path="res://sound/sfx/review_bloop.wav" id="5_swq02"]
+[ext_resource type="Script" uid="uid://glf2ew4st8qb" path="res://scenes/misc/audio_stream_better.gd" id="6_on3o4"]
 
 [node name="ReviewTime" type="Control"]
 layout_mode = 3
@@ -130,3 +134,20 @@ text = "I'm a bit surprised to be giving this place [rating] stars, considering 
 
 However, it did serve well as a canvas for my robots. This excursion was made worthwhile by the reassurance that even a deteriorated, uncared for space can house the creation of something new. Somehow, Relaxing Lakeside Cottages unintentionally turned out way more purposeful than any manufactured feeling of comfort it was originally hoping to provide."
 autowrap_mode = 2
+
+[node name="Noise" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_lpxs0")
+volume_db = 2.0
+bus = &"SFX"
+
+[node name="Bloops" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_1k8x8")
+volume_db = 5.0
+bus = &"SFX"
+
+[node name="Bloop" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_swq02")
+volume_db = -3.0
+bus = &"SFX"
+script = ExtResource("6_on3o4")
+metadata/_custom_type_script = "uid://glf2ew4st8qb"

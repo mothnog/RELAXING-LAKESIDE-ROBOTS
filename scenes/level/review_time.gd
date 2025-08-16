@@ -9,6 +9,9 @@ extends Control
 @onready var writing_bad = $Writing/Text/Bad
 @onready var writing_mid = $Writing/Text/Mid
 @onready var writing_good = $Writing/Text/Good
+@onready var noise = $Noise
+@onready var bloops = $Bloops
+@onready var bloop = $Bloop
 
 
 const DIALOGUE = preload("res://resources/dialogue/review.tres")
@@ -36,10 +39,12 @@ func _process(delta):
 	if editing_rating:
 		if Input.is_action_just_pressed("left") or Input.is_action_just_pressed("cam_left"):
 			if rating > 0:
+				AudioPlayer.play(bloop)
 				rating -= 0.5
 				stars.get_child(floor(rating)).frame -= 1
 		if Input.is_action_just_pressed("right") or Input.is_action_just_pressed("cam_right"):
 			if rating < 5:
+				AudioPlayer.play(bloop)
 				stars.get_child(floor(rating)).frame += 1
 				rating += 0.5
 		
@@ -47,8 +52,9 @@ func _process(delta):
 			# Continue
 			editing_rating = false
 			
-			# wait time
-			await get_tree().create_timer(1.5).timeout
+			# play sound and wait
+			bloops.play()
+			await get_tree().create_timer(3.0).timeout
 			
 			# show the rating
 			review.hide()
@@ -65,5 +71,6 @@ func _process(delta):
 
 func _on_dialogue_complete(path: String) -> void:
 	await get_tree().process_frame
+	noise.play()
 	review.show()
 	editing_rating = true

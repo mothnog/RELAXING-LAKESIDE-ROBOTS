@@ -38,7 +38,3 @@ func fade_in(music: AudioStreamPlayer, time: float) -> void:
 	tween.tween_property(self, "volume", 0, time).set_trans(Tween.TRANS_EXPO).set_ease(Tween.EASE_OUT)
 	
 	play(music)
-
-
-func _process(delta):
-	print(volume)
