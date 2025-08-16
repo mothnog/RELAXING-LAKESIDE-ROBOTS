@@ -3,7 +3,6 @@ extends Control
 
 
 @onready var review = $Review
-@onready var rlc_bg = $RLC_BG
 
 @onready var stars = $Review/Stars
 @onready var writing_text = $Writing/Text
@@ -22,7 +21,6 @@ var rating: float = 2.5
 
 func _ready():
 	review.hide()
-	rlc_bg.hide()
 	for i in writing_text.get_children(): i.hide()
 	
 	await ScreenOverlay.finished
@@ -56,6 +54,5 @@ func _process(delta):
 
 func _on_dialogue_complete(path: String) -> void:
 	await get_tree().process_frame
-	rlc_bg.show()
 	review.show()
 	editing_rating = true

@@ -1,8 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://7ywfju4yjrve"]
+[gd_scene load_steps=17 format=3 uid="uid://7ywfju4yjrve"]
 
 [ext_resource type="Script" uid="uid://dl7hus5vm7a5e" path="res://scenes/player/player.gd" id="1_g2els"]
-[ext_resource type="Texture2D" uid="uid://do88tg5dcfx0c" path="res://assets/tmp/temp_person0.png" id="2_qhqgy"]
-[ext_resource type="Texture2D" uid="uid://7eh67uxe1srp" path="res://assets/tmp/temp_person1.png" id="3_dqkch"]
+[ext_resource type="Texture2D" uid="uid://c2mq18deqjob6" path="res://assets/characters/player_sprite.png" id="2_qek5x"]
 [ext_resource type="PackedScene" uid="uid://m1vkpeis2d22" path="res://scenes/player/player_camera.tscn" id="4_dqkch"]
 [ext_resource type="Script" uid="uid://glf2ew4st8qb" path="res://scenes/misc/audio_stream_better.gd" id="5_5gtgg"]
 [ext_resource type="AudioStream" uid="uid://mo01qfuyymb4" path="res://sound/sfx/footstep_1.wav" id="6_h17s1"]
@@ -18,14 +17,34 @@ height = 0.7
 height = 0.7
 radius = 0.22
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_5gtgg"]
+atlas = ExtResource("2_qek5x")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h17s1"]
+atlas = ExtResource("2_qek5x")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_je7p5"]
+atlas = ExtResource("2_qek5x")
+region = Rect2(0, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fm80t"]
+atlas = ExtResource("2_qek5x")
+region = Rect2(100, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gx1jg"]
+atlas = ExtResource("2_qek5x")
+region = Rect2(200, 100, 100, 100)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_qlg0r"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_qhqgy")
+"texture": SubResource("AtlasTexture_5gtgg")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_dqkch")
+"texture": SubResource("AtlasTexture_h17s1")
 }],
 "loop": true,
 "name": &"idle",
@@ -33,14 +52,17 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_qhqgy")
+"texture": SubResource("AtlasTexture_je7p5")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_dqkch")
+"texture": SubResource("AtlasTexture_fm80t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gx1jg")
 }],
 "loop": true,
 "name": &"walk",
-"speed": 5.0
+"speed": 3.0
 }]
 
 [node name="Player" type="CharacterBody3D"]
@@ -57,13 +79,13 @@ disabled = true
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 layers = 2
-offset = Vector2(0, 37)
-pixel_size = 0.0105
+offset = Vector2(0, 47)
+pixel_size = 0.018
 billboard = 1
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_qlg0r")
 animation = &"idle"
-frame_progress = 0.0984042
+frame_progress = 0.305253
 
 [node name="PlayerCamera" parent="." node_paths=PackedStringArray("raycast") instance=ExtResource("4_dqkch")]
 transform = Transform3D(1, 0, 0, 0, 0.992546, 0.121869, 0, -0.121869, 0.992546, 0, 1, 1.75)

@@ -16,6 +16,7 @@ var move_dir: Vector3
 var move_vec: Vector3
 var accel: float = 15
 
+
 var disable_movement: bool = false
 
 var foot_step_time: float = 0.4
@@ -43,6 +44,7 @@ func _physics_process(delta):
 		
 		velocity.x = move_vec.x
 		velocity.z = move_vec.z
+		
 		
 		# footstep sounds
 		if input_dir != Vector3.ZERO and is_on_floor():
@@ -78,7 +80,13 @@ func _physics_process(delta):
 
 
 func set_animations() -> void:
-	if input_dir != Vector3.ZERO:
+	
+	# sprite flipping
+	if input_dir.x != 0 and ! disable_movement:
+		sprite.flip_h = sign(input_dir.x) == -1
+	
+	# animations
+	if input_dir != Vector3.ZERO and ! disable_movement:
 		sprite.play("walk")
 	else:
 		sprite.play("idle")

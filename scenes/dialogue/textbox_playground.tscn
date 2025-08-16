@@ -98,11 +98,10 @@ in_playground = true
 edit_position_in_editor = true
 
 [node name="notes1" parent="." instance=ExtResource("1_1lmg1")]
-visible = false
-offset_left = 136.0
-offset_top = 440.0
-offset_right = 536.0
-offset_bottom = 555.0
+offset_left = 112.0
+offset_top = 408.0
+offset_right = 512.0
+offset_bottom = 523.0
 res = ExtResource("10_iq1c4")
 in_playground = true
 edit_position_in_editor = true
@@ -209,10 +208,10 @@ edit_position_in_editor = true
 
 [node name="bird_2" parent="." instance=ExtResource("1_1lmg1")]
 visible = false
-offset_left = 440.0
-offset_top = 520.0
-offset_right = 728.0
-offset_bottom = 600.0
+offset_left = 424.0
+offset_top = 480.0
+offset_right = 712.0
+offset_bottom = 560.0
 res = ExtResource("21_kfsrp")
 in_playground = true
 edit_position_in_editor = true
@@ -239,10 +238,10 @@ edit_position_in_editor = true
 
 [node name="bird_5" parent="." instance=ExtResource("1_1lmg1")]
 visible = false
-offset_left = 536.0
-offset_top = 520.0
-offset_right = 656.0
-offset_bottom = 580.0
+offset_left = 512.0
+offset_top = 496.0
+offset_right = 632.0
+offset_bottom = 556.0
 res = ExtResource("24_y8n1p")
 in_playground = true
 edit_position_in_editor = true
@@ -259,10 +258,10 @@ edit_position_in_editor = true
 
 [node name="feather" parent="." instance=ExtResource("1_1lmg1")]
 visible = false
-offset_left = 808.0
-offset_top = 448.0
-offset_right = 1160.0
-offset_bottom = 556.0
+offset_left = 840.0
+offset_top = 440.0
+offset_right = 1192.0
+offset_bottom = 548.0
 res = ExtResource("21_yh5r4")
 in_playground = true
 edit_position_in_editor = true

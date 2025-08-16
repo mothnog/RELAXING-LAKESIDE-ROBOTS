@@ -54,6 +54,7 @@ func end_cutscene() -> void:
 	await ScreenOverlay.fade_to_black_out
 	
 	bird.show()
+	player.sprite.flip_h = true
 	
 	await ScreenOverlay.finished
 	

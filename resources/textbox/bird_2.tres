@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_t0pwk")
 text = "that sounds nice! What was it like before you were alive?"
-rect = Rect2(440, 520, 288, 80)
+rect = Rect2(424, 480, 288, 80)
 continue_input = true
 continue_text = ""
 portrait_scale = 1.0
