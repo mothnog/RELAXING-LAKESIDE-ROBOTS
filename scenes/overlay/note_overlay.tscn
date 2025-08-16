@@ -105,7 +105,7 @@ text = "hello— wait, you're telling me I have to verify my age by uploading a 
 
 
 
-you may have noticed that humanity has \"collapsed\" and maybe you aren't very happy about it. I, however, see it as an opportunity. that's what sets Me apart from all of you. with the uptick in people feeling scared, fearful, nervous, etc., I had one simple yet intelligent idea — I could make a lot of money from this situation. after some brainstorming, RELAXING LAKESIDE COTTAGES was the avenue I deemed most profitable."
+you may have noticed that humanity has \"collapsed\" and maybe you aren't very happy about it. I, however, see it as an opportunity. that's what sets Me apart from you. with the uptick in people feeling scared, fearful, nervous, etc., I had one simple idea — I could make a lot of money from this situation. after some brainstorming, RELAXING LAKESIDE COTTAGES was the avenue I deemed most profitable."
 autowrap_mode = 2
 
 [node name="pic" type="Sprite2D" parent="Note"]

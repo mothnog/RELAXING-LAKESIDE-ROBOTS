@@ -722,6 +722,7 @@ noise_speed = 37.5
 
 [node name="CutsceneCamera" type="Camera3D" parent="."]
 transform = Transform3D(0.956305, -0.0507698, -0.28793, 0, 0.984808, -0.173648, 0.292372, 0.166061, 0.941776, -8.501, 0.81, -1.64192)
+rotation_order = 3
 fov = 65.0
 
 [node name="GroundPlane" type="MeshInstance3D" parent="."]

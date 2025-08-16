@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://fi6b40t2inpd"]
+[gd_scene load_steps=27 format=3 uid="uid://fi6b40t2inpd"]
 
 [ext_resource type="PackedScene" uid="uid://fmsvur4h1s4r" path="res://scenes/dialogue/textbox.tscn" id="1_1lmg1"]
 [ext_resource type="Script" uid="uid://ttlme6xxcd62" path="res://scenes/dialogue/textbox_playground.gd" id="1_nbhh0"]
@@ -20,7 +20,12 @@
 [ext_resource type="Resource" uid="uid://d3y510epjp4wn" path="res://resources/textbox/review_0.tres" id="17_x3fdx"]
 [ext_resource type="Resource" uid="uid://cdbnriduy2uuq" path="res://resources/textbox/review_2.tres" id="18_x3fdx"]
 [ext_resource type="Resource" uid="uid://b1lbtst026t60" path="res://resources/textbox/bird_1.tres" id="20_agda5"]
+[ext_resource type="Resource" uid="uid://darcwts0lpo7s" path="res://resources/textbox/bird_2.tres" id="21_kfsrp"]
 [ext_resource type="Resource" uid="uid://clj1l8x0ckmak" path="res://resources/textbox/feather.tres" id="21_yh5r4"]
+[ext_resource type="Resource" uid="uid://uddnsjhbyl54" path="res://resources/textbox/bird_3.tres" id="22_4lx20"]
+[ext_resource type="Resource" uid="uid://dcx813ivaouyj" path="res://resources/textbox/bird_4.tres" id="23_y8n1p"]
+[ext_resource type="Resource" uid="uid://de18kmhpn24q" path="res://resources/textbox/bird_5.tres" id="24_y8n1p"]
+[ext_resource type="Resource" uid="uid://bh3cpyeyp0jdk" path="res://resources/textbox/bird_6.tres" id="25_trgj1"]
 
 [node name="TextboxPlayground" type="CanvasLayer"]
 script = ExtResource("1_nbhh0")
@@ -153,6 +158,7 @@ in_playground = true
 edit_position_in_editor = true
 
 [node name="intro_3" parent="." instance=ExtResource("1_1lmg1")]
+visible = false
 offset_left = 424.0
 offset_top = 384.0
 offset_right = 776.0
@@ -198,6 +204,56 @@ offset_top = 184.0
 offset_right = 1024.0
 offset_bottom = 256.0
 res = ExtResource("20_agda5")
+in_playground = true
+edit_position_in_editor = true
+
+[node name="bird_2" parent="." instance=ExtResource("1_1lmg1")]
+visible = false
+offset_left = 440.0
+offset_top = 520.0
+offset_right = 728.0
+offset_bottom = 600.0
+res = ExtResource("21_kfsrp")
+in_playground = true
+edit_position_in_editor = true
+
+[node name="bird_3" parent="." instance=ExtResource("1_1lmg1")]
+visible = false
+offset_left = 712.0
+offset_top = 120.0
+offset_right = 1064.0
+offset_bottom = 216.0
+res = ExtResource("22_4lx20")
+in_playground = true
+edit_position_in_editor = true
+
+[node name="bird_4" parent="." instance=ExtResource("1_1lmg1")]
+visible = false
+offset_left = 688.0
+offset_top = 264.0
+offset_right = 944.0
+offset_bottom = 336.0
+res = ExtResource("23_y8n1p")
+in_playground = true
+edit_position_in_editor = true
+
+[node name="bird_5" parent="." instance=ExtResource("1_1lmg1")]
+visible = false
+offset_left = 536.0
+offset_top = 520.0
+offset_right = 656.0
+offset_bottom = 580.0
+res = ExtResource("24_y8n1p")
+in_playground = true
+edit_position_in_editor = true
+
+[node name="bird_6" parent="." instance=ExtResource("1_1lmg1")]
+visible = false
+offset_left = 696.0
+offset_top = 168.0
+offset_right = 968.0
+offset_bottom = 264.0
+res = ExtResource("25_trgj1")
 in_playground = true
 edit_position_in_editor = true
 

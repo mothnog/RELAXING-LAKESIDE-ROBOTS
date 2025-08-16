@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="TextBoxRes" load_steps=2 format=3 uid="uid://darcwts0lpo7s"]
+
+[ext_resource type="Script" uid="uid://cn4fkxsiwgk47" path="res://scenes/dialogue/textbox_resource.gd" id="1_t0pwk"]
+
+[resource]
+script = ExtResource("1_t0pwk")
+text = "that sounds nice! What was it like before you were alive?"
+rect = Rect2(440, 520, 288, 80)
+continue_input = true
+continue_text = ""
+portrait_scale = 1.0
+portrait_offset = Vector2(400, 28.005)
+sprite_offset = Vector2(0, 0)

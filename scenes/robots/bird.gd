@@ -53,3 +53,8 @@ func _process(delta):
 	if frame % frame_reduction == 0:
 		sprite.position = lerp_position
 	
+
+
+func fly_away(time: float) -> void:
+	var tween = get_tree().create_tween()
+	tween.tween_property(self, "position:y", position.y + 5.5, time)

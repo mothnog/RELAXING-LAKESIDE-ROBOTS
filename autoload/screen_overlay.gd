@@ -93,9 +93,10 @@ func hide_overlay() -> void:
 		hide_dialogue_after = false
 
 
-func fade_to_black(in_time: float, hold_time: float, out_time: float) -> void:
+func fade_to_black(in_time: float, hold_time: float, out_time: float, color: Color = Color(0, 0, 0)) -> void:
 	var tween = get_tree().create_tween()
 	
+	fade_color_rect.color = color
 	fade_color_rect.color.a = 0
 	fade_color_rect.show()
 	

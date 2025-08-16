@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://cc0fm0bqwghj2"]
+[gd_scene load_steps=3 format=3 uid="uid://cc0fm0bqwghj2"]
 
 [ext_resource type="Script" uid="uid://dshfijolkrxp6" path="res://scenes/level/review_time.gd" id="1_um10y"]
 [ext_resource type="Texture2D" uid="uid://crlxe6gnfc3xo" path="res://assets/misc/star.png" id="2_h6ubb"]
-[ext_resource type="Texture2D" uid="uid://5cbv5w1yslkd" path="res://assets/misc/night_screenshot.png" id="2_lpxs0"]
 
 [node name="ReviewTime" type="Control"]
 layout_mode = 3
@@ -22,23 +21,9 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="RLC_BG" type="TextureRect" parent="."]
-modulate = Color(1, 1, 1, 0.313726)
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("2_lpxs0")
-
 [node name="Review" type="Control" parent="."]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 0
 
 [node name="Title" type="Label" parent="Review"]
 layout_mode = 1

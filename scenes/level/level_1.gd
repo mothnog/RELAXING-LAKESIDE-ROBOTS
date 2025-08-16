@@ -48,6 +48,7 @@ func end_cutscene() -> void:
 	ScreenOverlay.fade_to_black(2, 2, 1)
 	
 	await ScreenOverlay.fade_to_black_in
+	
 	robot_build_sound.play()
 	
 	await ScreenOverlay.fade_to_black_out
@@ -60,7 +61,15 @@ func end_cutscene() -> void:
 	
 	await Dialogue.dialogue_complete
 	
-	ScreenOverlay.fade_to_black(2, 2, 1)
+	# pan camera up and fade to white and bird fly away
+	var end_fade_time: float = 4
+	var tween = get_tree().create_tween()
+	tween.tween_property(cutscene_camera, "rotation:x", 40 * TAU / 360, end_fade_time)
+	
+	bird.fly_away(end_fade_time)
+	
+	ScreenOverlay.fade_to_black(end_fade_time, 2, 1, Color.WHITE)
 	
 	await ScreenOverlay.fade_to_black_out
+	
 	get_tree().change_scene_to_file("res://scenes/level/review_time.tscn")
