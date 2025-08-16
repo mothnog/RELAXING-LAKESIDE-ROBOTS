@@ -10,6 +10,8 @@ const LEVEL_1_PATH = "res://scenes/level/level_1.tscn"
 func _ready():
 	interpolate_camera.finished.connect(start_dialogue)
 	Dialogue.dialogue_complete.connect(transition_to_level)
+	
+	Music.play(Music.nighttime)
 
 
 func start_dialogue() -> void:
@@ -19,5 +21,6 @@ func start_dialogue() -> void:
 
 func transition_to_level(path) -> void:
 	ScreenOverlay.fade_to_black(2, 1, 2)
+	Music.fade_out(7.5)
 	await ScreenOverlay.fade_to_black_in
 	get_tree().change_scene_to_file(LEVEL_1_PATH)

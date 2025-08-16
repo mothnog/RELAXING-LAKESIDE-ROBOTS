@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="bog jam summer 2025"
-run/main_scene="uid://cirpvdfconraw"
+run/main_scene="uid://f5xyf4k5e6is"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -25,6 +25,7 @@ Dialogue="*res://autoload/dialogue.tscn"
 ScreenOverlay="*res://autoload/screen_overlay.tscn"
 Levels="*res://autoload/Levels.gd"
 AudioPlayer="*res://autoload/audio_player.gd"
+Music="*res://autoload/music.tscn"
 
 [display]
 

@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://b4fghmv2iwbuq"]
+
+[ext_resource type="Script" uid="uid://dxugqmxnuoeig" path="res://autoload/music.gd" id="1_vnik8"]
+[ext_resource type="AudioStream" uid="uid://c1nkkuaksfumh" path="res://sound/music/review.mp3" id="2_v77v8"]
+[ext_resource type="AudioStream" uid="uid://dkqir8i23ykym" path="res://sound/music/nighttime.mp3" id="3_hvklq"]
+
+[node name="Music" type="Node"]
+script = ExtResource("1_vnik8")
+
+[node name="Review" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_v77v8")
+volume_db = 4.0
+bus = &"Music"
+
+[node name="Nighttime" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_hvklq")
+volume_db = -5.0
+bus = &"Music"

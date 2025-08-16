@@ -20,7 +20,6 @@ enum OVERLAY {NOTE}
 
 
 signal finished
-
 signal fade_to_black_in
 signal fade_to_black_out
 

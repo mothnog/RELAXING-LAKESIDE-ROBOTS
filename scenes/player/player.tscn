@@ -62,7 +62,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk",
-"speed": 3.0
+"speed": 3.5
 }]
 
 [node name="Player" type="CharacterBody3D"]
@@ -84,8 +84,8 @@ pixel_size = 0.018
 billboard = 1
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_qlg0r")
-animation = &"idle"
-frame_progress = 0.305253
+animation = &"walk"
+frame_progress = 0.5666
 
 [node name="PlayerCamera" parent="." node_paths=PackedStringArray("raycast") instance=ExtResource("4_dqkch")]
 transform = Transform3D(1, 0, 0, 0, 0.992546, 0.121869, 0, -0.121869, 0.992546, 0, 1, 1.75)
