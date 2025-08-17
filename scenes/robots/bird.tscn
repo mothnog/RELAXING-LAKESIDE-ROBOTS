@@ -1,7 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://d3sjaioi0ueus"]
+[gd_scene load_steps=9 format=3 uid="uid://d3sjaioi0ueus"]
 
 [ext_resource type="Script" uid="uid://cx4gbpk4vd4k1" path="res://scenes/robots/bird.gd" id="1_8jfiy"]
 [ext_resource type="Texture2D" uid="uid://dvjwgc0o8dver" path="res://assets/characters/bird.png" id="2_fch6v"]
+[ext_resource type="AudioStream" uid="uid://ch1vjlvjg3jl5" path="res://sound/sfx/bird_flyaway.wav" id="3_i5exv"]
+[ext_resource type="Script" uid="uid://glf2ew4st8qb" path="res://scenes/misc/audio_stream_better.gd" id="3_ynjs5"]
 
 [sub_resource type="Animation" id="Animation_fch6v"]
 length = 0.001
@@ -103,3 +105,9 @@ pixel_size = 0.018
 billboard = 1
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_ynjs5")
+
+[node name="FlyAwaySound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_i5exv")
+volume_db = 3.0
+script = ExtResource("3_ynjs5")
+metadata/_custom_type_script = "uid://glf2ew4st8qb"

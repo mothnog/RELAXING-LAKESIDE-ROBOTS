@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("1_xqqk2")
-text = "During my stay, to combat the ever present lifelessness I've taken up the hobby of building little robots out of all the scrap metal lying around."
+text = "During my stay, I've taken up the hobby of building little robots out of all the scrap metal lying around to try and combat the ever present lifelessness around here."
 rect = Rect2(424, 384, 352, 150)
 continue_input = true
 continue_text = ""

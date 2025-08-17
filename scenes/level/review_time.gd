@@ -5,6 +5,7 @@ extends Control
 @onready var review = $Review
 
 @onready var stars = $Review/Stars
+@onready var portrait = $Writing/Portrait
 @onready var writing_text = $Writing/Text
 @onready var writing_bad = $Writing/Text/Bad
 @onready var writing_mid = $Writing/Text/Mid
@@ -12,6 +13,7 @@ extends Control
 @onready var noise = $Noise
 @onready var bloops = $Bloops
 @onready var bloop = $Bloop
+@onready var quit_prompt = $Writing/QuitPrompt
 
 
 const DIALOGUE = preload("res://resources/dialogue/review.tres")
@@ -19,16 +21,17 @@ const DIALOGUE = preload("res://resources/dialogue/review.tres")
 var editing_rating: bool = false
 var rating: float = 2.5
 
-
+var can_quit: bool = false
 
 
 func _ready():
 	review.hide()
+	portrait.hide()
+	quit_prompt.hide()
 	for i in writing_text.get_children(): i.hide()
 	
 	
-	#await ScreenOverlay.finished
-	await get_tree().create_timer(1.0).timeout
+	await ScreenOverlay.finished
 	
 	Dialogue.show_dialogue(DIALOGUE)
 	Dialogue.dialogue_complete.connect(_on_dialogue_complete)
@@ -58,6 +61,8 @@ func _process(delta):
 			
 			# show the rating
 			review.hide()
+			portrait.show()
+			quit_prompt.show()
 			var writing: Label
 			if rating <= 1.5: writing = writing_bad
 			elif rating <= 3.5: writing = writing_mid
@@ -67,6 +72,11 @@ func _process(delta):
 			
 			# music :D
 			Music.fade_in(Music.review, 10)
+			
+			can_quit = true
+	
+	if can_quit and Input.is_action_just_pressed("esc"):
+		get_tree().quit()
 
 
 func _on_dialogue_complete(path: String) -> void:

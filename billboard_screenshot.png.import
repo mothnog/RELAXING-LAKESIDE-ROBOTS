@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://6a5kac2s02pf"
 path.s3tc="res://.godot/imported/billboard_screenshot.png-75d021de4a879de0807a0615001c1f8e.s3tc.ctex"
+path.etc2="res://.godot/imported/billboard_screenshot.png-75d021de4a879de0807a0615001c1f8e.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://billboard_screenshot.png"
-dest_files=["res://.godot/imported/billboard_screenshot.png-75d021de4a879de0807a0615001c1f8e.s3tc.ctex"]
+dest_files=["res://.godot/imported/billboard_screenshot.png-75d021de4a879de0807a0615001c1f8e.s3tc.ctex", "res://.godot/imported/billboard_screenshot.png-75d021de4a879de0807a0615001c1f8e.etc2.ctex"]
 
 [params]
 

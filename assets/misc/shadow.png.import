@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c58rm5epmd2xm"
 path.s3tc="res://.godot/imported/shadow.png-6cfd3c91c7286a1e6518e6ea3ae78533.s3tc.ctex"
+path.etc2="res://.godot/imported/shadow.png-6cfd3c91c7286a1e6518e6ea3ae78533.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/misc/shadow.png"
-dest_files=["res://.godot/imported/shadow.png-6cfd3c91c7286a1e6518e6ea3ae78533.s3tc.ctex"]
+dest_files=["res://.godot/imported/shadow.png-6cfd3c91c7286a1e6518e6ea3ae78533.s3tc.ctex", "res://.godot/imported/shadow.png-6cfd3c91c7286a1e6518e6ea3ae78533.etc2.ctex"]
 
 [params]
 

@@ -3,6 +3,7 @@ extends Node3D
 
 @onready var sprite = $AnimatedSprite3D
 @onready var anim = $AnimationPlayer
+@onready var fly_away_sound = $FlyAwaySound
 
 
 @export var speed_mult: float = 1
@@ -56,5 +57,6 @@ func _process(delta):
 
 
 func fly_away(time: float) -> void:
+	AudioPlayer.play(fly_away_sound)
 	var tween = get_tree().create_tween()
 	tween.tween_property(self, "position:y", position.y + 5.5, time)

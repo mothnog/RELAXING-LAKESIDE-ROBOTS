@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://cc0fm0bqwghj2"]
+[gd_scene load_steps=8 format=3 uid="uid://cc0fm0bqwghj2"]
 
 [ext_resource type="Script" uid="uid://dshfijolkrxp6" path="res://scenes/level/review_time.gd" id="1_um10y"]
 [ext_resource type="Texture2D" uid="uid://crlxe6gnfc3xo" path="res://assets/misc/star.png" id="2_h6ubb"]
 [ext_resource type="AudioStream" uid="uid://dafjd4exovecq" path="res://sound/sfx/review_noise.wav" id="3_lpxs0"]
+[ext_resource type="Texture2D" uid="uid://c7mw5fe6dkv3c" path="res://assets/characters/review_portrait.png" id="3_on3o4"]
 [ext_resource type="AudioStream" uid="uid://cds30fxlvqjh4" path="res://sound/sfx/review_bloops.wav" id="4_1k8x8"]
 [ext_resource type="AudioStream" uid="uid://dg2dqu6asvs2l" path="res://sound/sfx/review_bloop.wav" id="5_swq02"]
 [ext_resource type="Script" uid="uid://glf2ew4st8qb" path="res://scenes/misc/audio_stream_better.gd" id="6_on3o4"]
@@ -23,7 +24,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 1)
+color = Color(0.0745098, 0.054902, 0.0901961, 1)
 
 [node name="Review" type="Control" parent="."]
 layout_mode = 1
@@ -100,13 +101,17 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -14.0
+offset_top = -184.0
+offset_right = -14.0
+offset_bottom = -184.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "horrible place built by horrible people. i did not feel relaxed and those buildings were not even cottages. and i don't even like robots that much.
+text = "horrible place built by horrible people. i did not feel relaxed and those buildings were NOT cottages. and i don't even like robots that much.
 
-Okay, for real though
+Okay, for real though. Despite the misrepresenting advertising, I am still grateful to have been able to nourish Relaxing Lakeside Cottages a little with the presence of my robots. It served as reassurance that even in a deteriorated, uncared for space there are pieces that can be put together to make a positive change. Somehow, my experience here turned out way more meaningful than any manufactured feeling of comfort it was originally hoping to provide.
 
-Having said that, considering the complaints above, I can't give Relaxing Lakeside Cottages more than [rating] stars."
+Having said that, considering my initial complaints, I can't give this more than [rating] stars. THERE ARE BETTER WAYS TO SPEND YOUR TIME."
 autowrap_mode = 2
 
 [node name="Mid" type="Label" parent="Writing/Text"]
@@ -115,11 +120,15 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -13.0
+offset_top = -171.0
+offset_right = -13.0
+offset_bottom = -171.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "I'm a bit surprised to be giving this place [rating] stars, since it failed at basically everything it promised: it wasn't particularly relaxing and under no reasonable definition could those buildings be considered cottages. 
+text = "I think [rating] stars is a fair rating for Relaxing Lakeside Cottages considering it failed at basically everything it promised: it wasn't particularly relaxing and those buildings were definitely not cottages.
 
-However, it did serve well as a canvas for my robots. This excursion was made worthwhile by the reassurance that even a deteriorated, uncared for space can house the creation of something new. Somehow, Relaxing Lakeside Cottages unintentionally turned out way more purposeful than any manufactured feeling of comfort it was originally hoping to provide."
+On the other hand, its wrecked state gave me the opportunity to nourish it a little with the presence of my robots. My experience here served as reassurance that even in a deteriorated, uncared for space there are pieces that can be put together to make a positive change. Somehow, Relaxing Lakeside Cottages unintentionally turned out way more meaningful than any manufactured feeling of comfort it was originally hoping to provide."
 autowrap_mode = 2
 
 [node name="Good" type="Label" parent="Writing/Text"]
@@ -128,16 +137,33 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -14.0
+offset_top = -174.0
+offset_right = -14.0
+offset_bottom = -174.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "I'm a bit surprised to be giving this place [rating] stars, considering it failed at basically everything it promised: it wasn't particularly relaxing and under no reasonable definition could those buildings be considered cottages. 
 
-However, it did serve well as a canvas for my robots. This excursion was made worthwhile by the reassurance that even a deteriorated, uncared for space can house the creation of something new. Somehow, Relaxing Lakeside Cottages unintentionally turned out way more purposeful than any manufactured feeling of comfort it was originally hoping to provide."
+However, it did serve well as a canvas for my robots. This trip was made worthwhile by the reassurance that even in a deteriorated, uncared for space, there are pieces that can be put together to make a positive change. Somehow, Relaxing Lakeside Cottages unintentionally turned out way more purposeful than any manufactured feeling of comfort it was originally hoping to provide."
 autowrap_mode = 2
+
+[node name="Portrait" type="Sprite2D" parent="Writing"]
+position = Vector2(245, 548)
+scale = Vector2(3, 3)
+texture = ExtResource("3_on3o4")
+
+[node name="QuitPrompt" type="Label" parent="Writing"]
+layout_mode = 0
+offset_left = 1003.0
+offset_top = 596.0
+offset_right = 1153.0
+offset_bottom = 619.0
+text = "[press ESC to leave]"
 
 [node name="Noise" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_lpxs0")
-volume_db = 2.0
+volume_db = 4.0
 bus = &"SFX"
 
 [node name="Bloops" type="AudioStreamPlayer" parent="."]

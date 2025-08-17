@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dcrqg103s5e26"
 path.s3tc="res://.godot/imported/gear_icon.png-47d7e9c1cbee87be0fcffe66c1006766.s3tc.ctex"
+path.etc2="res://.godot/imported/gear_icon.png-47d7e9c1cbee87be0fcffe66c1006766.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/interactables/gear_icon.png"
-dest_files=["res://.godot/imported/gear_icon.png-47d7e9c1cbee87be0fcffe66c1006766.s3tc.ctex"]
+dest_files=["res://.godot/imported/gear_icon.png-47d7e9c1cbee87be0fcffe66c1006766.s3tc.ctex", "res://.godot/imported/gear_icon.png-47d7e9c1cbee87be0fcffe66c1006766.etc2.ctex"]
 
 [params]
 

@@ -12,5 +12,4 @@ func playy() -> void:
 	if ! multi_stream.is_empty():
 		stream = multi_stream.pick_random()
 	pitch_scale = randf_range(min_pitch, max_pitch)
-	print(pitch_scale)
 	call_deferred("play")
