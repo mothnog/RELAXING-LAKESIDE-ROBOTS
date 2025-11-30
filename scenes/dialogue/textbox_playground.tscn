@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://fi6b40t2inpd"]
+[gd_scene load_steps=30 format=3 uid="uid://fi6b40t2inpd"]
 
 [ext_resource type="PackedScene" uid="uid://fmsvur4h1s4r" path="res://scenes/dialogue/textbox.tscn" id="1_1lmg1"]
 [ext_resource type="Script" uid="uid://ttlme6xxcd62" path="res://scenes/dialogue/textbox_playground.gd" id="1_nbhh0"]
@@ -11,11 +11,13 @@
 [ext_resource type="Resource" uid="uid://dqvo85d5tclm" path="res://resources/textbox/outfit.tres" id="9_k5hhw"]
 [ext_resource type="Resource" uid="uid://dasimypgawswy" path="res://resources/textbox/notes1.tres" id="10_iq1c4"]
 [ext_resource type="Resource" uid="uid://cga2jran67yce" path="res://resources/textbox/notes2.tres" id="11_4f8wq"]
+[ext_resource type="Resource" uid="uid://0ohfhbpqrnoi" path="res://resources/textbox/notes1_1.tres" id="11_s6goi"]
 [ext_resource type="Resource" uid="uid://owuhanhmcudp" path="res://resources/textbox/level_completion.tres" id="12_kiq46"]
 [ext_resource type="Resource" uid="uid://bdjyvdafdrjlg" path="res://resources/textbox/level_complete.tres" id="13_5j0ku"]
 [ext_resource type="Resource" uid="uid://cgix40gynoxds" path="res://resources/textbox/intro_1.tres" id="14_ep4ra"]
 [ext_resource type="Resource" uid="uid://21g6y7xjhsn2" path="res://resources/textbox/intro_2.tres" id="15_xyol1"]
 [ext_resource type="Resource" uid="uid://cvcix4n6msdoi" path="res://resources/textbox/intro_3.tres" id="16_4h2s2"]
+[ext_resource type="Resource" uid="uid://ytgecdthmpmn" path="res://resources/textbox/intro_4.tres" id="16_y8n1p"]
 [ext_resource type="Resource" uid="uid://db66duh4wvykf" path="res://resources/textbox/review_1.tres" id="17_4h2s2"]
 [ext_resource type="Resource" uid="uid://d3y510epjp4wn" path="res://resources/textbox/review_0.tres" id="17_x3fdx"]
 [ext_resource type="Resource" uid="uid://cdbnriduy2uuq" path="res://resources/textbox/review_2.tres" id="18_x3fdx"]
@@ -26,6 +28,7 @@
 [ext_resource type="Resource" uid="uid://dcx813ivaouyj" path="res://resources/textbox/bird_4.tres" id="23_y8n1p"]
 [ext_resource type="Resource" uid="uid://de18kmhpn24q" path="res://resources/textbox/bird_5.tres" id="24_y8n1p"]
 [ext_resource type="Resource" uid="uid://bh3cpyeyp0jdk" path="res://resources/textbox/bird_6.tres" id="25_trgj1"]
+[ext_resource type="Resource" uid="uid://bqy6i7fe3tyd6" path="res://resources/textbox/bird_5_1.tres" id="27_nwhud"]
 
 [node name="TextboxPlayground" type="CanvasLayer"]
 script = ExtResource("1_nbhh0")
@@ -98,20 +101,31 @@ in_playground = true
 edit_position_in_editor = true
 
 [node name="notes1" parent="." instance=ExtResource("1_1lmg1")]
-offset_left = 112.0
-offset_top = 408.0
-offset_right = 512.0
-offset_bottom = 523.0
+visible = false
+offset_left = 248.0
+offset_top = 352.0
+offset_right = 416.0
+offset_bottom = 412.0
 res = ExtResource("10_iq1c4")
+in_playground = true
+edit_position_in_editor = true
+
+[node name="notes1_1" parent="." instance=ExtResource("1_1lmg1")]
+visible = false
+offset_left = 808.0
+offset_top = 440.0
+offset_right = 1112.0
+offset_bottom = 536.0
+res = ExtResource("11_s6goi")
 in_playground = true
 edit_position_in_editor = true
 
 [node name="notes2" parent="." instance=ExtResource("1_1lmg1")]
 visible = false
-offset_left = 136.0
-offset_top = 448.0
-offset_right = 536.0
-offset_bottom = 548.0
+offset_left = 112.0
+offset_top = 408.0
+offset_right = 512.0
+offset_bottom = 508.0
 res = ExtResource("11_4f8wq")
 in_playground = true
 edit_position_in_editor = true
@@ -148,20 +162,31 @@ edit_position_in_editor = true
 
 [node name="intro_2" parent="." instance=ExtResource("1_1lmg1")]
 visible = false
-offset_left = 416.0
-offset_top = 464.0
-offset_right = 666.0
-offset_bottom = 544.0
+offset_left = 448.0
+offset_top = 344.0
+offset_right = 848.0
+offset_bottom = 496.0
 res = ExtResource("15_xyol1")
 in_playground = true
 edit_position_in_editor = true
 
 [node name="intro_3" parent="." instance=ExtResource("1_1lmg1")]
-offset_left = 424.0
-offset_top = 384.0
-offset_right = 776.0
-offset_bottom = 534.0
+visible = false
+offset_left = 432.0
+offset_top = 440.0
+offset_right = 682.0
+offset_bottom = 520.0
 res = ExtResource("16_4h2s2")
+in_playground = true
+edit_position_in_editor = true
+
+[node name="intro_4" parent="." instance=ExtResource("1_1lmg1")]
+visible = false
+offset_left = 472.0
+offset_top = 392.0
+offset_right = 824.0
+offset_bottom = 542.0
+res = ExtResource("16_y8n1p")
 in_playground = true
 edit_position_in_editor = true
 
@@ -216,7 +241,6 @@ in_playground = true
 edit_position_in_editor = true
 
 [node name="bird_3" parent="." instance=ExtResource("1_1lmg1")]
-visible = false
 offset_left = 712.0
 offset_top = 120.0
 offset_right = 1064.0
@@ -226,7 +250,6 @@ in_playground = true
 edit_position_in_editor = true
 
 [node name="bird_4" parent="." instance=ExtResource("1_1lmg1")]
-visible = false
 offset_left = 688.0
 offset_top = 264.0
 offset_right = 944.0
@@ -236,12 +259,20 @@ in_playground = true
 edit_position_in_editor = true
 
 [node name="bird_5" parent="." instance=ExtResource("1_1lmg1")]
-visible = false
-offset_left = 512.0
-offset_top = 496.0
-offset_right = 632.0
-offset_bottom = 556.0
+offset_left = 592.0
+offset_top = 472.0
+offset_right = 712.0
+offset_bottom = 532.0
 res = ExtResource("24_y8n1p")
+in_playground = true
+edit_position_in_editor = true
+
+[node name="bird_5_1" parent="." instance=ExtResource("1_1lmg1")]
+offset_left = 512.0
+offset_top = 568.0
+offset_right = 744.0
+offset_bottom = 628.0
+res = ExtResource("27_nwhud")
 in_playground = true
 edit_position_in_editor = true
 

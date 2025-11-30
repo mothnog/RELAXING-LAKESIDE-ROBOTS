@@ -11,3 +11,4 @@ continue_text = ""
 portrait_scale = 1.0
 portrait_offset = Vector2(-18.655, 50.27)
 sprite_offset = Vector2(0, 0)
+flip_h = false

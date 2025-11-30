@@ -5,9 +5,10 @@
 [resource]
 script = ExtResource("1_v6qns")
 text = "I agree!"
-rect = Rect2(512, 496, 120, 60)
-continue_input = true
+rect = Rect2(592, 472, 120, 60)
+continue_input = false
 continue_text = ""
 portrait_scale = 1.0
-portrait_offset = Vector2(150, 24.76)
+portrait_offset = Vector2(150, 40)
 sprite_offset = Vector2(0, 0)
+flip_h = false

@@ -11,4 +11,5 @@ continue_text = ""
 portrait_scale = 1.0
 portrait_offset = Vector2(800, 75)
 sprite_offset = Vector2(0, 0)
+flip_h = false
 metadata/_custom_type_script = "uid://cn4fkxsiwgk47"

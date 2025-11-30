@@ -41,6 +41,7 @@ func update_parameters() -> void:
 		portrait_sprite.scale = Vector2.ONE * res.portrait_scale
 		arrow_target.position = res.portrait_offset
 		portrait_sprite.position = res.sprite_offset
+		portrait_sprite.flip_h = res.flip_h
 
 
 func update_curve() -> void:

@@ -1,13 +1,14 @@
-[gd_resource type="Resource" script_class="DialogueRes" load_steps=5 format=3 uid="uid://dfs15v0olo4lc"]
+[gd_resource type="Resource" script_class="DialogueRes" load_steps=6 format=3 uid="uid://dfs15v0olo4lc"]
 
 [ext_resource type="Script" uid="uid://ynudbsppuko4" path="res://scenes/dialogue/dialogue_resource.gd" id="1_yia3m"]
 [ext_resource type="Script" uid="uid://cn4fkxsiwgk47" path="res://scenes/dialogue/textbox_resource.gd" id="2_r7vqh"]
 [ext_resource type="Resource" uid="uid://dasimypgawswy" path="res://resources/textbox/notes1.tres" id="3_r7vqh"]
 [ext_resource type="Resource" uid="uid://cga2jran67yce" path="res://resources/textbox/notes2.tres" id="4_6ro7t"]
+[ext_resource type="Resource" uid="uid://0ohfhbpqrnoi" path="res://resources/textbox/notes1_1.tres" id="4_josrp"]
 
 [resource]
 script = ExtResource("1_yia3m")
-textboxes = Array[ExtResource("2_r7vqh")]([ExtResource("3_r7vqh"), ExtResource("4_6ro7t")])
+textboxes = Array[ExtResource("2_r7vqh")]([ExtResource("3_r7vqh"), ExtResource("4_josrp"), ExtResource("4_6ro7t")])
 screen_overlay = "note"
 overlay_index = 0
 metadata/_custom_type_script = "uid://ynudbsppuko4"

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="TextBoxRes" load_steps=2 format=3 uid="uid://bqy6i7fe3tyd6"]
+
+[ext_resource type="Script" uid="uid://cn4fkxsiwgk47" path="res://scenes/dialogue/textbox_resource.gd" id="1_vvg3y"]
+
+[resource]
+script = ExtResource("1_vvg3y")
+text = "*noise of contentment*"
+rect = Rect2(512, 568, 232, 60)
+continue_input = true
+continue_text = ""
+portrait_scale = 1.0
+portrait_offset = Vector2(300, 24.76)
+sprite_offset = Vector2(0, 0)
+flip_h = false

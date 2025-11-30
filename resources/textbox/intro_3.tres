@@ -5,11 +5,12 @@
 
 [resource]
 script = ExtResource("1_xqqk2")
-text = "During my stay, I've taken up the hobby of building little robots out of all the scrap metal lying around to try and combat the ever present lifelessness around here."
-rect = Rect2(424, 384, 352, 150)
+text = "This place is such a mess..."
+rect = Rect2(432, 440, 250, 80)
 continue_input = true
 continue_text = ""
 portrait = ExtResource("1_dp5no")
 portrait_scale = 4.0
-portrait_offset = Vector2(-145.865, 112.64)
-sprite_offset = Vector2(0, 16.415)
+portrait_offset = Vector2(-138.44, 43.72)
+sprite_offset = Vector2(0, 5.835)
+flip_h = false

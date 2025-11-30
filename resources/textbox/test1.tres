@@ -13,4 +13,5 @@ portrait = ExtResource("1_3ayts")
 portrait_scale = 2.0
 portrait_offset = Vector2(-70, 33)
 sprite_offset = Vector2(0, 42)
+flip_h = false
 metadata/_custom_type_script = "uid://cn4fkxsiwgk47"

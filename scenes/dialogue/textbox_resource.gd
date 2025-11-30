@@ -12,3 +12,4 @@ class_name TextBoxRes
 @export_range(0, 8, 0.1) var portrait_scale: float = 1
 @export var portrait_offset: Vector2
 @export var sprite_offset: Vector2
+@export var flip_h: bool = false

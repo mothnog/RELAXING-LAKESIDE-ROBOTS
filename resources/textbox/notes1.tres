@@ -4,10 +4,11 @@
 
 [resource]
 script = ExtResource("1_gjg86")
-text = "There are..... 17 copies of the same note plastered to the wall. It must be important"
-rect = Rect2(112, 408, 400, 115)
-continue_input = true
-continue_text = "press interact to read"
+text = "There are....."
+rect = Rect2(248, 352, 168, 60)
+continue_input = false
+continue_text = ""
 portrait_scale = 1.0
-portrait_offset = Vector2(425, 57)
+portrait_offset = Vector2(425, 40)
 sprite_offset = Vector2(0, 0)
+flip_h = false

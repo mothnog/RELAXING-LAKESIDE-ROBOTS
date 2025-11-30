@@ -13,3 +13,4 @@ portrait = ExtResource("1_077cb")
 portrait_scale = 4.0
 portrait_offset = Vector2(700, 50)
 sprite_offset = Vector2(0, 30)
+flip_h = false

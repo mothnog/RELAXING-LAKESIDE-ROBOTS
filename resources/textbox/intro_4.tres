@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="TextBoxRes" load_steps=3 format=3 uid="uid://ytgecdthmpmn"]
+
+[ext_resource type="Texture2D" uid="uid://b3s4xqydsurx6" path="res://assets/characters/portraits1.png" id="1_umfem"]
+[ext_resource type="Script" uid="uid://cn4fkxsiwgk47" path="res://scenes/dialogue/textbox_resource.gd" id="2_dnit4"]
+
+[resource]
+script = ExtResource("2_dnit4")
+text = "I take note of all the scrap metal strewn over the stone pavement. I should be able to combat the ever present lifelessness here by helping some new robots settle in."
+rect = Rect2(472, 392, 352, 150)
+continue_input = true
+continue_text = ""
+portrait = ExtResource("1_umfem")
+portrait_scale = 4.0
+portrait_offset = Vector2(533, 98.92)
+sprite_offset = Vector2(0, 16.415)
+flip_h = true
