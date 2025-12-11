@@ -13,3 +13,6 @@ class_name TextBoxRes
 @export var portrait_offset: Vector2
 @export var sprite_offset: Vector2
 @export var flip_h: bool = false
+
+@export_group("Other")
+@export var screen_overlay: String = ""

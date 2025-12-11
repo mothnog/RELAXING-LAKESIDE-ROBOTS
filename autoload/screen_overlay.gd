@@ -5,7 +5,7 @@ extends CanvasLayer
 @onready var scrap_overlay = $Scrap
 @onready var scrap_sprite = $Scrap/ScrapSprite
 @onready var scrap_shadow = $Scrap/Shadow
-
+@onready var lake_note = $LakeNote
 @onready var input_prompt = $InputPrompt
 
 
@@ -60,11 +60,18 @@ func show_scrap_get(frame: int, time: float = SCRAP_GET_TIME, dialogue_path: Str
 func show_overlay(name: String) -> void:
 	
 	#_overlay_things()
-	
 	if name == "note":
 		get_tree().paused = true
 		current_overlay = note_overlay
 		note_overlay.show()
+	
+	
+	
+	elif name == "lake_note":
+		current_overlay = lake_note
+		lake_note.show()
+		await Dialogue.dialogue_hidden
+		hide_overlay()
 	
 	else:
 		get_tree().paused = false

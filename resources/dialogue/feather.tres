@@ -7,6 +7,4 @@
 [resource]
 script = ExtResource("1_iyg04")
 textboxes = Array[ExtResource("2_owmpk")]([ExtResource("3_owmpk")])
-screen_overlay = ""
-overlay_index = 0
 metadata/_custom_type_script = "uid://ynudbsppuko4"

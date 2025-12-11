@@ -5,12 +5,13 @@
 
 [resource]
 script = ExtResource("1_pjh8h")
-text = "Surveying the view out the window, framed like a painting by its needlessly red curtains, it becomes apparent how little resemblance there is to the picturesque village of cottages shown in the advertising."
-rect = Rect2(448, 344, 400, 152)
+text = "I survey the view out the window, framed like a painting by its needlessly red curtains. The picturesque village of cottages I'm met with is instead a vacant maze of conjoined buildings, which allegedly hide a lake somewhere through their many passages."
+rect = Rect2(416, 376, 416, 184)
 continue_input = true
 continue_text = ""
 portrait = ExtResource("1_s8rpm")
 portrait_scale = 4.0
-portrait_offset = Vector2(565, 100)
+portrait_offset = Vector2(580, 100)
 sprite_offset = Vector2(0, 5.835)
 flip_h = true
+screen_overlay = ""

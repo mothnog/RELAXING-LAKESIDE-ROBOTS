@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dkknh7ai727sr"]
+[gd_scene load_steps=6 format=3 uid="uid://dkknh7ai727sr"]
 
 [ext_resource type="Script" uid="uid://c53ycuk4yvr3w" path="res://autoload/screen_overlay.gd" id="1_ewrkx"]
 [ext_resource type="Texture2D" uid="uid://1ykwo48yiqik" path="res://assets/misc/scrap_get_shadow.png" id="2_508sp"]
 [ext_resource type="Texture2D" uid="uid://bskd4le7agsej" path="res://assets/things/scrap.png" id="3_6uvr1"]
 [ext_resource type="PackedScene" uid="uid://c8a1jlpk6chbo" path="res://scenes/overlay/note_overlay.tscn" id="4_508sp"]
+[ext_resource type="Texture2D" uid="uid://c7cwu4nb03siv" path="res://assets/overlays/lake_note_overlay.png" id="5_6uvr1"]
 
 [node name="ScreenOverlay" type="CanvasLayer"]
 process_mode = 3
@@ -11,6 +12,7 @@ layer = 2
 script = ExtResource("1_ewrkx")
 
 [node name="Scrap" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -50,6 +52,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
+
+[node name="LakeNote" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(921, 278)
+scale = Vector2(4, 4)
+texture = ExtResource("5_6uvr1")
 
 [node name="InputPrompt" type="Label" parent="."]
 visible = false

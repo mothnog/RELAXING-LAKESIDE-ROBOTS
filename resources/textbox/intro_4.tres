@@ -5,8 +5,8 @@
 
 [resource]
 script = ExtResource("2_dnit4")
-text = "I take note of all the scrap metal strewn over the stone pavement. I should be able to combat the ever present lifelessness here by helping some new robots settle in."
-rect = Rect2(472, 392, 352, 150)
+text = "Piles of scrap metal strewn across the stone pavement catch my attention. I should be able to combat the ever present lifelessness by helping some new robots settle in..."
+rect = Rect2(472, 392, 360, 150)
 continue_input = true
 continue_text = ""
 portrait = ExtResource("1_umfem")
@@ -14,3 +14,4 @@ portrait_scale = 4.0
 portrait_offset = Vector2(533, 98.92)
 sprite_offset = Vector2(0, 16.415)
 flip_h = true
+screen_overlay = ""

@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_nb7dr")
-text = "The lake is this way, but I don't feel like swimming."
+text = "I'm told the lake is this way, but I don't feel like swimming."
 rect = Rect2(160, 344, 300, 120)
 continue_input = false
 continue_text = ""
@@ -12,3 +12,4 @@ portrait_scale = 1.0
 portrait_offset = Vector2(400, 60)
 sprite_offset = Vector2(0, 0)
 flip_h = false
+screen_overlay = "lake_note"

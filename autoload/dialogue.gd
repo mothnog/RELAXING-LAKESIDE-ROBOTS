@@ -11,6 +11,7 @@ const TEXTBOX = preload("res://scenes/dialogue/textbox.tscn")
 
 signal continue_pressed
 signal dialogue_complete(path: String)
+signal dialogue_hidden
 
 @onready var input_prompt_text = input_prompt.text
 
@@ -52,8 +53,8 @@ func show_dialogue(res: DialogueRes) -> void:
 				
 				_clear_dialogue()
 				
-				if ! res.screen_overlay.is_empty() and res.overlay_index == input_index:
-					ScreenOverlay.show_overlay(res.screen_overlay)
+				if ! textbox.screen_overlay.is_empty():
+					ScreenOverlay.show_overlay(textbox.screen_overlay)
 					waiting_for_input = false
 					await ScreenOverlay.finished
 					
@@ -63,6 +64,10 @@ func show_dialogue(res: DialogueRes) -> void:
 				
 				if i == res.textboxes.size()-1:
 					hide_dialogue()
+			
+			# showing screen overlay if input is not required
+			elif ! textbox.screen_overlay.is_empty():
+				ScreenOverlay.show_overlay(textbox.screen_overlay)
 		
 		dialogue_complete.emit(res.resource_path)
 		
@@ -75,6 +80,7 @@ func hide_dialogue() -> void:
 	waiting_for_input = false
 	input_index = 0
 	_clear_dialogue()
+	dialogue_hidden.emit()
 
 
 func _clear_dialogue() -> void:

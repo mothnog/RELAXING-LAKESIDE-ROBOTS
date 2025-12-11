@@ -12,3 +12,4 @@ portrait_scale = 1.0
 portrait_offset = Vector2(460, 57)
 sprite_offset = Vector2(0, 0)
 flip_h = false
+screen_overlay = ""
