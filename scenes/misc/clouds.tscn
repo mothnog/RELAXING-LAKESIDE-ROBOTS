@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cx1y50kv4vvkr"]
+[gd_scene load_steps=12 format=3 uid="uid://cx1y50kv4vvkr"]
 
 [ext_resource type="Script" uid="uid://cmaogb2v3n3f0" path="res://scenes/misc/clouds.gd" id="1_4nnr4"]
 [ext_resource type="Texture2D" uid="uid://bct6js68u1lan" path="res://assets/things/clouds.png" id="1_uikpe"]
@@ -33,7 +33,7 @@ resource_local_to_scene = true
 transparency = 1
 blend_mode = 1
 shading_mode = 0
-albedo_color = Color(0.888842, 0.883797, 0.940587, 0.039)
+albedo_color = Color(0.889, 0.884, 0.941, 0.066)
 albedo_texture = SubResource("ViewportTexture_4nnr4")
 uv1_scale = Vector3(1.5, 3, 0)
 texture_filter = 0
@@ -41,6 +41,25 @@ texture_filter = 0
 [sub_resource type="PlaneMesh" id="PlaneMesh_mcjyy"]
 resource_local_to_scene = true
 material = SubResource("StandardMaterial3D_yeyeq")
+flip_faces = true
+size = Vector2(250, 500)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_yeyeq"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mcjyy"]
+resource_local_to_scene = true
+transparency = 1
+blend_mode = 1
+shading_mode = 0
+albedo_color = Color(0.889, 0.884, 0.941, 0.028)
+albedo_texture = SubResource("ViewportTexture_yeyeq")
+uv1_scale = Vector3(1.5, 3, 0)
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_wid6n"]
+resource_local_to_scene = true
+material = SubResource("StandardMaterial3D_mcjyy")
 flip_faces = true
 size = Vector2(250, 500)
 
@@ -65,3 +84,7 @@ centered = false
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(-1.77265, 0, 0.260472, 0, 1, 0, -0.312567, 0, -1.47721, 0, 0, 0)
 mesh = SubResource("PlaneMesh_mcjyy")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1.77265, 0, 0.260472, 0, 1, 0, -0.312567, 0, -1.47721, 5.18456, 1.3534, 110.747)
+mesh = SubResource("PlaneMesh_wid6n")

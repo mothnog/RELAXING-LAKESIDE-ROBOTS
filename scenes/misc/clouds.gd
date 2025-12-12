@@ -11,7 +11,7 @@ var sprite_size: Vector2:
 
 
 var direction: Vector2 = Vector2(0, 1)
-var speed: float = 3.5
+var speed: float = 5.5
 
 
 func _ready():
