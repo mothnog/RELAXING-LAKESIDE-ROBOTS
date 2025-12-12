@@ -6,7 +6,7 @@
 script = ExtResource("1_lfmx8")
 text = "now, i heard there's a lake around here ? see you later !"
 rect = Rect2(696, 168, 272, 96)
-continue_input = true
+continue_input = false
 continue_text = ""
 portrait_scale = 1.0
 portrait_offset = Vector2(-18.655, 50.27)

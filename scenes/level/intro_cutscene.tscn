@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://f5xyf4k5e6is"]
+[gd_scene load_steps=38 format=3 uid="uid://f5xyf4k5e6is"]
 
 [ext_resource type="PackedScene" uid="uid://bdsiaes3y0p12" path="res://assets/level/level1.glb" id="1_luhhk"]
 [ext_resource type="Script" uid="uid://d3xrovbwfy4f" path="res://scenes/level/intro_cutscene.gd" id="1_ueyut"]
@@ -14,16 +14,21 @@
 [ext_resource type="Script" uid="uid://glf2ew4st8qb" path="res://scenes/misc/audio_stream_better.gd" id="12_3xa4y"]
 [ext_resource type="PackedScene" uid="uid://r24r3y6khmy5" path="res://scenes/misc/billboard.tscn" id="13_3xa4y"]
 [ext_resource type="Texture2D" uid="uid://i2xeqs17jre4" path="res://assets/misc/arrow_indicator.png" id="14_s5olp"]
+[ext_resource type="Texture2D" uid="uid://56rdn48hnes3" path="res://assets/things/moon1.png" id="15_eeheb"]
+[ext_resource type="Texture2D" uid="uid://criqd3gnrm7ru" path="res://assets/things/moon.png" id="15_w30ad"]
+[ext_resource type="Texture2D" uid="uid://pcsm41tm4f1k" path="res://assets/things/moon2.png" id="16_lyft7"]
+[ext_resource type="Texture2D" uid="uid://2mavvejnximi" path="res://assets/things/moon3.png" id="17_xtu20"]
+[ext_resource type="Texture2D" uid="uid://iu12e1ytteyb" path="res://assets/things/moon4.png" id="18_ugwyl"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xt0ir"]
-sky_top_color = Color(0.283698, 0.45926, 0.65871, 1)
-sky_horizon_color = Color(0.446327, 0.200338, 0.224258, 1)
-sky_curve = 0.369343
+sky_top_color = Color(0.157608, 0.281022, 0.420316, 1)
+sky_horizon_color = Color(0.278768, 0.113214, 0.12958, 1)
+sky_curve = 0.270375
 sky_energy_multiplier = 0.2
-ground_bottom_color = Color(0.447059, 0.2, 0.223529, 1)
-ground_horizon_color = Color(0.447059, 0.2, 0.223529, 1)
+ground_bottom_color = Color(0.278431, 0.113725, 0.129412, 1)
+ground_horizon_color = Color(0.278431, 0.113725, 0.129412, 1)
 ground_energy_multiplier = 0.2
-energy_multiplier = 2.0
+energy_multiplier = 1.2
 
 [sub_resource type="Sky" id="Sky_ed718"]
 sky_material = SubResource("ProceduralSkyMaterial_xt0ir")
@@ -33,7 +38,6 @@ background_mode = 2
 sky = SubResource("Sky_ed718")
 ssao_enabled = true
 ssao_intensity = 1.0
-glow_enabled = true
 glow_intensity = 0.46
 glow_strength = 2.0
 glow_bloom = 0.05
@@ -126,11 +130,33 @@ animations = [{
 "speed": 3.0
 }]
 
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_wiql3"]
+frames = 4
+speed_scale = 0.7
+frame_0/texture = ExtResource("15_eeheb")
+frame_0/duration = 0.5
+frame_1/texture = ExtResource("16_lyft7")
+frame_1/duration = 0.2
+frame_2/texture = ExtResource("17_xtu20")
+frame_2/duration = 0.5
+frame_3/texture = ExtResource("18_ugwyl")
+frame_3/duration = 0.2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xt0ir"]
+transparency = 1
+shading_mode = 0
+disable_fog = true
+albedo_color = Color(0.501, 0.501, 0.501, 0.215)
+albedo_texture = SubResource("AnimatedTexture_wiql3")
+texture_filter = 0
+disable_receive_shadows = true
+billboard_mode = 1
+
 [node name="IntroCutscene" type="Node3D"]
 script = ExtResource("1_ueyut")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0.477089, -0.566, 0.672332, -0.14963, 0.701528, 0.696757, 0, 0, 0)
 light_energy = 0.1
 shadow_enabled = true
 
@@ -614,6 +640,11 @@ transform = Transform3D(-0.953181, 0.0147491, 0.30204, 0, 0.99881, -0.0487734, -
 [node name="Billboard" parent="." instance=ExtResource("13_3xa4y")]
 transform = Transform3D(-0.762714, 0, 0.646737, 0, 1, 0, -0.646737, 0, -0.762714, 8.4647, 0.0376682, 11.4129)
 
+[node name="OmniLight3D" type="OmniLight3D" parent="Billboard"]
+transform = Transform3D(0.999999, 0, -2.68221e-07, 0, 1, 0, 2.68221e-07, 0, 0.999999, 0.960078, 5.63016, 3.20352)
+light_color = Color(0.821756, 0.740402, 0.907622, 1)
+light_energy = 0.5
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="ArrowIndicator" type="AnimatedSprite2D" parent="CanvasLayer"]
@@ -623,3 +654,12 @@ rotation = 3.14159
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_w30ad")
 autoplay = "default"
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(-0.49451, -0.0216187, 0.868903, -0.108466, 0.993411, -0.0370137, -0.862378, -0.11255, -0.493596, -162.583, 92.7949, 91.3449)
+material_override = SubResource("StandardMaterial3D_xt0ir")
+gi_mode = 0
+pixel_size = 2.0
+billboard = 1
+texture_filter = 0
+texture = ExtResource("15_w30ad")

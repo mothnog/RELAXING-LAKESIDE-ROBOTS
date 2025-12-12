@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="TextBoxRes" load_steps=2 format=3 uid="uid://bj2765hppu7kr"]
+
+[ext_resource type="Script" uid="uid://cn4fkxsiwgk47" path="res://scenes/dialogue/textbox_resource.gd" id="1_f4o44"]
+
+[resource]
+script = ExtResource("1_f4o44")
+text = "hm, I don't actually know if there is?? let me know!"
+rect = Rect2(440, 472, 296, 80)
+continue_input = true
+continue_text = ""
+portrait_scale = 1.0
+portrait_offset = Vector2(500, 60)
+sprite_offset = Vector2(0, 0)
+flip_h = false
+screen_overlay = ""

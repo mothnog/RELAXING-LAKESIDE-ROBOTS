@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_v6qns")
 text = "I agree!"
-rect = Rect2(592, 472, 120, 60)
+rect = Rect2(552, 448, 160, 60)
 continue_input = false
 continue_text = ""
 portrait_scale = 1.0

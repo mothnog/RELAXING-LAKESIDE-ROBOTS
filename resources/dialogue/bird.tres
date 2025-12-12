@@ -6,13 +6,11 @@
 [ext_resource type="Resource" uid="uid://darcwts0lpo7s" path="res://resources/textbox/bird_2.tres" id="4_mlkjs"]
 [ext_resource type="Resource" uid="uid://uddnsjhbyl54" path="res://resources/textbox/bird_3.tres" id="5_qy8e4"]
 [ext_resource type="Resource" uid="uid://dcx813ivaouyj" path="res://resources/textbox/bird_4.tres" id="6_uw0ja"]
-[ext_resource type="Resource" uid="uid://de18kmhpn24q" path="res://resources/textbox/bird_5.tres" id="7_axa2w"]
 [ext_resource type="Resource" uid="uid://bh3cpyeyp0jdk" path="res://resources/textbox/bird_6.tres" id="8_77fom"]
 [ext_resource type="Resource" uid="uid://bqy6i7fe3tyd6" path="res://resources/textbox/bird_5_1.tres" id="8_qy8e4"]
+[ext_resource type="Resource" uid="uid://bj2765hppu7kr" path="res://resources/textbox/bird_7.tres" id="10_uw0ja"]
 
 [resource]
 script = ExtResource("1_p72ge")
-textboxes = Array[ExtResource("2_ovxat")]([ExtResource("3_ovxat"), ExtResource("4_mlkjs"), ExtResource("5_qy8e4"), ExtResource("6_uw0ja"), ExtResource("7_axa2w"), ExtResource("8_qy8e4"), ExtResource("8_77fom")])
-screen_overlay = ""
-overlay_index = 0
+textboxes = Array[ExtResource("2_ovxat")]([ExtResource("3_ovxat"), ExtResource("4_mlkjs"), ExtResource("5_qy8e4"), ExtResource("6_uw0ja"), ExtResource("8_qy8e4"), ExtResource("8_77fom"), ExtResource("10_uw0ja")])
 metadata/_custom_type_script = "uid://ynudbsppuko4"

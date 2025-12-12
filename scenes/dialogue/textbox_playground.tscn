@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://fi6b40t2inpd"]
+[gd_scene load_steps=31 format=3 uid="uid://fi6b40t2inpd"]
 
 [ext_resource type="PackedScene" uid="uid://fmsvur4h1s4r" path="res://scenes/dialogue/textbox.tscn" id="1_1lmg1"]
 [ext_resource type="Script" uid="uid://ttlme6xxcd62" path="res://scenes/dialogue/textbox_playground.gd" id="1_nbhh0"]
@@ -29,6 +29,7 @@
 [ext_resource type="Resource" uid="uid://de18kmhpn24q" path="res://resources/textbox/bird_5.tres" id="24_y8n1p"]
 [ext_resource type="Resource" uid="uid://bh3cpyeyp0jdk" path="res://resources/textbox/bird_6.tres" id="25_trgj1"]
 [ext_resource type="Resource" uid="uid://bqy6i7fe3tyd6" path="res://resources/textbox/bird_5_1.tres" id="27_nwhud"]
+[ext_resource type="Resource" uid="uid://bj2765hppu7kr" path="res://resources/textbox/bird_7.tres" id="29_gfpwf"]
 
 [node name="TextboxPlayground" type="CanvasLayer"]
 script = ExtResource("1_nbhh0")
@@ -181,6 +182,7 @@ in_playground = true
 edit_position_in_editor = true
 
 [node name="intro_4" parent="." instance=ExtResource("1_1lmg1")]
+visible = false
 offset_left = 472.0
 offset_top = 392.0
 offset_right = 832.0
@@ -261,20 +263,19 @@ edit_position_in_editor = true
 
 [node name="bird_5" parent="." instance=ExtResource("1_1lmg1")]
 visible = false
-offset_left = 592.0
-offset_top = 472.0
+offset_left = 552.0
+offset_top = 448.0
 offset_right = 712.0
-offset_bottom = 532.0
+offset_bottom = 508.0
 res = ExtResource("24_y8n1p")
 in_playground = true
 edit_position_in_editor = true
 
 [node name="bird_5_1" parent="." instance=ExtResource("1_1lmg1")]
-visible = false
-offset_left = 512.0
-offset_top = 568.0
-offset_right = 744.0
-offset_bottom = 628.0
+offset_left = 496.0
+offset_top = 520.0
+offset_right = 728.0
+offset_bottom = 580.0
 res = ExtResource("27_nwhud")
 in_playground = true
 edit_position_in_editor = true
@@ -286,6 +287,16 @@ offset_top = 168.0
 offset_right = 968.0
 offset_bottom = 264.0
 res = ExtResource("25_trgj1")
+in_playground = true
+edit_position_in_editor = true
+
+[node name="bird_7" parent="." instance=ExtResource("1_1lmg1")]
+visible = false
+offset_left = 440.0
+offset_top = 472.0
+offset_right = 736.0
+offset_bottom = 552.0
+res = ExtResource("29_gfpwf")
 in_playground = true
 edit_position_in_editor = true
 
