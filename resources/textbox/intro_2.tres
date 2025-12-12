@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("1_pjh8h")
-text = "I survey the view out the window, framed like a painting by its needlessly red curtains. The picturesque village of cottages I'm met with is instead a vacant maze of conjoined buildings, which allegedly hide a lake somewhere through their many passages."
+text = "I survey the view out the window, framed like a painting by its needlessly red curtains. The picturesque village of cottages I'm met with is instead a maze of conjoined buildings, which allegedly hide a lake somewhere through their many passages."
 rect = Rect2(416, 376, 416, 184)
 continue_input = true
 continue_text = ""

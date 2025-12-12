@@ -21,6 +21,7 @@ func _ready():
 	super()
 	if start_player_at_start: player.position = player_start_pos.position
 	Dialogue.dialogue_complete.connect(_on_dialogue_complete)
+	
 
 
 func _on_dialogue_complete(path: String) -> void:

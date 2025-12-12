@@ -1,0 +1,67 @@
+[gd_scene load_steps=9 format=3 uid="uid://cx1y50kv4vvkr"]
+
+[ext_resource type="Script" uid="uid://cmaogb2v3n3f0" path="res://scenes/misc/clouds.gd" id="1_4nnr4"]
+[ext_resource type="Texture2D" uid="uid://bct6js68u1lan" path="res://assets/things/clouds.png" id="1_uikpe"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4nnr4"]
+atlas = ExtResource("1_uikpe")
+region = Rect2(0, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yeyeq"]
+atlas = ExtResource("1_uikpe")
+region = Rect2(320, 0, 320, 320)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4nnr4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4nnr4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yeyeq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_4nnr4"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yeyeq"]
+resource_local_to_scene = true
+transparency = 1
+blend_mode = 1
+shading_mode = 0
+albedo_color = Color(0.888842, 0.883797, 0.940587, 0.039)
+albedo_texture = SubResource("ViewportTexture_4nnr4")
+uv1_scale = Vector3(1.5, 3, 0)
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_mcjyy"]
+resource_local_to_scene = true
+material = SubResource("StandardMaterial3D_yeyeq")
+flip_faces = true
+size = Vector2(250, 500)
+
+[node name="Clouds" type="Node3D"]
+script = ExtResource("1_4nnr4")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+transparent_bg = true
+canvas_item_default_texture_filter = 0
+size = Vector2i(320, 320)
+
+[node name="Parallax2D" type="Parallax2D" parent="SubViewport"]
+scroll_offset = Vector2(68.4112, 5517.1)
+repeat_size = Vector2(320, 320)
+repeat_times = 5
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="SubViewport/Parallax2D"]
+sprite_frames = SubResource("SpriteFrames_4nnr4")
+autoplay = "default"
+centered = false
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1.77265, 0, 0.260472, 0, 1, 0, -0.312567, 0, -1.47721, 0, 0, 0)
+mesh = SubResource("PlaneMesh_mcjyy")

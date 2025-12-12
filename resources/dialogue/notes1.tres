@@ -9,6 +9,4 @@
 [resource]
 script = ExtResource("1_yia3m")
 textboxes = Array[ExtResource("2_r7vqh")]([ExtResource("3_r7vqh"), ExtResource("4_josrp"), ExtResource("4_6ro7t")])
-screen_overlay = "note"
-overlay_index = 0
 metadata/_custom_type_script = "uid://ynudbsppuko4"

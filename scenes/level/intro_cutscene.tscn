@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://f5xyf4k5e6is"]
+[gd_scene load_steps=37 format=3 uid="uid://f5xyf4k5e6is"]
 
 [ext_resource type="PackedScene" uid="uid://bdsiaes3y0p12" path="res://assets/level/level1.glb" id="1_luhhk"]
 [ext_resource type="Script" uid="uid://d3xrovbwfy4f" path="res://scenes/level/intro_cutscene.gd" id="1_ueyut"]
@@ -18,7 +18,6 @@
 [ext_resource type="Texture2D" uid="uid://criqd3gnrm7ru" path="res://assets/things/moon.png" id="15_w30ad"]
 [ext_resource type="Texture2D" uid="uid://pcsm41tm4f1k" path="res://assets/things/moon2.png" id="16_lyft7"]
 [ext_resource type="Texture2D" uid="uid://2mavvejnximi" path="res://assets/things/moon3.png" id="17_xtu20"]
-[ext_resource type="Texture2D" uid="uid://iu12e1ytteyb" path="res://assets/things/moon4.png" id="18_ugwyl"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xt0ir"]
 sky_top_color = Color(0.157608, 0.281022, 0.420316, 1)
@@ -28,7 +27,7 @@ sky_energy_multiplier = 0.2
 ground_bottom_color = Color(0.278431, 0.113725, 0.129412, 1)
 ground_horizon_color = Color(0.278431, 0.113725, 0.129412, 1)
 ground_energy_multiplier = 0.2
-energy_multiplier = 1.2
+energy_multiplier = 1.5
 
 [sub_resource type="Sky" id="Sky_ed718"]
 sky_material = SubResource("ProceduralSkyMaterial_xt0ir")
@@ -139,7 +138,7 @@ frame_1/texture = ExtResource("16_lyft7")
 frame_1/duration = 0.2
 frame_2/texture = ExtResource("17_xtu20")
 frame_2/duration = 0.5
-frame_3/texture = ExtResource("18_ugwyl")
+frame_3/texture = ExtResource("16_lyft7")
 frame_3/duration = 0.2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xt0ir"]
@@ -641,9 +640,9 @@ transform = Transform3D(-0.953181, 0.0147491, 0.30204, 0, 0.99881, -0.0487734, -
 transform = Transform3D(-0.762714, 0, 0.646737, 0, 1, 0, -0.646737, 0, -0.762714, 8.4647, 0.0376682, 11.4129)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Billboard"]
-transform = Transform3D(0.999999, 0, -2.68221e-07, 0, 1, 0, 2.68221e-07, 0, 0.999999, 0.960078, 5.63016, 3.20352)
+transform = Transform3D(0.999999, 0, -2.68221e-07, 0, 1, 0, 2.68221e-07, 0, 0.999999, 0.371237, 5.63016, 3.20428)
 light_color = Color(0.821756, 0.740402, 0.907622, 1)
-light_energy = 0.5
+light_energy = 0.6
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -655,7 +654,7 @@ scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_w30ad")
 autoplay = "default"
 
-[node name="Sprite3D" type="Sprite3D" parent="."]
+[node name="la lune" type="Sprite3D" parent="."]
 transform = Transform3D(-0.49451, -0.0216187, 0.868903, -0.108466, 0.993411, -0.0370137, -0.862378, -0.11255, -0.493596, -162.583, 92.7949, 91.3449)
 material_override = SubResource("StandardMaterial3D_xt0ir")
 gi_mode = 0
