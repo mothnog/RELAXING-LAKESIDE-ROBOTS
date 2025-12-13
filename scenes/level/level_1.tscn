@@ -722,7 +722,7 @@ directional_shadow_mode = 1
 environment = SubResource("Environment_ybxn4")
 
 [node name="LevelCompletion" parent="." instance=ExtResource("19_8uvjh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.56145, 0.262267, -4.15421)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.34555, 0.262267, -4.1043)
 
 [node name="Bird" parent="." instance=ExtResource("20_4n8ks")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.44849, 2.5, -5.56154)

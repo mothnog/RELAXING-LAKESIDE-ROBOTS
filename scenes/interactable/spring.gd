@@ -7,7 +7,7 @@ extends Interactable
 @export var strength: float = 8
 
 var spring_delay: float = 0.2
-
+var player_speed_mult: float = 1.2
 
 
 
@@ -21,6 +21,7 @@ func _interaction() -> void:
 		player.velocity.y = strength
 		player.is_spring_jump_frame = true
 		player.is_spring_jumping = true
+		player.speed *= player_speed_mult
 		player.landed_after_spring.connect(spring_air_sound.stop)
 		
 		AudioPlayer.play(spring_jump_sound)

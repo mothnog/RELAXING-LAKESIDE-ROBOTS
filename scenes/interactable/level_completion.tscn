@@ -4,7 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://dcrqg103s5e26" path="res://assets/interactables/gear_icon.png" id="2_2sqpl"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_kbwja"]
-radius = 0.6
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tlm6a"]
 atlas = ExtResource("2_2sqpl")

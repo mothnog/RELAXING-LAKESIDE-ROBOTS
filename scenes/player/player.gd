@@ -7,14 +7,16 @@ class_name Player
 @onready var footstep_sound = $FootstepSound
 
 
-@export var speed: float = 2.4
+@export var walk_speed: float = 2.4
 @export var gravity: float = 0.2
 
+var speed: float = walk_speed
 
 var input_dir: Vector3
 var move_dir: Vector3
 var move_vec: Vector3
 var accel: float = 15
+var reccel: float = 6
 
 
 var disable_movement: bool = false
@@ -40,6 +42,9 @@ func _physics_process(delta):
 		
 		move_dir = input_dir.rotated(Vector3.UP, camera.rotation.y)
 		
+		
+		speed = lerp(speed, walk_speed, reccel * delta)
+		print(speed)
 		move_vec = lerp(move_vec, move_dir * speed, accel * delta)
 		
 		velocity.x = move_vec.x
