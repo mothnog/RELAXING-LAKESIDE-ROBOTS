@@ -17,13 +17,13 @@ height = 0.7
 height = 0.7
 radius = 0.22
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_qek5x"]
+atlas = ExtResource("2_qek5x")
+region = Rect2(0, 0, 100, 110)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_5gtgg"]
 atlas = ExtResource("2_qek5x")
-region = Rect2(0, 0, 100, 100)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_h17s1"]
-atlas = ExtResource("2_qek5x")
-region = Rect2(100, 0, 100, 100)
+region = Rect2(100, 0, 100, 110)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_je7p5"]
 atlas = ExtResource("2_qek5x")
@@ -41,10 +41,10 @@ region = Rect2(200, 100, 100, 100)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_5gtgg")
+"texture": SubResource("AtlasTexture_qek5x")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_h17s1")
+"texture": SubResource("AtlasTexture_5gtgg")
 }],
 "loop": true,
 "name": &"idle",
@@ -79,13 +79,12 @@ disabled = true
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 layers = 2
-offset = Vector2(0, 47)
-pixel_size = 0.018
+offset = Vector2(0, 50)
+pixel_size = 0.02
 billboard = 1
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_qlg0r")
-animation = &"walk"
-frame_progress = 0.5666
+animation = &"idle"
 
 [node name="PlayerCamera" parent="." node_paths=PackedStringArray("raycast") instance=ExtResource("4_dqkch")]
 transform = Transform3D(1, 0, 0, 0, 0.992546, 0.121869, 0, -0.121869, 0.992546, 0, 1, 1.75)

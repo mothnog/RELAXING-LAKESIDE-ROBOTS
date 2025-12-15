@@ -42,9 +42,8 @@ func _physics_process(delta):
 		
 		move_dir = input_dir.rotated(Vector3.UP, camera.rotation.y)
 		
-		
 		speed = lerp(speed, walk_speed, reccel * delta)
-		print(speed)
+		
 		move_vec = lerp(move_vec, move_dir * speed, accel * delta)
 		
 		velocity.x = move_vec.x
