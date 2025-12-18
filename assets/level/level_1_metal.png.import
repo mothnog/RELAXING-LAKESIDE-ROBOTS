@@ -2,12 +2,10 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://s67mphpvl7h2"
-path.s3tc="res://.godot/imported/level1_metal.png-7bb87acac2f082e8b50be1da9dd7887a.s3tc.ctex"
-path.etc2="res://.godot/imported/level1_metal.png-7bb87acac2f082e8b50be1da9dd7887a.etc2.ctex"
+uid="uid://cs182pgg4cuyc"
+path="res://.godot/imported/level_1_metal.png-6db4809842c7d5bbef1426203a518838.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={
 "md5": "c30b9f1cdb71e625f6b7a118eb8df944"
@@ -15,12 +13,12 @@ generator_parameters={
 
 [deps]
 
-source_file="res://assets/level/level1_metal.png"
-dest_files=["res://.godot/imported/level1_metal.png-7bb87acac2f082e8b50be1da9dd7887a.s3tc.ctex", "res://.godot/imported/level1_metal.png-7bb87acac2f082e8b50be1da9dd7887a.etc2.ctex"]
+source_file="res://assets/level/level_1_metal.png"
+dest_files=["res://.godot/imported/level_1_metal.png-6db4809842c7d5bbef1426203a518838.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

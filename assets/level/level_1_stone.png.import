@@ -2,19 +2,19 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://df3rdwlyhlckv"
-path="res://.godot/imported/level1_roof.png-db60acc295259f47113bb0772f66342d.ctex"
+uid="uid://dh6m16cqtx54o"
+path="res://.godot/imported/level_1_stone.png-e3bc243420b9a8f2e3c3747f280cc0e4.ctex"
 metadata={
 "vram_texture": false
 }
 generator_parameters={
-"md5": "f486416583f7126149a28a395d5ef182"
+"md5": "d6a1779b05cfac9f1edd5f3efc8be67f"
 }
 
 [deps]
 
-source_file="res://assets/level/level1_roof.png"
-dest_files=["res://.godot/imported/level1_roof.png-db60acc295259f47113bb0772f66342d.ctex"]
+source_file="res://assets/level/level_1_stone.png"
+dest_files=["res://.godot/imported/level_1_stone.png-e3bc243420b9a8f2e3c3747f280cc0e4.ctex"]
 
 [params]
 
@@ -24,7 +24,7 @@ compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=false
+mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""

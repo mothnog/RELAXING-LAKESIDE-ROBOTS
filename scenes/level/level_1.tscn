@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://cxa6etye7cpsv" path="res://scenes/level/level_1.gd" id="1_0alxl"]
 [ext_resource type="ArrayMesh" uid="uid://543tnerp4u33" path="res://assets/level/floor1.obj" id="1_ybxn4"]
 [ext_resource type="PackedScene" uid="uid://7ywfju4yjrve" path="res://scenes/player/player.tscn" id="2_ybxn4"]
-[ext_resource type="PackedScene" uid="uid://bdsiaes3y0p12" path="res://assets/level/level1.glb" id="3_ybxn4"]
 [ext_resource type="PackedScene" uid="uid://cpw84yq5ergmc" path="res://scenes/misc/shadow.tscn" id="4_lkxmd"]
 [ext_resource type="PackedScene" uid="uid://dlwuufevvxlfw" path="res://scenes/interactable/interact_question.tscn" id="4_u8rbc"]
 [ext_resource type="Texture2D" uid="uid://chsvlnd4aexwb" path="res://assets/things/leaf.png" id="4_wdc5c"]
@@ -27,6 +26,7 @@
 [ext_resource type="AudioStream" uid="uid://cg33f8bv8r4fl" path="res://sound/sfx/robot_build.wav" id="20_ox3e1"]
 [ext_resource type="AudioStream" uid="uid://bcmucjomclay6" path="res://sound/sfx/ambience.wav" id="25_swapm"]
 [ext_resource type="Script" uid="uid://glf2ew4st8qb" path="res://scenes/misc/audio_stream_better.gd" id="26_hkufj"]
+[ext_resource type="PackedScene" uid="uid://dmr7w5punm8ay" path="res://assets/level/level_1.glb" id="28_1kt21"]
 [ext_resource type="PackedScene" uid="uid://cx1y50kv4vvkr" path="res://scenes/misc/clouds.tscn" id="28_rfyx5"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_g6sy5"]
@@ -120,9 +120,6 @@ size = Vector2(200, 200)
 [node name="Level1" type="Node3D"]
 script = ExtResource("1_0alxl")
 start_player_at_start = false
-
-[node name="level1" parent="." instance=ExtResource("3_ybxn4")]
-transform = Transform3D(0.85, 0, 0, 0, 0.85, 0, 0, 0, 0.85, 0, 0, 0)
 
 [node name="Collision" type="StaticBody3D" parent="."]
 transform = Transform3D(0.85, 0, 0, 0, 0.85, 0, 0, 0, 0.85, 0, 0, 0)
@@ -758,3 +755,6 @@ metadata/_custom_type_script = "uid://glf2ew4st8qb"
 
 [node name="Clouds" parent="." instance=ExtResource("28_rfyx5")]
 transform = Transform3D(0.997441, -0.0714974, 0, 0.0714974, 0.997441, 0, 0, 0, 1, -26.6964, 50.6547, -20.3577)
+
+[node name="level_1" parent="." instance=ExtResource("28_1kt21")]
+transform = Transform3D(0.85, 0, 0, 0, 0.85, 0, 0, 0, 0.85, 0, 0, 0)
