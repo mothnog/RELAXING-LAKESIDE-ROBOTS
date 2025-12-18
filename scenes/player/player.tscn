@@ -80,14 +80,15 @@ disabled = true
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 layers = 2
 offset = Vector2(0, 50)
-pixel_size = 0.02
+modulate = Color(0.838898, 0.838897, 0.838897, 1)
+pixel_size = 0.0115
 billboard = 1
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_qlg0r")
 animation = &"idle"
 
 [node name="PlayerCamera" parent="." node_paths=PackedStringArray("raycast") instance=ExtResource("4_dqkch")]
-transform = Transform3D(1, 0, 0, 0, 0.992546, 0.121869, 0, -0.121869, 0.992546, 0, 1, 1.75)
+transform = Transform3D(1, 0, 0, 0, 0.996195, 0.0871557, 0, -0.0871557, 0.996195, 0, 1, 1.75)
 raycast = NodePath("../CameraRayCast3D")
 
 [node name="CameraRayCast3D" type="RayCast3D" parent="."]

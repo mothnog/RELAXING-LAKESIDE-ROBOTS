@@ -38,6 +38,10 @@ window/stretch/mode="canvas_items"
 
 import/blender/enabled=false
 
+[gui]
+
+fonts/dynamic_fonts/use_oversampling=false
+
 [input]
 
 forward={

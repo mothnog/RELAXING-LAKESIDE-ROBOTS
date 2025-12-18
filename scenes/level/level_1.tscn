@@ -119,6 +119,7 @@ size = Vector2(200, 200)
 
 [node name="Level1" type="Node3D"]
 script = ExtResource("1_0alxl")
+start_player_at_start = false
 
 [node name="level1" parent="." instance=ExtResource("3_ybxn4")]
 transform = Transform3D(0.85, 0, 0, 0, 0.85, 0, 0, 0, 0.85, 0, 0, 0)

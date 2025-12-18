@@ -10,7 +10,7 @@ var rotation_vel: float = 0
 var rotation_accel: float = 12
 
 var look_dir: int = 0
-var look_span: float = 25*(TAU/360)
+var look_span: float = 20*(TAU/360)
 var look_away_accel: float = 1
 var look_return_accel: float = 5
 
