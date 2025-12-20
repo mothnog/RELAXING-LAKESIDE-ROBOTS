@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_gjg86")
 text = "There are....."
-rect = Rect2(248, 352, 168, 60)
+rect = Rect2(288, 344, 168, 60)
 continue_input = false
 continue_text = ""
 portrait_scale = 1.0

@@ -85,7 +85,7 @@ pixel_size = 0.0115
 billboard = 1
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_qlg0r")
-animation = &"idle"
+animation = &"walk"
 
 [node name="PlayerCamera" parent="." node_paths=PackedStringArray("raycast") instance=ExtResource("4_dqkch")]
 transform = Transform3D(1, 0, 0, 0, 0.996195, 0.0871557, 0, -0.0871557, 0.996195, 0, 1, 1.75)

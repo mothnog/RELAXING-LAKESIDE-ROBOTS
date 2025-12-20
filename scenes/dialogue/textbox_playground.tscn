@@ -102,21 +102,19 @@ in_playground = true
 edit_position_in_editor = true
 
 [node name="notes1" parent="." instance=ExtResource("1_1lmg1")]
-visible = false
-offset_left = 248.0
-offset_top = 352.0
-offset_right = 416.0
-offset_bottom = 412.0
+offset_left = 288.0
+offset_top = 344.0
+offset_right = 456.0
+offset_bottom = 404.0
 res = ExtResource("10_iq1c4")
 in_playground = true
 edit_position_in_editor = true
 
 [node name="notes1_1" parent="." instance=ExtResource("1_1lmg1")]
-visible = false
 offset_left = 808.0
-offset_top = 440.0
+offset_top = 384.0
 offset_right = 1112.0
-offset_bottom = 536.0
+offset_bottom = 480.0
 res = ExtResource("11_s6goi")
 in_playground = true
 edit_position_in_editor = true
@@ -272,6 +270,7 @@ in_playground = true
 edit_position_in_editor = true
 
 [node name="bird_5_1" parent="." instance=ExtResource("1_1lmg1")]
+visible = false
 offset_left = 496.0
 offset_top = 520.0
 offset_right = 728.0

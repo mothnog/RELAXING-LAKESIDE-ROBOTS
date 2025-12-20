@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_mydmo")
 text = "seventeen copies of the same note plastered to the wall?? It must be important."
-rect = Rect2(808, 440, 304, 96)
+rect = Rect2(808, 384, 304, 96)
 continue_input = true
 continue_text = "press interact to read"
 portrait_scale = 1.0
