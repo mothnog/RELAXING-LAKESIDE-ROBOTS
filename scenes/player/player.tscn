@@ -25,17 +25,17 @@ region = Rect2(0, 0, 100, 110)
 atlas = ExtResource("2_qek5x")
 region = Rect2(100, 0, 100, 110)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_h17s1"]
+atlas = ExtResource("2_qek5x")
+region = Rect2(0, 110, 100, 110)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_je7p5"]
 atlas = ExtResource("2_qek5x")
-region = Rect2(0, 100, 100, 100)
+region = Rect2(100, 110, 100, 110)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fm80t"]
 atlas = ExtResource("2_qek5x")
-region = Rect2(100, 100, 100, 100)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_gx1jg"]
-atlas = ExtResource("2_qek5x")
-region = Rect2(200, 100, 100, 100)
+region = Rect2(200, 110, 100, 110)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qlg0r"]
 animations = [{
@@ -52,17 +52,17 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_h17s1")
+}, {
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_je7p5")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_fm80t")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_gx1jg")
 }],
 "loop": true,
 "name": &"walk",
-"speed": 3.5
+"speed": 3.0
 }]
 
 [node name="Player" type="CharacterBody3D"]
