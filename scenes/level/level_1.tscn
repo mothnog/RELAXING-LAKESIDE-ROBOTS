@@ -714,6 +714,7 @@ light_energy = 0.315
 light_specular = 0.0
 shadow_enabled = true
 directional_shadow_mode = 1
+directional_shadow_max_distance = 206.7
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_ybxn4")

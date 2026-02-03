@@ -150,8 +150,17 @@ autowrap_mode = 2
 
 [node name="Portrait" type="Sprite2D" parent="Writing"]
 position = Vector2(245, 548)
-scale = Vector2(3, 3)
+scale = Vector2(2, 2)
 texture = ExtResource("3_on3o4")
+
+[node name="Label" type="Label" parent="Writing/Portrait"]
+top_level = true
+offset_left = 348.0
+offset_top = 476.0
+offset_right = 666.0
+offset_bottom = 580.0
+text = "they still have these stupid photo verification checks, but to be honest, i doubt there's anyone on the other end anymore."
+autowrap_mode = 2
 
 [node name="QuitPrompt" type="Label" parent="Writing"]
 layout_mode = 0

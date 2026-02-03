@@ -72,7 +72,6 @@ in_playground = true
 edit_position_in_editor = true
 
 [node name="garbage_1" parent="." instance=ExtResource("1_1lmg1")]
-visible = false
 offset_left = 112.0
 offset_top = 80.0
 offset_right = 512.0
@@ -82,7 +81,6 @@ in_playground = true
 edit_position_in_editor = true
 
 [node name="garbage_2" parent="." instance=ExtResource("1_1lmg1")]
-visible = false
 offset_left = 744.0
 offset_top = 456.0
 offset_right = 1020.0

@@ -31,7 +31,7 @@ func _ready():
 	for i in writing_text.get_children(): i.hide()
 	
 	
-	await ScreenOverlay.finished
+	#await ScreenOverlay.finished
 	
 	Dialogue.show_dialogue(DIALOGUE)
 	Dialogue.dialogue_complete.connect(_on_dialogue_complete)
