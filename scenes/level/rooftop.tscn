@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dvkfioupvjn6i"]
+[gd_scene load_steps=11 format=3 uid="uid://dvkfioupvjn6i"]
 
 [ext_resource type="Script" uid="uid://bha56co8m2ws3" path="res://scenes/level/rooftop.gd" id="1_m5bhw"]
 [ext_resource type="Texture2D" uid="uid://cmq8ibjvw2y4i" path="res://assets/materials/building1.png" id="1_qsv7h"]
@@ -6,6 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://cx1y50kv4vvkr" path="res://scenes/misc/clouds.tscn" id="3_fsb1h"]
 [ext_resource type="PackedScene" uid="uid://bd75fyaa41cwg" path="res://scenes/interactable/garbage_pile.tscn" id="4_m5bhw"]
 [ext_resource type="PackedScene" uid="uid://dv5osnhdqrndc" path="res://scenes/misc/elevator.tscn" id="6_ahptw"]
+[ext_resource type="PackedScene" uid="uid://csuuoikcehw7c" path="res://scenes/interactable/collectable.tscn" id="6_qh2p7"]
+[ext_resource type="AudioStream" uid="uid://bq66n2p627aky" path="res://sound/sfx/rooftop.ogg" id="7_hg02e"]
+[ext_resource type="PackedScene" uid="uid://wqarg6oowg4f" path="res://scenes/misc/stars.tscn" id="9_fib6u"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m5bhw"]
 albedo_texture = ExtResource("1_qsv7h")
@@ -52,8 +55,13 @@ transform = Transform3D(1.49616, -0.107246, 0, 0.107246, 1.49616, 0, 0, 0, 1.5, 
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.53862, 1.03833, 2.30404)
 seed = 320
 
-[node name="GoodPile" parent="Scrap" instance=ExtResource("4_m5bhw")]
+[node name="Collectable" parent="Scrap" instance=ExtResource("6_qh2p7")]
 transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 2.18894, 1.03833, -2.34191)
+sprite_frame = 1
+
+[node name="GoodPile" parent="Scrap" node_paths=PackedStringArray("hiding") instance=ExtResource("4_m5bhw")]
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 2.18894, 1.03833, -2.34191)
+hiding = NodePath("../Collectable")
 seed = 222
 
 [node name="GarbagePile3" parent="Scrap" instance=ExtResource("4_m5bhw")]
@@ -67,5 +75,14 @@ enter_method_string = "exit_rooftop"
 
 [node name="Decal" parent="Elevator" index="0"]
 albedo_mix = 0.6
+
+[node name="Ambience" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_hg02e")
+volume_db = -80.0
+autoplay = true
+bus = &"SFX"
+parameters/looping = true
+
+[node name="Stars" parent="." instance=ExtResource("9_fib6u")]
 
 [editable path="Elevator"]

@@ -18,6 +18,7 @@ var hide_dialogue_after: bool = false
 const SCRAP_GET_TIME = 3.0
 enum OVERLAY {NOTE}
 
+var fading: bool = false
 
 signal finished
 signal fade_to_black_in
@@ -105,6 +106,7 @@ func fade_to_black(in_time: float, hold_time: float, out_time: float, color: Col
 	fade_color_rect.color = color
 	fade_color_rect.color.a = 0
 	fade_color_rect.show()
+	fading = true
 	
 	tween.tween_property(fade_color_rect, "color:a", 1, in_time)
 	tween.tween_callback(fade_to_black_in.emit)
@@ -113,3 +115,4 @@ func fade_to_black(in_time: float, hold_time: float, out_time: float, color: Col
 	tween.tween_property(fade_color_rect, "color:a", 0, in_time)
 	tween.tween_callback(finished.emit)
 	tween.tween_callback(fade_color_rect.hide)
+	tween.tween_callback(set.bind("fading", false))

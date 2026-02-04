@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3 uid="uid://wqarg6oowg4f"]
+
+[ext_resource type="Script" uid="uid://vb01dfgsq7dm" path="res://scenes/misc/stars.gd" id="1_4rmbk"]
+[ext_resource type="Texture2D" uid="uid://l6litow6j00u" path="res://assets/things/star_green.png" id="2_ww2m5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ww2m5"]
+atlas = ExtResource("2_ww2m5")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f7y4k"]
+atlas = ExtResource("2_ww2m5")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f7y4k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ww2m5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f7y4k")
+}],
+"loop": true,
+"name": &"default",
+"speed": 0.5
+}]
+
+[node name="Stars" type="Node3D"]
+script = ExtResource("1_4rmbk")
+radius = 120.0
+
+[node name="Sprites" type="Node3D" parent="."]
+
+[node name="SpriteTypes" type="Node3D" parent="."]
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="SpriteTypes"]
+layers = 2
+extra_cull_margin = 8.9
+pixel_size = 0.005
+billboard = 1
+fixed_size = true
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_f7y4k")
+autoplay = "default"
+frame_progress = 0.998977

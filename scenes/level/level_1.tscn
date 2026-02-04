@@ -133,7 +133,7 @@ shape = SubResource("BoxShape3D_2qg3m")
 transform = Transform3D(-0.161604, 0, -0.986856, 0, 1, 0, 0.986856, 0, -0.161604, -12.3875, -0.369244, 9.66276)
 
 [node name="Player" parent="." instance=ExtResource("2_ybxn4")]
-transform = Transform3D(-0.161604, 0, -0.986856, 0, 1, 0, 0.986856, 0, -0.161604, -1.8423, 0.119469, -8.31599)
+transform = Transform3D(-0.161604, 0, -0.986856, 0, 1, 0, 0.986856, 0, -0.161604, -5.74123, 0.119469, -4.32576)
 floor_constant_speed = true
 
 [node name="Shadow" parent="Player" instance=ExtResource("4_lkxmd")]
@@ -337,104 +337,119 @@ cull_mask = 1048573
 
 [node name="Decal" type="Decal" parent="Environment/Notes/Main"]
 transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 14.0457, 2.85555, -4.39879)
+sorting_offset = 1.0
 size = Vector3(0.5, 0.5, 0.5)
 texture_albedo = ExtResource("8_q27gu")
 cull_mask = 1048573
 
 [node name="Decal2" type="Decal" parent="Environment/Notes/Main"]
 transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0.518236, -6.00365e-08, -0.855238, 0.855238, -1.47308e-08, 0.518236, 13.9536, 2.7132, -5.19533)
+sorting_offset = 1.0
 size = Vector3(0.5, 0.5, 0.5)
 texture_albedo = ExtResource("8_q27gu")
 cull_mask = 1048573
 
 [node name="Decal7" type="Decal" parent="Environment/Notes/Main"]
 transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0.096141, -4.77114e-08, -0.995369, 0.995369, -3.93065e-08, 0.096141, 13.7403, 2.16211, -6.20968)
+sorting_offset = 1.0
 size = Vector3(0.5, 0.5, 0.5)
 texture_albedo = ExtResource("8_q27gu")
 cull_mask = 1048573
 
 [node name="Decal15" type="Decal" parent="Environment/Notes/Main"]
 transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0.096141, -4.77114e-08, -0.995369, 0.995369, -3.93065e-08, 0.096141, 14.0612, 2.47048, -3.15327)
-sorting_offset = 0.74
+sorting_offset = 1.0
 size = Vector3(0.5, 0.5, 0.5)
 texture_albedo = ExtResource("8_q27gu")
 cull_mask = 1048573
 
 [node name="Decal16" type="Decal" parent="Environment/Notes/Main"]
 transform = Transform3D(-0.889663, -0.403148, -0.214419, 0.306781, -0.179911, -0.934624, 0.338215, -0.897277, 0.283738, 13.5094, 2.0911, -2.15771)
-sorting_offset = 0.74
+sorting_offset = 1.0
 size = Vector3(0.5, 0.5, 0.5)
 texture_albedo = ExtResource("8_q27gu")
 cull_mask = 1048573
 
 [node name="Decal10" type="Decal" parent="Environment/Notes/Main"]
 transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0.0229142, -4.47016e-08, -0.999739, 0.999739, -4.26984e-08, 0.0229142, 14.0312, 1.97122, -5.06783)
+sorting_offset = 1.0
 size = Vector3(0.5, 0.5, 0.5)
 texture_albedo = ExtResource("8_q27gu")
 cull_mask = 1048573
 
 [node name="Decal13" type="Decal" parent="Environment/Notes/Main"]
 transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0.464147, -5.90063e-08, -0.88576, 0.88576, -1.84293e-08, 0.464147, 13.913, 3.09852, -5.88661)
+sorting_offset = 1.0
 size = Vector3(0.5, 0.5, 0.5)
 texture_albedo = ExtResource("8_q27gu")
 cull_mask = 1048573
 
 [node name="Decal14" type="Decal" parent="Environment/Notes/Main"]
 transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0.115388, -4.84633e-08, -0.993323, 0.993323, -3.83758e-08, 0.115388, 13.6126, 3.27409, -7.87262)
+sorting_offset = 1.0
 size = Vector3(0.5, 0.5, 0.5)
 texture_albedo = ExtResource("8_q27gu")
 cull_mask = 1048573
 
 [node name="Decal17" type="Decal" parent="Environment/Notes/Main"]
 transform = Transform3D(0.98745, -0.157734, 0.00826874, 0.0110511, 0.0167706, -0.999801, 0.157564, 0.98734, 0.0183032, 13.1282, 2.54048, -8.62438)
+sorting_offset = 1.0
 size = Vector3(0.5, 0.5, 0.5)
 texture_albedo = ExtResource("8_q27gu")
 cull_mask = 1048573
 
 [node name="Decal11" type="Decal" parent="Environment/Notes/Main"]
 transform = Transform3D(0.00125876, -0.999998, -0.00171732, 0.454938, 0.00210197, -0.890523, 0.890524, 0.000339682, 0.45494, 14.1208, 2.92366, -3.01448)
+sorting_offset = 1.0
 size = Vector3(0.5, 0.5, 0.5)
 texture_albedo = ExtResource("8_q27gu")
 cull_mask = 1048573
 
 [node name="Decal8" type="Decal" parent="Environment/Notes/Main"]
 transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0.293073, -5.46027e-08, -0.956091, 0.956091, -2.89815e-08, 0.293073, 13.7403, 2.82317, -6.57755)
+sorting_offset = 1.0
 size = Vector3(0.5, 0.5, 0.5)
 texture_albedo = ExtResource("8_q27gu")
 cull_mask = 1048573
 
 [node name="Decal9" type="Decal" parent="Environment/Notes/Main"]
 transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, -0.0395566, -4.19482e-08, -0.999219, 0.999219, -4.54063e-08, -0.0395566, 13.7403, 2.64681, -7.16267)
+sorting_offset = 1.0
 size = Vector3(0.5, 0.5, 0.5)
 texture_albedo = ExtResource("8_q27gu")
 cull_mask = 1048573
 
 [node name="Decal3" type="Decal" parent="Environment/Notes/Main"]
 transform = Transform3D(-1.46974e-08, -1.25, 5.46386e-08, 0.34723, -5.65709e-08, -1.2008, 1.2008, 1.05871e-09, 0.34723, 14.0457, 3.21082, -4.76907)
+sorting_offset = 1.0
 size = Vector3(0.5, 0.5, 0.5)
 texture_albedo = ExtResource("8_q27gu")
 cull_mask = 1048573
 
 [node name="Decal4" type="Decal" parent="Environment/Notes/Main"]
 transform = Transform3D(-1.46974e-08, -1.25, 5.46386e-08, 0.379189, -5.65224e-08, -1.1911, 1.1911, 2.56978e-09, 0.379189, 14.0457, 2.86804, -3.51206)
+sorting_offset = 1.0
 size = Vector3(0.5, 0.5, 0.5)
 texture_albedo = ExtResource("8_q27gu")
 cull_mask = 1048573
 
 [node name="Decal5" type="Decal" parent="Environment/Notes/Main"]
 transform = Transform3D(-1.46975e-08, -1.25, 5.46386e-08, 0.360495, -5.65558e-08, -1.19689, 1.19689, 1.68461e-09, 0.360495, 13.7415, 2.30379, -6.75813)
+sorting_offset = 1.0
 size = Vector3(0.5, 0.5, 0.5)
 texture_albedo = ExtResource("8_q27gu")
 cull_mask = 1048573
 
 [node name="Decal12" type="Decal" parent="Environment/Notes/Main"]
 transform = Transform3D(-1.46975e-08, -1.25, 5.46387e-08, -0.0187186, -5.44124e-08, -1.24986, 1.24986, -1.5514e-08, -0.0187186, 13.7415, 2.0313, -7.63918)
+sorting_offset = 1.0
 size = Vector3(0.5, 0.5, 0.5)
 texture_albedo = ExtResource("8_q27gu")
 cull_mask = 1048573
 
 [node name="Decal6" type="Decal" parent="Environment/Notes/Main"]
 transform = Transform3D(-1.46975e-08, -1.25, 5.46387e-08, -0.085368, -5.35073e-08, -1.24708, 1.24708, -1.83947e-08, -0.085368, 14.1839, 2.04597, -3.74252)
+sorting_offset = 1.0
 size = Vector3(0.5, 0.5, 0.5)
 texture_albedo = ExtResource("8_q27gu")
 cull_mask = 1048573
@@ -551,7 +566,7 @@ cull_mask = 1048573
 transform = Transform3D(-0.290368, -0.956919, 4.18281e-08, -4.21094e-22, -4.37114e-08, -1, 0.956919, -0.290368, 1.26924e-08, -16.9765, 2.48267, 10.3738)
 size = Vector3(2.52, 0.4, 2.52)
 texture_albedo = ExtResource("11_8e0j7")
-upper_fade = 0.0609189
+upper_fade = 0.00735546
 lower_fade = 0.0274516
 cull_mask = 1048573
 
@@ -559,7 +574,7 @@ cull_mask = 1048573
 transform = Transform3D(-0.0348997, 0.999402, -4.36848e-08, 0, -4.37117e-08, -1, -0.999402, -0.0348997, 1.5255e-09, 1.40582, 3.25342, -12.074)
 size = Vector3(2.19629, 0.4, 2.65015)
 texture_albedo = ExtResource("11_8e0j7")
-upper_fade = 0.0609189
+upper_fade = 0.00735546
 lower_fade = 0.0274516
 cull_mask = 1048573
 
@@ -567,7 +582,7 @@ cull_mask = 1048573
 transform = Transform3D(-0.88993, -0.0111527, 4.87499e-10, 0, -3.89031e-08, -0.89, 0.0111527, -0.88993, 3.89001e-08, -13.0776, 4.67602, -18.0196)
 size = Vector3(2.52, 0.4, 2.52)
 texture_albedo = ExtResource("11_8e0j7")
-upper_fade = 0.0609189
+upper_fade = 0.00735546
 lower_fade = 0.0274516
 cull_mask = 1048573
 
@@ -575,16 +590,16 @@ cull_mask = 1048573
 transform = Transform3D(0.945328, -0.326148, 1.42563e-08, 2.42329e-16, -4.37117e-08, -1, 0.326148, 0.945328, -4.13213e-08, -14.9672, 3.46598, -1.99315)
 size = Vector3(2.52, 0.4, 1.82813)
 texture_albedo = ExtResource("11_8e0j7")
-upper_fade = 0.0609189
+upper_fade = 0.00735546
 lower_fade = 0.0274516
 cull_mask = 1048573
 
 [node name="Decal3" type="Decal" parent="Environment/Windows"]
-transform = Transform3D(-0.123724, 0.992327, -4.33756e-08, 2.39982e-16, -4.37117e-08, -1, -0.992327, -0.123724, 5.4081e-09, 14.2199, 2.80037, -4.86788)
-sorting_offset = -0.405
+transform = Transform3D(-0.123724, 0.992327, -4.33756e-08, 2.39982e-16, -4.37117e-08, -1, -0.992327, -0.123724, 5.4081e-09, 14.2434, 2.80037, -4.86788)
+sorting_offset = -100000.0
 size = Vector3(3.29271, 0.4, 2.52)
 texture_albedo = ExtResource("11_8e0j7")
-upper_fade = 0.0609189
+upper_fade = 0.00735546
 lower_fade = 0.0274516
 cull_mask = 1048573
 
