@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="TextBoxRes" load_steps=2 format=3 uid="uid://c5tbijwau5nc5"]
+
+[ext_resource type="Script" uid="uid://cn4fkxsiwgk47" path="res://scenes/dialogue/textbox_resource.gd" id="1_u2wxa"]
+
+[resource]
+script = ExtResource("1_u2wxa")
+text = "(not like i really have a constant home. maybe someday, somewhere)"
+rect = Rect2(152, 408, 320, 112)
+continue_input = false
+continue_text = ""
+portrait_scale = 1.0
+portrait_offset = Vector2(320, 38.805)
+sprite_offset = Vector2(0, 0)
+flip_h = false
+screen_overlay = ""

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="TextBoxRes" load_steps=2 format=3 uid="uid://c20owjo0wdrxj"]
+
+[ext_resource type="Script" uid="uid://cn4fkxsiwgk47" path="res://scenes/dialogue/textbox_resource.gd" id="1_fpniq"]
+
+[resource]
+script = ExtResource("1_fpniq")
+text = "\"we use this tower to collect information from our visitors, which we then sell. the demand is high because people love to be informed\""
+rect = Rect2(768, 152, 392, 104)
+continue_input = false
+continue_text = ""
+portrait_scale = 1.0
+portrait_offset = Vector2(150, 200)
+sprite_offset = Vector2(0, 0)
+flip_h = false
+screen_overlay = ""

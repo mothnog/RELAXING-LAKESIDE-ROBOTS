@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dvkfioupvjn6i"]
+[gd_scene load_steps=14 format=3 uid="uid://dvkfioupvjn6i"]
 
 [ext_resource type="Script" uid="uid://bha56co8m2ws3" path="res://scenes/level/rooftop.gd" id="1_m5bhw"]
 [ext_resource type="Texture2D" uid="uid://cmq8ibjvw2y4i" path="res://assets/materials/building1.png" id="1_qsv7h"]
@@ -9,38 +9,15 @@
 [ext_resource type="PackedScene" uid="uid://csuuoikcehw7c" path="res://scenes/interactable/collectable.tscn" id="6_qh2p7"]
 [ext_resource type="AudioStream" uid="uid://bq66n2p627aky" path="res://sound/sfx/rooftop.ogg" id="7_hg02e"]
 [ext_resource type="PackedScene" uid="uid://wqarg6oowg4f" path="res://scenes/misc/stars.tscn" id="9_fib6u"]
-[ext_resource type="Texture2D" uid="uid://boqw58r6yxlrt" path="res://assets/things/tower.png" id="10_p4sll"]
+[ext_resource type="Texture2D" uid="uid://duswx4geubohm" path="res://assets/things/note.png" id="10_p4sll"]
+[ext_resource type="PackedScene" uid="uid://dlwuufevvxlfw" path="res://scenes/interactable/interact_question.tscn" id="11_aysub"]
+[ext_resource type="Resource" uid="uid://fqrh238qluo3" path="res://resources/dialogue/rooftop.tres" id="12_rfy0g"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m5bhw"]
 albedo_texture = ExtResource("1_qsv7h")
 uv1_scale = Vector3(0.25, 0.25, 0.25)
 uv1_triplanar = true
 texture_filter = 0
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_aysub"]
-atlas = ExtResource("10_p4sll")
-region = Rect2(0, 0, 30, 60)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_rfy0g"]
-atlas = ExtResource("10_p4sll")
-region = Rect2(30, 0, 30, 60)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_dbviw"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_aysub")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_rfy0g")
-}],
-"loop": true,
-"name": &"default",
-"speed": 2.0
-}]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_p4sll"]
-size = Vector3(0.18, 2.315, 1.1)
 
 [node name="Rooftop" type="Node3D"]
 script = ExtResource("1_m5bhw")
@@ -105,7 +82,6 @@ albedo_mix = 0.6
 [node name="Ambience" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_hg02e")
 volume_db = -80.0
-pitch_scale = 0.93
 autoplay = true
 bus = &"SFX"
 parameters/looping = true
@@ -124,21 +100,16 @@ parameters/looping = true
 [node name="Stars" parent="." instance=ExtResource("9_fib6u")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
 
-[node name="Tower" type="AnimatedSprite3D" parent="."]
-transform = Transform3D(0.507989, 0, 0.861363, 0, 1, 0, -0.861363, 0, 0.507989, 2.00225, 2.1966, 2.1004)
-visible = false
-modulate = Color(0.873298, 0.873298, 0.873298, 1)
-pixel_size = 0.04
-texture_filter = 0
-sprite_frames = SubResource("SpriteFrames_dbviw")
-autoplay = "default"
+[node name="Decal" type="Decal" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 1.39162, 1.54456, 3.22159)
+sorting_offset = 1.0
+size = Vector3(0.5, 0.5, 0.5)
+texture_albedo = ExtResource("10_p4sll")
+modulate = Color(0.839264, 0.822897, 0.856847, 1)
+cull_mask = 1048573
 
-[node name="TowerCollision" type="StaticBody3D" parent="."]
-transform = Transform3D(0.903238, 0, -0.42914, 0, 1, 0, 0.42914, 0, 0.903238, 2.01089, 1.73027, 2.14488)
-visible = false
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="TowerCollision"]
-visible = false
-shape = SubResource("BoxShape3D_p4sll")
+[node name="InteractQuestion" parent="." instance=ExtResource("11_aysub")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.88601, 1.19083, 2.33408)
+dialogue = ExtResource("12_rfy0g")
 
 [editable path="Elevator"]
