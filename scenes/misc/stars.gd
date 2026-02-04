@@ -49,8 +49,16 @@ func create_stars() -> void:
 		sprite.transform.basis = sprite.transform.basis.orthonormalized()
 		
 		# apply random perameters to sprite
-		sprite.pixel_size *= lerp(0.5, 1.25, random_value())
+		sprite.pixel_size *= lerp(0.66, 1.25, random_value())
 		sprite.speed_scale = lerp(1.0, 3.0, random_value())
+		
+		# fade ones toward the horizon
+		# have fun interpreting this
+		var n = vec.normalized()
+		var new_x = Vector2(n.x, n.z).length()
+		var dist_from_up = Vector2(new_x, n.z).dot(Vector2(1, 0))
+		sprite.modulate.a -= pow(dist_from_up, 3)
+		
 
 
 func random_value() -> float:

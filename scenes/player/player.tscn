@@ -87,6 +87,10 @@ texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_qlg0r")
 animation = &"walk"
 
+[node name="AudioListener3D" type="AudioListener3D" parent="."]
+transform = Transform3D(-1, 7.6194e-09, -8.70901e-08, 0, 0.996195, 0.0871557, 8.74228e-08, 0.0871557, -0.996195, 0, 1, 1.75)
+current = true
+
 [node name="PlayerCamera" parent="." node_paths=PackedStringArray("raycast") instance=ExtResource("4_dqkch")]
 transform = Transform3D(1, 0, 0, 0, 0.996195, 0.0871557, 0, -0.0871557, 0.996195, 0, 1, 1.75)
 raycast = NodePath("../CameraRayCast3D")
@@ -94,9 +98,6 @@ raycast = NodePath("../CameraRayCast3D")
 [node name="CameraRayCast3D" type="RayCast3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.58, 0)
 target_position = Vector3(0, 0, 0)
-
-[node name="AudioListener3D" type="AudioListener3D" parent="."]
-current = true
 
 [node name="FootstepSound" type="AudioStreamPlayer" parent="."]
 volume_db = -40.0

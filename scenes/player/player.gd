@@ -5,6 +5,7 @@ class_name Player
 @onready var sprite = $AnimatedSprite3D
 @onready var collision = $CollisionShape3D
 @onready var footstep_sound = $FootstepSound
+@onready var audio_listener = $AudioListener3D
 
 
 @export var walk_speed: float = 2.4
@@ -81,6 +82,8 @@ func _physics_process(delta):
 	
 	# random stuff
 	is_spring_jump_frame = false
+	
+	audio_listener.rotation.y = camera.rotation.y
 
 
 func set_animations() -> void:

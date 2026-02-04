@@ -36,10 +36,10 @@ radius = 120.0
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="SpriteTypes"]
 layers = 2
 extra_cull_margin = 8.9
-pixel_size = 0.005
+pixel_size = 0.0055
 billboard = 1
 fixed_size = true
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_f7y4k")
 autoplay = "default"
-frame_progress = 0.998977
+frame_progress = 0.293521
