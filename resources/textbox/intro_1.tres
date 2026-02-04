@@ -1,17 +1,17 @@
 [gd_resource type="Resource" script_class="TextBoxRes" load_steps=3 format=3 uid="uid://cgix40gynoxds"]
 
-[ext_resource type="Texture2D" uid="uid://b3s4xqydsurx6" path="res://assets/characters/portraits1.png" id="1_m6n7d"]
+[ext_resource type="Texture2D" uid="uid://c7uvolbtvcea6" path="res://assets/characters/new_portraits_uh-window.png" id="1_m6n7d"]
 [ext_resource type="Script" uid="uid://cn4fkxsiwgk47" path="res://scenes/dialogue/textbox_resource.gd" id="1_pnphq"]
 
 [resource]
 script = ExtResource("1_pnphq")
 text = "It seems even \"Relaxing Lakeside Cottages\" couldn't escape the collapse of humanity."
-rect = Rect2(424, 408, 360, 150)
+rect = Rect2(568, 392, 360, 150)
 continue_input = true
 continue_text = ""
 portrait = ExtResource("1_m6n7d")
-portrait_scale = 4.0
-portrait_offset = Vector2(-150.725, 91.88)
+portrait_scale = 2.0
+portrait_offset = Vector2(-200, 91.88)
 sprite_offset = Vector2(0, 12.26)
 flip_h = false
 screen_overlay = ""

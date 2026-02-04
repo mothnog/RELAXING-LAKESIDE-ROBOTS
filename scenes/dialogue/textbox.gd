@@ -8,6 +8,7 @@ class_name TextBox
 @onready var path = $Path2D
 @onready var arrow_target = $ArrowTarget
 @onready var portrait_sprite = $ArrowTarget/Portrait
+@onready var animated_portrait = $ArrowTarget/AnimatedPortrait
 
 var path_points: Array[Vector2]
 
@@ -25,6 +26,7 @@ func _ready():
 	update_arrow()
 
 
+
 func _on_resized():
 	update_curve()
 
@@ -37,11 +39,22 @@ func update_parameters() -> void:
 		
 		
 		label.text = text_replacements(res.text)
-		portrait_sprite.texture = res.portrait
-		portrait_sprite.scale = Vector2.ONE * res.portrait_scale
+		
+		var portrait
+		if res.animated_portrait == null:
+			portrait_sprite.texture = res.portrait
+			animated_portrait.hide()
+			portrait = portrait_sprite
+		else:
+			portrait_sprite.hide()
+			animated_portrait.sprite_frames = res.animated_portrait
+			animated_portrait.play()
+			portrait = animated_portrait
+		
+		portrait.scale = Vector2.ONE * res.portrait_scale
+		portrait.position = res.sprite_offset
+		portrait.flip_h = res.flip_h
 		arrow_target.position = res.portrait_offset
-		portrait_sprite.position = res.sprite_offset
-		portrait_sprite.flip_h = res.flip_h
 
 
 func update_curve() -> void:

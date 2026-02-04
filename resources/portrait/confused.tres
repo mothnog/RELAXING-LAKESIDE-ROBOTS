@@ -1,0 +1,32 @@
+[gd_resource type="SpriteFrames" load_steps=5 format=3 uid="uid://dwobmyqkvyw6p"]
+
+[ext_resource type="Texture2D" uid="uid://ccu7yjkfibtl2" path="res://assets/characters/new_portraits_uh-confused.png" id="1_dnejq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ba63c"]
+atlas = ExtResource("1_dnejq")
+region = Rect2(0, 0, 185, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kend7"]
+atlas = ExtResource("1_dnejq")
+region = Rect2(185, 0, 185, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rtu0m"]
+atlas = ExtResource("1_dnejq")
+region = Rect2(370, 0, 185, 144)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 23.0,
+"texture": SubResource("AtlasTexture_ba63c")
+}, {
+"duration": 18.0,
+"texture": SubResource("AtlasTexture_kend7")
+}, {
+"duration": 60.0,
+"texture": SubResource("AtlasTexture_rtu0m")
+}],
+"loop": true,
+"name": &"default",
+"speed": 100.0
+}]

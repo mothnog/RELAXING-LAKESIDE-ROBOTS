@@ -159,7 +159,7 @@ offset_left = 348.0
 offset_top = 476.0
 offset_right = 666.0
 offset_bottom = 580.0
-text = "they still have these stupid photo verification checks, but to be honest, i doubt there's anyone on the other end anymore."
+text = "they still have these stupid photo verification checks, but to be honest, i doubt there's anyone on the other end anymore"
 autowrap_mode = 2
 
 [node name="QuitPrompt" type="Label" parent="Writing"]

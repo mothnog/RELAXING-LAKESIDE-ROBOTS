@@ -1,17 +1,17 @@
 [gd_resource type="Resource" script_class="TextBoxRes" load_steps=3 format=3 uid="uid://cvcix4n6msdoi"]
 
-[ext_resource type="Texture2D" uid="uid://b3s4xqydsurx6" path="res://assets/characters/portraits1.png" id="1_dp5no"]
+[ext_resource type="Texture2D" uid="uid://c7uvolbtvcea6" path="res://assets/characters/new_portraits_uh-window.png" id="1_dp5no"]
 [ext_resource type="Script" uid="uid://cn4fkxsiwgk47" path="res://scenes/dialogue/textbox_resource.gd" id="1_xqqk2"]
 
 [resource]
 script = ExtResource("1_xqqk2")
-text = "Whatever ambitions were had here clearly never took off - this place is a mess."
-rect = Rect2(432, 440, 304, 104)
+text = "This place is such a mess.. It's clear that whatever ambitions were had here never took off..."
+rect = Rect2(568, 424, 304, 104)
 continue_input = true
 continue_text = ""
 portrait = ExtResource("1_dp5no")
-portrait_scale = 4.0
-portrait_offset = Vector2(-150, 43.72)
+portrait_scale = 2.0
+portrait_offset = Vector2(-200, 63.54)
 sprite_offset = Vector2(0, 5.835)
 flip_h = false
 screen_overlay = ""

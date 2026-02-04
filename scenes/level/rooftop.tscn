@@ -1,0 +1,71 @@
+[gd_scene load_steps=8 format=3 uid="uid://dvkfioupvjn6i"]
+
+[ext_resource type="Script" uid="uid://bha56co8m2ws3" path="res://scenes/level/rooftop.gd" id="1_m5bhw"]
+[ext_resource type="Texture2D" uid="uid://cmq8ibjvw2y4i" path="res://assets/materials/building1.png" id="1_qsv7h"]
+[ext_resource type="Environment" uid="uid://b8nub5p4yuvwq" path="res://resources/env/rooftop_env.tres" id="3_akyiu"]
+[ext_resource type="PackedScene" uid="uid://cx1y50kv4vvkr" path="res://scenes/misc/clouds.tscn" id="3_fsb1h"]
+[ext_resource type="PackedScene" uid="uid://bd75fyaa41cwg" path="res://scenes/interactable/garbage_pile.tscn" id="4_m5bhw"]
+[ext_resource type="PackedScene" uid="uid://dv5osnhdqrndc" path="res://scenes/misc/elevator.tscn" id="6_ahptw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m5bhw"]
+albedo_texture = ExtResource("1_qsv7h")
+uv1_scale = Vector3(0.25, 0.25, 0.25)
+uv1_triplanar = true
+texture_filter = 0
+
+[node name="Rooftop" type="Node3D"]
+script = ExtResource("1_m5bhw")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.565, 1.9, -2.443)
+calculate_tangents = false
+use_collision = true
+size = Vector3(2, 1.8, 1.6)
+material = SubResource("StandardMaterial3D_m5bhw")
+
+[node name="PlayerEnterTransform" type="Marker3D" parent="."]
+transform = Transform3D(-0.344741, 0, -0.938698, 0, 1, 0, 0.938698, 0, -0.344741, -1.34122, 1.12117, -0.867824)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="."]
+operation = 2
+calculate_tangents = false
+use_collision = true
+size = Vector3(8, 4, 8)
+material = SubResource("StandardMaterial3D_m5bhw")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGBox3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.108, 2, 0.009)
+operation = 2
+use_collision = true
+size = Vector3(6.5, 2, 6.5)
+material = SubResource("StandardMaterial3D_m5bhw")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("3_akyiu")
+
+[node name="Clouds" parent="." instance=ExtResource("3_fsb1h")]
+transform = Transform3D(1.49616, -0.107246, 0, 0.107246, 1.49616, 0, 0, 0, 1.5, -26.6964, 61.9908, -20.3577)
+
+[node name="Scrap" type="Node3D" parent="."]
+
+[node name="GarbagePile" parent="Scrap" instance=ExtResource("4_m5bhw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.53862, 1.03833, 2.30404)
+seed = 320
+
+[node name="GoodPile" parent="Scrap" instance=ExtResource("4_m5bhw")]
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 2.18894, 1.03833, -2.34191)
+seed = 222
+
+[node name="GarbagePile3" parent="Scrap" instance=ExtResource("4_m5bhw")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0.510789, 1.03833, -2.55537)
+seed = 14
+
+[node name="Elevator" parent="." node_paths=PackedStringArray("where_i_go") instance=ExtResource("6_ahptw")]
+transform = Transform3D(-0.9, 0, -1.35896e-07, 0, 0.9, 0, 1.35896e-07, 0, -0.9, -1.62848, 1.16653, -1.30172)
+where_i_go = NodePath("..")
+enter_method_string = "exit_rooftop"
+
+[node name="Decal" parent="Elevator" index="0"]
+albedo_mix = 0.6
+
+[editable path="Elevator"]

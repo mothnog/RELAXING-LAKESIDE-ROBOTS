@@ -29,12 +29,12 @@ ground_horizon_color = Color(0.278431, 0.113725, 0.129412, 1)
 ground_energy_multiplier = 0.2
 energy_multiplier = 1.5
 
-[sub_resource type="Sky" id="Sky_ed718"]
+[sub_resource type="Sky" id="Sky_wiql3"]
 sky_material = SubResource("ProceduralSkyMaterial_xt0ir")
 
 [sub_resource type="Environment" id="Environment_wiql3"]
 background_mode = 2
-sky = SubResource("Sky_ed718")
+sky = SubResource("Sky_wiql3")
 ssao_enabled = true
 ssao_intensity = 1.0
 glow_intensity = 0.46

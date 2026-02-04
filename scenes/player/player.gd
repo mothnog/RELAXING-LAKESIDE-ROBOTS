@@ -94,3 +94,8 @@ func set_animations() -> void:
 		sprite.play("walk")
 	else:
 		sprite.play("idle")
+
+
+func set_trans(trans: Transform3D) -> void:
+	global_transform = trans
+	camera.set_rot()

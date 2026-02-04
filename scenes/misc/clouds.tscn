@@ -72,7 +72,7 @@ canvas_item_default_texture_filter = 0
 size = Vector2i(320, 320)
 
 [node name="Parallax2D" type="Parallax2D" parent="SubViewport"]
-scroll_offset = Vector2(68.4112, 5517.1)
+scroll_offset = Vector2(68.4112, 5551.83)
 repeat_size = Vector2(320, 320)
 repeat_times = 5
 
