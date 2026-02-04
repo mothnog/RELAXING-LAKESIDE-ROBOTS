@@ -11,7 +11,7 @@ const TRANSITION_TIME = 0.75
 
 func _process(delta):
 	if player_entered:
-		if player.is_on_wall() and player.input_dir != Vector3.ZERO:
+		if player.is_on_wall() and player.input_dir != Vector3.ZERO and ! ScreenOverlay.fading:
 			player_entered = false
 			player.disable_movement = true
 			
