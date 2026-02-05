@@ -334,9 +334,9 @@ in_playground = true
 edit_position_in_editor = true
 
 [node name="rooftop3" parent="." instance=ExtResource("1_1lmg1")]
-offset_left = 152.0
+offset_left = 176.0
 offset_top = 408.0
-offset_right = 472.0
+offset_right = 480.0
 offset_bottom = 520.0
 res = ExtResource("33_nqh0e")
 in_playground = true

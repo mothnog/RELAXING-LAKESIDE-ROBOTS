@@ -653,7 +653,7 @@ sprite_frames = SubResource("SpriteFrames_w30ad")
 autoplay = "default"
 
 [node name="la lune" type="Sprite3D" parent="."]
-transform = Transform3D(-0.49451, -0.0216187, 0.868903, -0.108466, 0.993411, -0.0370137, -0.862378, -0.11255, -0.493596, -162.583, 92.7949, 91.3449)
+transform = Transform3D(-0.49451, -0.0216187, 0.868903, -0.108466, 0.993411, -0.0370137, -0.862378, -0.11255, -0.493596, -162.583, 89.93, 91.505)
 material_override = SubResource("StandardMaterial3D_xt0ir")
 gi_mode = 0
 pixel_size = 2.0

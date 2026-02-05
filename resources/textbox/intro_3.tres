@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="TextBoxRes" load_steps=3 format=3 uid="uid://cvcix4n6msdoi"]
 
-[ext_resource type="Texture2D" uid="uid://c7uvolbtvcea6" path="res://assets/characters/new_portraits_uh-window.png" id="1_dp5no"]
+[ext_resource type="Texture2D" uid="uid://dy7ogiev3qsme" path="res://assets/characters/new_portraits_uh-window.png" id="1_dp5no"]
 [ext_resource type="Script" uid="uid://cn4fkxsiwgk47" path="res://scenes/dialogue/textbox_resource.gd" id="1_xqqk2"]
 
 [resource]

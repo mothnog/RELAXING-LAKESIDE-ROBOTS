@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ce0trld2b2kfq"
-path="res://.godot/imported/new_portraits_uh-confused.png-6a286796ae48f89849a77222cb84fe9b.ctex"
+uid="uid://bs8dwtdlt26wg"
+path="res://.godot/imported/moon4.png-ae2fc1d0376132e1a66c48d97e291ae0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/new_portraits_uh-confused.png"
-dest_files=["res://.godot/imported/new_portraits_uh-confused.png-6a286796ae48f89849a77222cb84fe9b.ctex"]
+source_file="res://assets/things/moon4.png"
+dest_files=["res://.godot/imported/moon4.png-ae2fc1d0376132e1a66c48d97e291ae0.ctex"]
 
 [params]
 
