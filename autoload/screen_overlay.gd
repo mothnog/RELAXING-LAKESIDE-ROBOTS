@@ -19,10 +19,15 @@ const SCRAP_GET_TIME = 3.0
 enum OVERLAY {NOTE}
 
 var fading: bool = false
+var fade_rect_alpha: float = 0
+var fade_is_choppy: bool = false
+var fade_choppiness: int = 10
+var fade_frame: int = 0
 
 signal finished
 signal fade_to_black_in
 signal fade_to_black_out
+
 
 
 func _ready():
@@ -35,6 +40,16 @@ func _process(delta):
 	input_prompt.visible = awaiting_input
 	if current_overlay != null and Input.is_action_just_pressed("interact") and note_overlay == _previous_overlay and awaiting_input:
 		hide_overlay()
+	
+	if fading:
+		if fade_is_choppy:
+			fade_frame += 1
+			if fade_frame % fade_choppiness == 0:
+				fade_color_rect.color.a = fade_rect_alpha
+			if fade_rect_alpha == 1: 
+				fade_color_rect.color.a = 1
+		else:
+			fade_color_rect.color.a = fade_rect_alpha
 	
 	
 	scrap_shadow.rotation += delta / 6
@@ -100,19 +115,20 @@ func hide_overlay() -> void:
 		hide_dialogue_after = false
 
 
-func fade_to_black(in_time: float, hold_time: float, out_time: float, color: Color = Color(0, 0, 0)) -> void:
+func fade_to_black(in_time: float, hold_time: float, out_time: float, color: Color = Color(0, 0, 0), choppy: bool = false) -> void:
 	var tween = get_tree().create_tween()
 	
 	fade_color_rect.color = color
 	fade_color_rect.color.a = 0
 	fade_color_rect.show()
 	fading = true
+	fade_is_choppy = choppy
 	
-	tween.tween_property(fade_color_rect, "color:a", 1, in_time)
+	tween.tween_property(self, "fade_rect_alpha", 1, in_time)
 	tween.tween_callback(fade_to_black_in.emit)
 	tween.tween_interval(hold_time)
 	tween.tween_callback(fade_to_black_out.emit)
-	tween.tween_property(fade_color_rect, "color:a", 0, in_time)
+	tween.tween_property(self, "fade_rect_alpha", 0, in_time)
 	tween.tween_callback(finished.emit)
 	tween.tween_callback(fade_color_rect.hide)
 	tween.tween_callback(set.bind("fading", false))

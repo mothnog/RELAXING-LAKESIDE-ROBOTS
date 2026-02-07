@@ -1,15 +1,45 @@
-[gd_scene load_steps=3 format=3 uid="uid://bacumyk1uvxqu"]
+[gd_scene load_steps=4 format=3 uid="uid://bacumyk1uvxqu"]
 
 [ext_resource type="Script" uid="uid://cw8n2uo0qgnxg" path="res://scenes/level/lake_scene.gd" id="1_j86dm"]
 [ext_resource type="Texture2D" uid="uid://cks72xiddo01" path="res://assets/characters/lake_scene.png" id="1_wm3p8"]
+[ext_resource type="Texture2D" uid="uid://dupy07f2q8scd" path="res://assets/characters/hand.png" id="3_7klur"]
 
 [node name="LakeScene" type="Node2D"]
 script = ExtResource("1_j86dm")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="Border" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Border"]
+offset_top = 2.0
+offset_right = 140.0
+offset_bottom = 722.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Border"]
+offset_left = 1140.0
+offset_top = 2.0
+offset_right = 1280.0
+offset_bottom = 722.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Border"]
+offset_left = 140.0
+offset_top = 2.0
+offset_right = 1140.0
+offset_bottom = 42.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="Border"]
+offset_left = 140.0
+offset_top = 682.0
+offset_right = 1140.0
+offset_bottom = 722.0
+color = Color(0, 0, 0, 1)
+
+[node name="Background" type="CanvasLayer" parent="."]
 layer = -1
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+[node name="ColorRect" type="ColorRect" parent="Background"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -17,7 +47,32 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Lakeside" type="Sprite2D" parent="."]
 position = Vector2(640, 360)
 scale = Vector2(4, 4)
 texture = ExtResource("1_wm3p8")
+
+[node name="InitialHandPosition" type="Marker2D" parent="."]
+position = Vector2(534, 422)
+scale = Vector2(4, 4)
+
+[node name="Hand" type="Sprite2D" parent="."]
+position = Vector2(640, 360)
+scale = Vector2(4, 4)
+texture = ExtResource("3_7klur")
+
+[node name="subtitle" type="Label" parent="Hand"]
+modulate = Color(0.816658, 0.796257, 0.830214, 1)
+top_level = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 174.0
+offset_top = -277.0
+offset_right = 368.0
+offset_bottom = -254.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "[sound of wings flapping]"

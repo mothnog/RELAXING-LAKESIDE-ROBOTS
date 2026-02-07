@@ -747,6 +747,26 @@ panning_strength = 0.0
 bus = &"SFX"
 playback_type = 1
 
+[node name="SubtitleLayer" type="CanvasLayer" parent="RobotBuildSound"]
+layer = 5
+visible = false
+
+[node name="subtitle" type="Label" parent="RobotBuildSound/SubtitleLayer"]
+modulate = Color(0.816658, 0.796257, 0.830214, 1)
+top_level = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.5
+offset_top = 240.0
+offset_right = 76.5
+offset_bottom = 263.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "[sound of tinkering]"
+
 [node name="Ambience" type="AudioStreamPlayer" parent="."]
 process_mode = 3
 stream = ExtResource("25_swapm")

@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_gavyx")
-text = "I suppose it is a little less empty with you here"
+text = "Although... I suppose it is a little less empty with you here"
 rect = Rect2(240, 152, 304, 84)
 continue_input = true
 continue_text = ""

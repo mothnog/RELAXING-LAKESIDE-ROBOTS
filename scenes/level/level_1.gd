@@ -7,6 +7,7 @@ extends Level
 @onready var cutscene_camera = $CutsceneCamera
 @onready var bird = $Bird
 @onready var robot_build_sound = $RobotBuildSound
+@onready var robot_build_sound_subtitle = $RobotBuildSound/SubtitleLayer
 @onready var player_start_pos = $PlayerStartPos
 
 
@@ -46,16 +47,18 @@ func end_cutscene() -> void:
 	
 	
 	# fade to black
-	ScreenOverlay.fade_to_black(2, 2, 1)
+	ScreenOverlay.fade_to_black(2, 3, 1)
 	
 	await ScreenOverlay.fade_to_black_in
 	
 	robot_build_sound.play()
+	robot_build_sound_subtitle.show()
 	
 	await ScreenOverlay.fade_to_black_out
 	
 	bird.show()
 	player.sprite.flip_h = true
+	robot_build_sound_subtitle.hide()
 	
 	await ScreenOverlay.finished
 	
@@ -70,7 +73,7 @@ func end_cutscene() -> void:
 	
 	bird.fly_away(end_fade_time)
 	
-	ScreenOverlay.fade_to_black(end_fade_time, 2, 1, Color.WHITE)
+	ScreenOverlay.fade_to_black(end_fade_time, 0.5, 0.5, Color.WHITE)
 	
 	await ScreenOverlay.fade_to_black_out
 	
