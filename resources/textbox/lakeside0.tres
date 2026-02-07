@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="TextBoxRes" load_steps=2 format=3 uid="uid://bjty4xr8mux2v"]
+
+[ext_resource type="Script" uid="uid://cn4fkxsiwgk47" path="res://scenes/dialogue/textbox_resource.gd" id="1_431ew"]
+
+[resource]
+script = ExtResource("1_431ew")
+text = "..."
+rect = Rect2(344, 176, 60, 60)
+continue_input = true
+continue_text = ""
+portrait_scale = 1.0
+portrait_offset = Vector2(30, 50)
+sprite_offset = Vector2(0, 0)
+flip_h = false
+screen_overlay = ""

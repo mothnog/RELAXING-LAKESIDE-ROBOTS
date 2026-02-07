@@ -45,7 +45,7 @@ offset_left = 166.0
 offset_top = 142.0
 offset_right = 512.0
 offset_bottom = 176.0
-text = "(left/right to chose rating, interact to submit)"
+text = "(left/right to choose rating, interact to submit)"
 
 [node name="Stars" type="Node2D" parent="Review"]
 position = Vector2(640, 360)

@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://bacumyk1uvxqu"]
+[gd_scene load_steps=3 format=3 uid="uid://bacumyk1uvxqu"]
 
+[ext_resource type="Script" uid="uid://cw8n2uo0qgnxg" path="res://scenes/level/lake_scene.gd" id="1_j86dm"]
 [ext_resource type="Texture2D" uid="uid://cks72xiddo01" path="res://assets/characters/lake_scene.png" id="1_wm3p8"]
 
 [node name="LakeScene" type="Node2D"]
+script = ExtResource("1_j86dm")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -1

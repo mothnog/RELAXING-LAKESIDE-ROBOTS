@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="TextBoxRes" load_steps=2 format=3 uid="uid://b151yf1joh5cy"]
+
+[ext_resource type="Script" uid="uid://cn4fkxsiwgk47" path="res://scenes/dialogue/textbox_resource.gd" id="1_x05yx"]
+
+[resource]
+script = ExtResource("1_x05yx")
+text = "Even though the lake didn't live up to its hype, I'm glad you were able to find it flying above the mess of questionable architectural design choices!"
+rect = Rect2(224, 136, 360, 116)
+continue_input = false
+continue_text = ""
+portrait_scale = 1.0
+portrait_offset = Vector2(155, 100)
+sprite_offset = Vector2(0, 0)
+flip_h = false
+screen_overlay = ""

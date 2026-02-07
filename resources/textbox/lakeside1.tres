@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="TextBoxRes" load_steps=2 format=3 uid="uid://dg8pn6ds8yle8"]
+
+[ext_resource type="Script" uid="uid://cn4fkxsiwgk47" path="res://scenes/dialogue/textbox_resource.gd" id="1_dd7x3"]
+
+[resource]
+script = ExtResource("1_dd7x3")
+text = "So there was a lake after all..."
+rect = Rect2(232, 168, 264, 64)
+continue_input = false
+continue_text = ""
+portrait_scale = 1.0
+portrait_offset = Vector2(146, 100)
+sprite_offset = Vector2(0, 0)
+flip_h = false
+screen_overlay = ""

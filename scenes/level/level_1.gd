@@ -74,4 +74,4 @@ func end_cutscene() -> void:
 	
 	await ScreenOverlay.fade_to_black_out
 	
-	get_tree().change_scene_to_file("res://scenes/level/review_time.tscn")
+	get_tree().change_scene_to_file("res://scenes/level/lake_scene.tscn")
