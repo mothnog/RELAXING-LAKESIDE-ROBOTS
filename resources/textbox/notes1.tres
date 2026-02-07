@@ -8,6 +8,7 @@ text = "There are....."
 rect = Rect2(288, 344, 168, 60)
 continue_input = false
 continue_text = ""
+modulate = Color(1, 1, 1, 1)
 portrait_scale = 1.0
 portrait_offset = Vector2(425, 40)
 sprite_offset = Vector2(0, 0)

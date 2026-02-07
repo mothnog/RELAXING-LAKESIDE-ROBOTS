@@ -9,6 +9,7 @@ text = "It seems even \"Relaxing Lakeside Cottages\" couldn't escape the collaps
 rect = Rect2(568, 392, 360, 150)
 continue_input = true
 continue_text = ""
+modulate = Color(1, 1, 1, 1)
 portrait = ExtResource("1_m6n7d")
 portrait_scale = 2.0
 portrait_offset = Vector2(-200, 91.88)

@@ -240,6 +240,7 @@ edit_position_in_editor = true
 
 [node name="bird_1" parent="." instance=ExtResource("1_1lmg1")]
 visible = false
+modulate = Color(1.5, 1.33, 1.33, 1)
 offset_left = 688.0
 offset_top = 184.0
 offset_right = 1024.0
@@ -260,6 +261,7 @@ edit_position_in_editor = true
 
 [node name="bird_3" parent="." instance=ExtResource("1_1lmg1")]
 visible = false
+modulate = Color(1.5, 1.33, 1.33, 1)
 offset_left = 712.0
 offset_top = 120.0
 offset_right = 1064.0
@@ -270,6 +272,7 @@ edit_position_in_editor = true
 
 [node name="bird_4" parent="." instance=ExtResource("1_1lmg1")]
 visible = false
+modulate = Color(1.5, 1.33, 1.33, 1)
 offset_left = 688.0
 offset_top = 264.0
 offset_right = 944.0
@@ -300,6 +303,7 @@ edit_position_in_editor = true
 
 [node name="bird_6" parent="." instance=ExtResource("1_1lmg1")]
 visible = false
+modulate = Color(1.5, 1.33, 1.33, 1)
 offset_left = 696.0
 offset_top = 168.0
 offset_right = 968.0
@@ -359,6 +363,7 @@ in_playground = true
 edit_position_in_editor = true
 
 [node name="glitch1" parent="." instance=ExtResource("1_1lmg1")]
+visible = false
 offset_left = 744.0
 offset_top = 88.0
 offset_right = 1144.0
@@ -463,16 +468,16 @@ in_playground = true
 edit_position_in_editor = true
 
 [node name="lakeside9" parent="." instance=ExtResource("1_1lmg1")]
-visible = false
-offset_left = 296.0
+offset_left = 280.0
 offset_top = 168.0
-offset_right = 504.0
+offset_right = 488.0
 offset_bottom = 232.0
 res = ExtResource("45_6wgif")
 in_playground = true
 edit_position_in_editor = true
 
 [node name="lakeside10" parent="." instance=ExtResource("1_1lmg1")]
+visible = false
 offset_left = 224.0
 offset_top = 136.0
 offset_right = 544.0
@@ -482,6 +487,8 @@ in_playground = true
 edit_position_in_editor = true
 
 [node name="lakeside11" parent="." instance=ExtResource("1_1lmg1")]
+visible = false
+modulate = Color(1.5, 1.33, 1.33, 1)
 offset_left = 592.0
 offset_top = 344.0
 offset_right = 744.0

@@ -9,6 +9,7 @@ text = "Piles of scrap metal strewn across the stone pavement catch my attention
 rect = Rect2(456, 344, 360, 150)
 continue_input = true
 continue_text = ""
+modulate = Color(1, 1, 1, 1)
 portrait = ExtResource("1_umfem")
 portrait_scale = 2.0
 portrait_offset = Vector2(580, 99.94)

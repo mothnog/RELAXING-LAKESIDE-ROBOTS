@@ -8,6 +8,7 @@ text = "*noise of contentment*"
 rect = Rect2(496, 520, 232, 60)
 continue_input = true
 continue_text = ""
+modulate = Color(1, 1, 1, 1)
 portrait_scale = 1.0
 portrait_offset = Vector2(300, 24.76)
 sprite_offset = Vector2(0, 0)

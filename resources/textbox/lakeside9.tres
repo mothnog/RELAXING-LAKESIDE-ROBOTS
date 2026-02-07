@@ -5,11 +5,12 @@
 [resource]
 script = ExtResource("1_dyp5y")
 text = "Hm, actually..."
-rect = Rect2(296, 168, 208, 64)
+rect = Rect2(280, 168, 208, 64)
 continue_input = true
 continue_text = ""
+modulate = Color(1, 1, 1, 1)
 portrait_scale = 1.0
-portrait_offset = Vector2(80, 33)
+portrait_offset = Vector2(100, 33)
 sprite_offset = Vector2(0, 0)
 flip_h = false
 screen_overlay = ""

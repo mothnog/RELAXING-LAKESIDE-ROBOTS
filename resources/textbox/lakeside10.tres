@@ -8,6 +8,7 @@ text = "what should I call you? I assume you'd prefer to distance yourself from 
 rect = Rect2(224, 136, 320, 112)
 continue_input = false
 continue_text = ""
+modulate = Color(1, 1, 1, 1)
 portrait_scale = 1.0
 portrait_offset = Vector2(150, 100)
 sprite_offset = Vector2(0, 0)

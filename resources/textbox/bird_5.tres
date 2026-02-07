@@ -8,6 +8,7 @@ text = "I agree!"
 rect = Rect2(552, 448, 160, 60)
 continue_input = false
 continue_text = ""
+modulate = Color(1, 1, 1, 1)
 portrait_scale = 1.0
 portrait_offset = Vector2(150, 40)
 sprite_offset = Vector2(0, 0)

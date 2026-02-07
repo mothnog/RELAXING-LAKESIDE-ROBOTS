@@ -8,6 +8,7 @@ text = "hello, this is nothingness. I'm also here to test"
 rect = Rect2(880, 200, 300, 150)
 continue_input = false
 continue_text = ""
+modulate = Color(1, 1, 1, 1)
 portrait_scale = 1.0
 portrait_offset = Vector2(800, 75)
 sprite_offset = Vector2(0, 0)

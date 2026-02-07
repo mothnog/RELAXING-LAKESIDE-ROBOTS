@@ -9,6 +9,7 @@ text = "Normally I'd say something, but this is just a test."
 rect = Rect2(200, 100, 500, 150)
 continue_input = false
 continue_text = ""
+modulate = Color(1, 1, 1, 1)
 portrait = ExtResource("1_3ayts")
 portrait_scale = 2.0
 portrait_offset = Vector2(-70, 33)

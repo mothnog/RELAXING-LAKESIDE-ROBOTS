@@ -8,6 +8,7 @@ text = "Looks like I'll need [Level.remaining_collectables] more suitable pieces
 rect = Rect2(144, 376, 350, 115)
 continue_input = false
 continue_text = ""
+modulate = Color(1, 1, 1, 1)
 portrait_scale = 1.0
 portrait_offset = Vector2(460, 57)
 sprite_offset = Vector2(0, 0)

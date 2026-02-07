@@ -6,6 +6,7 @@ class_name TextBoxRes
 @export var rect: Rect2 = Rect2(0, 0, 600, 300)
 @export var continue_input: bool = false
 @export var continue_text: String = ""
+@export var modulate: Color = Color(1, 1, 1, 1)
 
 @export_group("Portrait")
 @export var portrait: Texture2D

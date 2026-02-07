@@ -8,6 +8,7 @@ text = "i'm happy for you!! What was it like before you were alive?"
 rect = Rect2(424, 480, 288, 80)
 continue_input = true
 continue_text = ""
+modulate = Color(1, 1, 1, 1)
 portrait_scale = 1.0
 portrait_offset = Vector2(400, 28.005)
 sprite_offset = Vector2(0, 0)

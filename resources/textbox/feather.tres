@@ -8,6 +8,7 @@ text = "this one kind of looks like a feather. that gives me an idea.."
 rect = Rect2(864, 400, 352, 108)
 continue_input = false
 continue_text = ""
+modulate = Color(1, 1, 1, 1)
 portrait_scale = 1.0
 portrait_offset = Vector2(0, 48)
 sprite_offset = Vector2(0, 0)

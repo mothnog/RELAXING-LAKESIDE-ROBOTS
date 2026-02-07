@@ -8,6 +8,7 @@ text = "I should leave Relaxing Lakeside Cottages a review"
 rect = Rect2(232, 488, 260, 100)
 continue_input = true
 continue_text = ""
+modulate = Color(1, 1, 1, 1)
 portrait_scale = 1.0
 portrait_offset = Vector2(0, 50)
 sprite_offset = Vector2(0, 0)

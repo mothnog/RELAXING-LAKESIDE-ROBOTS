@@ -8,6 +8,7 @@ text = "seventeen copies of the same note plastered to the wall?? It must be imp
 rect = Rect2(808, 384, 304, 96)
 continue_input = true
 continue_text = "press interact to read"
+modulate = Color(1, 1, 1, 1)
 portrait_scale = 1.0
 portrait_offset = Vector2(-20, 33)
 sprite_offset = Vector2(0, 0)

@@ -51,6 +51,7 @@ func update_parameters() -> void:
 			animated_portrait.play()
 			portrait = animated_portrait
 		
+		modulate = res.modulate
 		portrait.scale = Vector2.ONE * res.portrait_scale
 		portrait.position = res.sprite_offset
 		portrait.flip_h = res.flip_h

@@ -9,6 +9,7 @@ text = "I survey the view out the window, framed like a painting by its needless
 rect = Rect2(416, 344, 416, 184)
 continue_input = true
 continue_text = ""
+modulate = Color(1, 1, 1, 1)
 portrait = ExtResource("1_s8rpm")
 portrait_scale = 2.0
 portrait_offset = Vector2(620, 120)

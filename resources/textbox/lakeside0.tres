@@ -8,6 +8,7 @@ text = "..."
 rect = Rect2(344, 176, 60, 60)
 continue_input = true
 continue_text = ""
+modulate = Color(1, 1, 1, 1)
 portrait_scale = 1.0
 portrait_offset = Vector2(30, 50)
 sprite_offset = Vector2(0, 0)

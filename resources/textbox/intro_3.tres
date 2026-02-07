@@ -9,6 +9,7 @@ text = "This place is such a mess.. It's clear that whatever ambitions were had 
 rect = Rect2(568, 424, 304, 104)
 continue_input = true
 continue_text = ""
+modulate = Color(1, 1, 1, 1)
 portrait = ExtResource("1_dp5no")
 portrait_scale = 2.0
 portrait_offset = Vector2(-200, 63.54)

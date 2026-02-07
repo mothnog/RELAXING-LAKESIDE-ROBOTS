@@ -8,6 +8,7 @@ text = "*bird noises*"
 rect = Rect2(592, 344, 152, 60)
 continue_input = true
 continue_text = ""
+modulate = Color(1.5, 1.33, 1.33, 1)
 portrait_scale = 1.0
 portrait_offset = Vector2(0, 20)
 sprite_offset = Vector2(0, 0)

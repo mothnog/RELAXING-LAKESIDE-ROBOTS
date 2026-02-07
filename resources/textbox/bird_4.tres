@@ -8,6 +8,7 @@ text = "i think this form suits me much better~"
 rect = Rect2(688, 264, 256, 72)
 continue_input = false
 continue_text = ""
+modulate = Color(1.5, 1.33, 1.33, 1)
 portrait_scale = 1.0
 portrait_offset = Vector2(-18.655, 24.76)
 sprite_offset = Vector2(0, 0)

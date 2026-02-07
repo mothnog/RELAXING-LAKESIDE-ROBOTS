@@ -8,6 +8,7 @@ text = "Oh, before I forget..."
 rect = Rect2(216, 496, 300, 80)
 continue_input = true
 continue_text = ""
+modulate = Color(1, 1, 1, 1)
 portrait_scale = 1.0
 portrait_offset = Vector2(0, 40)
 sprite_offset = Vector2(0, 0)

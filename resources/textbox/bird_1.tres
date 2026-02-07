@@ -8,6 +8,7 @@ text = "ah, i'm alive ! what a whimsical feeling~"
 rect = Rect2(688, 184, 336, 72)
 continue_input = false
 continue_text = ""
+modulate = Color(1.5, 1.33, 1.33, 1)
 portrait_scale = 1.0
 portrait_offset = Vector2(-18.655, 36.76)
 sprite_offset = Vector2(0, 0)

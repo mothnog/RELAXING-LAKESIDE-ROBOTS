@@ -9,6 +9,7 @@ text = "who said that??"
 rect = Rect2(744, 456, 276, 120)
 continue_input = false
 continue_text = ""
+modulate = Color(1, 1, 1, 1)
 animated_portrait = ExtResource("1_j8t00")
 portrait_scale = 2.0
 portrait_offset = Vector2(393.7, 66)

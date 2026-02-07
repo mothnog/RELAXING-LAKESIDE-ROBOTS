@@ -8,6 +8,7 @@ text = "maybe I had overly high expectations for Relaxing Lakeside Cottages"
 rect = Rect2(112, 408, 400, 100)
 continue_input = false
 continue_text = ""
+modulate = Color(1, 1, 1, 1)
 portrait_scale = 1.0
 portrait_offset = Vector2(425, 50)
 sprite_offset = Vector2(0, 0)

@@ -8,6 +8,7 @@ text = "oh, you know. scattered pieces. vague purpose. what's the point in that 
 rect = Rect2(712, 120, 352, 96)
 continue_input = false
 continue_text = ""
+modulate = Color(1.5, 1.33, 1.33, 1)
 portrait_scale = 1.0
 portrait_offset = Vector2(-18.655, 69)
 sprite_offset = Vector2(0, 0)

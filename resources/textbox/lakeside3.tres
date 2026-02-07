@@ -8,6 +8,7 @@ text = "I thought that having found the lake, I could finally relax, but no, I s
 rect = Rect2(200, 136, 368, 100)
 continue_input = true
 continue_text = ""
+modulate = Color(1, 1, 1, 1)
 portrait_scale = 1.0
 portrait_offset = Vector2(175, 100)
 sprite_offset = Vector2(0, 0)

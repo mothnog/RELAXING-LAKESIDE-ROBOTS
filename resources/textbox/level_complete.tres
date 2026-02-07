@@ -8,6 +8,7 @@ text = "I have collected all the scrap I need!"
 rect = Rect2(144, 376, 350, 115)
 continue_input = true
 continue_text = ""
+modulate = Color(1, 1, 1, 1)
 portrait_scale = 1.0
 portrait_offset = Vector2(460, 57)
 sprite_offset = Vector2(0, 0)
