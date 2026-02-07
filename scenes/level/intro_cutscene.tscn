@@ -20,8 +20,8 @@
 [ext_resource type="PackedScene" uid="uid://dmr7w5punm8ay" path="res://assets/level/level_1.glb" id="18_wiql3"]
 [ext_resource type="PackedScene" uid="uid://wqarg6oowg4f" path="res://scenes/misc/stars.tscn" id="19_eeheb"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xt0ir"]
-sky_top_color = Color(0.157608, 0.281022, 0.420316, 1)
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_eeheb"]
+sky_top_color = Color(0.114534, 0.214426, 0.327065, 1)
 sky_horizon_color = Color(0.278768, 0.113214, 0.12958, 1)
 sky_curve = 0.270375
 sky_energy_multiplier = 0.2
@@ -31,7 +31,7 @@ ground_energy_multiplier = 0.2
 energy_multiplier = 1.5
 
 [sub_resource type="Sky" id="Sky_wiql3"]
-sky_material = SubResource("ProceduralSkyMaterial_xt0ir")
+sky_material = SubResource("ProceduralSkyMaterial_eeheb")
 
 [sub_resource type="Environment" id="Environment_wiql3"]
 background_mode = 2
@@ -41,11 +41,13 @@ ssao_intensity = 1.0
 glow_intensity = 0.46
 glow_strength = 2.0
 glow_bloom = 0.05
+fog_enabled = true
 fog_mode = 1
 fog_light_color = Color(0, 0, 0, 1)
 fog_density = 1.0
 fog_sky_affect = 0.0
-fog_depth_end = 300.0
+fog_depth_begin = 2.5
+fog_depth_end = 37.0
 volumetric_fog_density = 0.1658
 volumetric_fog_length = 20.88
 volumetric_fog_sky_affect = 0.0
@@ -654,6 +656,7 @@ autoplay = "default"
 
 [node name="la lune" type="Sprite3D" parent="."]
 transform = Transform3D(-0.49451, -0.0216187, 0.868903, -0.108466, 0.993411, -0.0370137, -0.862378, -0.11255, -0.493596, -162.583, 89.93, 91.505)
+visible = false
 material_override = SubResource("StandardMaterial3D_xt0ir")
 gi_mode = 0
 pixel_size = 2.0
@@ -667,5 +670,6 @@ transform = Transform3D(0.85, 0, 0, 0, 0.85, 0, 0, 0, 0.85, 0, 0, 0)
 
 [node name="Stars" parent="." instance=ExtResource("19_eeheb")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 11.6361, -11.6431, 0)
+visible = false
 stars = 80
 radius = 700.0

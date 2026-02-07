@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="DialogueRes" load_steps=4 format=3 uid="uid://b2abwg7s56uj4"]
+
+[ext_resource type="Script" uid="uid://ynudbsppuko4" path="res://scenes/dialogue/dialogue_resource.gd" id="1_axyqs"]
+[ext_resource type="Script" uid="uid://cn4fkxsiwgk47" path="res://scenes/dialogue/textbox_resource.gd" id="2_74dfj"]
+[ext_resource type="Resource" uid="uid://ca0gw67ir8vmn" path="res://resources/textbox/glitch1.tres" id="3_d5mmq"]
+
+[resource]
+script = ExtResource("1_axyqs")
+textboxes = Array[ExtResource("2_74dfj")]([ExtResource("3_d5mmq")])
+metadata/_custom_type_script = "uid://ynudbsppuko4"

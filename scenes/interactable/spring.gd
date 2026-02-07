@@ -22,7 +22,8 @@ func _interaction() -> void:
 		player.is_spring_jump_frame = true
 		player.is_spring_jumping = true
 		player.speed *= player_speed_mult
-		player.landed_after_spring.connect(spring_air_sound.stop)
+		if ! player.landed_after_spring.is_connected(spring_air_sound.stop):
+			player.landed_after_spring.connect(spring_air_sound.stop)
 		
 		AudioPlayer.play(spring_jump_sound)
 		spring_jump_sound.play()

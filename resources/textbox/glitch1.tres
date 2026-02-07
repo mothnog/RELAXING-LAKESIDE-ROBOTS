@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="TextBoxRes" load_steps=2 format=3 uid="uid://ca0gw67ir8vmn"]
+
+[ext_resource type="Script" uid="uid://cn4fkxsiwgk47" path="res://scenes/dialogue/textbox_resource.gd" id="1_grwyv"]
+
+[resource]
+script = ExtResource("1_grwyv")
+text = "you weren't supposed to make it up here, but you did! congrats"
+rect = Rect2(744, 88, 400, 96)
+continue_input = false
+continue_text = ""
+portrait_scale = 1.0
+portrait_offset = Vector2(300, 0)
+sprite_offset = Vector2(0, 0)
+flip_h = false
+screen_overlay = ""

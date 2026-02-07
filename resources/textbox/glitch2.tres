@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="TextBoxRes" load_steps=2 format=3 uid="uid://djxpyhwkchdqa"]
+
+[ext_resource type="Script" uid="uid://cn4fkxsiwgk47" path="res://scenes/dialogue/textbox_resource.gd" id="1_p3fhh"]
+
+[resource]
+script = ExtResource("1_p3fhh")
+text = "your prize: Large Text Box"
+rect = Rect2(56, 440, 1208, 320)
+continue_input = false
+continue_text = ""
+portrait_scale = 1.0
+portrait_offset = Vector2(1500, 96.055)
+sprite_offset = Vector2(0, 0)
+flip_h = false
+screen_overlay = ""

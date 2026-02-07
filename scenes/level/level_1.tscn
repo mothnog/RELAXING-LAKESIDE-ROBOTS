@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://cirpvdfconraw"]
+[gd_scene load_steps=47 format=3 uid="uid://cirpvdfconraw"]
 
 [ext_resource type="Script" uid="uid://cxa6etye7cpsv" path="res://scenes/level/level_1.gd" id="1_0alxl"]
 [ext_resource type="ArrayMesh" uid="uid://543tnerp4u33" path="res://assets/level/floor1.obj" id="1_ybxn4"]
@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://b2am3skm26chx" path="res://assets/things/window.png" id="11_8e0j7"]
 [ext_resource type="Resource" uid="uid://dfs15v0olo4lc" path="res://resources/dialogue/notes1.tres" id="13_m3417"]
 [ext_resource type="PackedScene" uid="uid://csuuoikcehw7c" path="res://scenes/interactable/collectable.tscn" id="14_vigbq"]
+[ext_resource type="Resource" uid="uid://b2abwg7s56uj4" path="res://resources/dialogue/glitch.tres" id="18_nwfd4"]
 [ext_resource type="PackedScene" uid="uid://8j0ltg6opn8a" path="res://scenes/interactable/level_completion.tscn" id="19_8uvjh"]
 [ext_resource type="PackedScene" uid="uid://d3sjaioi0ueus" path="res://scenes/robots/bird.tscn" id="20_4n8ks"]
 [ext_resource type="AudioStream" uid="uid://cg33f8bv8r4fl" path="res://sound/sfx/robot_build.wav" id="20_ox3e1"]
@@ -100,7 +101,7 @@ size = Vector2(200, 200)
 [node name="Level1" type="Node3D"]
 script = ExtResource("1_0alxl")
 start_player_at_start = false
-collectable_requirement = 3
+collectable_requirement = 4
 
 [node name="Collision" type="StaticBody3D" parent="."]
 transform = Transform3D(0.85, 0, 0, 0, 0.85, 0, 0, 0, 0.85, 0, 0, 0)
@@ -621,6 +622,11 @@ dialogue = ExtResource("6_so7sr")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.3737, 1.27012, -4.02054)
 dialogue = ExtResource("13_m3417")
 
+[node name="Secret" parent="Dialogue" instance=ExtResource("4_u8rbc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.92998, 5.64287, -8.45144)
+visible = false
+dialogue = ExtResource("18_nwfd4")
+
 [node name="GarbagePiles" type="Node3D" parent="."]
 
 [node name="Entrance1" parent="GarbagePiles" instance=ExtResource("7_2qg3m")]
@@ -679,7 +685,7 @@ dialogue_path = "res://resources/dialogue/feather.tres"
 
 [node name="RoofCollectable" parent="Collectables" instance=ExtResource("14_vigbq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.85306, 3.33919, 2.65357)
-sprite_frame = 1
+sprite_frame = 2
 
 [node name="TreeCollectable" parent="Collectables" instance=ExtResource("14_vigbq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.31337, 3.17008, -7.60839)
