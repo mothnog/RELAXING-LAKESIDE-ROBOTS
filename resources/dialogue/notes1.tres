@@ -1,3 +1,4 @@
+
 [gd_resource type="Resource" script_class="DialogueRes" load_steps=6 format=3 uid="uid://dfs15v0olo4lc"]
 
 [ext_resource type="Script" uid="uid://ynudbsppuko4" path="res://scenes/dialogue/dialogue_resource.gd" id="1_yia3m"]
