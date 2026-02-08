@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_wame7")
 text = "How does that work?"
-rect = Rect2(568, 464, 184, 60)
+rect = Rect2(496, 448, 184, 60)
 continue_input = true
 continue_text = ""
 modulate = Color(1, 1, 1, 1)

@@ -6,10 +6,12 @@ const DIALOGUE = preload("res://resources/dialogue/lakeside.tres")
 @onready var lakeside = $Lakeside
 @onready var hand = $Hand
 @onready var initial_hand_position = $InitialHandPosition
+@onready var bird_flap_sound = $BirdFlapSound
 
 const TRANSITION_TIME = 3.5
 const BLACK_TIME = 0.1
-const HAND_TIME = 6
+const HAND_TIME = 5.33
+const BIRD_FLAP_SOUND_DELAY = 0.7
 
 @onready var hand_position: Vector2 = initial_hand_position.position
 @onready var hand_end_pos: Vector2 = hand.position
@@ -36,7 +38,11 @@ func _ready():
 	tween.tween_property(self, "hand_position", hand_end_pos, HAND_TIME + TRANSITION_TIME/2
 		).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUINT)
 	
-	await get_tree().create_timer(HAND_TIME).timeout
+	await get_tree().create_timer(BIRD_FLAP_SOUND_DELAY).timeout
+	
+	bird_flap_sound.play()
+	
+	await get_tree().create_timer(HAND_TIME - BIRD_FLAP_SOUND_DELAY).timeout
 	
 	
 	ScreenOverlay.fade_to_black(TRANSITION_TIME/2.0, 1.0, TRANSITION_TIME/2.0, Color.BLACK, true)
@@ -57,7 +63,7 @@ func _ready():
 	await Dialogue.dialogue_complete
 	
 	ScreenOverlay.fade_to_black(4, 1, 0.1, Color.BLACK, true)
-	await ScreenOverlay.fade_to_black_out
+	await ScreenOverlay.fade_to_black_in
 	
 	get_tree().change_scene_to_file("res://scenes/level/review_time.tscn")
 

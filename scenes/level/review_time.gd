@@ -30,8 +30,8 @@ func _ready():
 	quit_prompt.hide()
 	for i in writing_text.get_children(): i.hide()
 	
-	#if ScreenOverlay.fading:
-		#await ScreenOverlay.finished
+	if ScreenOverlay.fading:
+		await ScreenOverlay.finished
 	
 	Dialogue.show_dialogue(DIALOGUE)
 	Dialogue.dialogue_complete.connect(_on_dialogue_complete)

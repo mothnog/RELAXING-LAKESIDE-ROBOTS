@@ -20,7 +20,7 @@ var noise3d: NoiseTexture3D = NoiseTexture3D.new()
 @export var noise_amplitude: Vector3 = Vector3(1, 0.2, 2)
 
 
-var frame_reduction: int = 8
+var frame_reduction: int = 7
 var frame: int = 0
 
 @onready var lerp_position = sprite.position
@@ -53,6 +53,9 @@ func _process(delta):
 	
 	if frame % frame_reduction == 0:
 		sprite.position = lerp_position
+	
+	#if randf() < 0.01:
+		#sprite.flip_h = ! sprite.flip_h
 	
 
 

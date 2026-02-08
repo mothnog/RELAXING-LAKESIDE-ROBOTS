@@ -1,8 +1,79 @@
-[gd_scene load_steps=4 format=3 uid="uid://bacumyk1uvxqu"]
+[gd_scene load_steps=18 format=3 uid="uid://bacumyk1uvxqu"]
 
 [ext_resource type="Script" uid="uid://cw8n2uo0qgnxg" path="res://scenes/level/lake_scene.gd" id="1_j86dm"]
-[ext_resource type="Texture2D" uid="uid://cks72xiddo01" path="res://assets/characters/lake_scene.png" id="1_wm3p8"]
+[ext_resource type="Texture2D" uid="uid://dcxxpsksbneum" path="res://assets/lake/lake_scene-bg.png" id="2_f41b3"]
 [ext_resource type="Texture2D" uid="uid://dupy07f2q8scd" path="res://assets/characters/hand.png" id="3_7klur"]
+[ext_resource type="Texture2D" uid="uid://dxt66xxfj52fr" path="res://assets/lake/lake_scene-water.png" id="3_f2vui"]
+[ext_resource type="Texture2D" uid="uid://cxwprs3ije5qs" path="res://assets/lake/lake_scene-seat.png" id="4_qmepu"]
+[ext_resource type="AudioStream" uid="uid://cfjkwe37rk0mr" path="res://sound/sfx/bird_flap.wav" id="4_x5s51"]
+[ext_resource type="Texture2D" uid="uid://chtnen61f83pc" path="res://assets/lake/lake_scene-possum.png" id="5_tvl6q"]
+[ext_resource type="Texture2D" uid="uid://boikhxr4n2s2h" path="res://assets/lake/lake_scene-stars.png" id="6_hu5g4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e3sil"]
+atlas = ExtResource("3_f2vui")
+region = Rect2(0, 0, 250, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qmpvo"]
+atlas = ExtResource("3_f2vui")
+region = Rect2(250, 0, 250, 160)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rr6rf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e3sil")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qmpvo")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.2
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u86rj"]
+atlas = ExtResource("5_tvl6q")
+region = Rect2(0, 0, 250, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lnr8j"]
+atlas = ExtResource("5_tvl6q")
+region = Rect2(250, 0, 250, 160)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lr0il"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u86rj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lnr8j")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_68lcf"]
+atlas = ExtResource("6_hu5g4")
+region = Rect2(0, 0, 250, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gegwi"]
+atlas = ExtResource("6_hu5g4")
+region = Rect2(250, 0, 250, 160)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lk46t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_68lcf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gegwi")
+}],
+"loop": true,
+"name": &"default",
+"speed": 0.8
+}]
 
 [node name="LakeScene" type="Node2D"]
 script = ExtResource("1_j86dm")
@@ -47,16 +118,39 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="Lakeside" type="Sprite2D" parent="."]
+[node name="Lakeside" type="Node2D" parent="."]
 position = Vector2(640, 360)
 scale = Vector2(4, 4)
-texture = ExtResource("1_wm3p8")
+
+[node name="BG" type="Sprite2D" parent="Lakeside"]
+texture = ExtResource("2_f41b3")
+
+[node name="Water" type="AnimatedSprite2D" parent="Lakeside"]
+sprite_frames = SubResource("SpriteFrames_rr6rf")
+autoplay = "default"
+frame_progress = 0.954049
+
+[node name="Seat" type="Sprite2D" parent="Lakeside"]
+texture = ExtResource("4_qmepu")
+
+[node name="Possum" type="AnimatedSprite2D" parent="Lakeside"]
+position = Vector2(0.25, 0)
+sprite_frames = SubResource("SpriteFrames_lr0il")
+autoplay = "default"
+frame_progress = 0.70119
+
+[node name="Stars" type="AnimatedSprite2D" parent="Lakeside"]
+position = Vector2(0.25, 0)
+sprite_frames = SubResource("SpriteFrames_lk46t")
+autoplay = "default"
+frame_progress = 0.0629732
 
 [node name="InitialHandPosition" type="Marker2D" parent="."]
 position = Vector2(534, 422)
 scale = Vector2(4, 4)
 
 [node name="Hand" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(640, 360)
 scale = Vector2(4, 4)
 texture = ExtResource("3_7klur")
@@ -76,3 +170,6 @@ offset_bottom = -254.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "[sound of wings flapping]"
+
+[node name="BirdFlapSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_x5s51")
