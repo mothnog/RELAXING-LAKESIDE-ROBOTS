@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://f5xyf4k5e6is"]
+[gd_scene load_steps=42 format=3 uid="uid://f5xyf4k5e6is"]
 
 [ext_resource type="Script" uid="uid://d3xrovbwfy4f" path="res://scenes/level/intro_cutscene.gd" id="1_ueyut"]
 [ext_resource type="Texture2D" uid="uid://chsvlnd4aexwb" path="res://assets/things/leaf.png" id="2_y5r2x"]
@@ -12,6 +12,7 @@
 [ext_resource type="AudioStream" uid="uid://bcmucjomclay6" path="res://sound/sfx/ambience.wav" id="11_cu086"]
 [ext_resource type="Script" uid="uid://glf2ew4st8qb" path="res://scenes/misc/audio_stream_better.gd" id="12_3xa4y"]
 [ext_resource type="PackedScene" uid="uid://r24r3y6khmy5" path="res://scenes/misc/billboard.tscn" id="13_3xa4y"]
+[ext_resource type="Texture2D" uid="uid://ri14wbljpb4t" path="res://assets/hud/possum_text.png" id="14_lyft7"]
 [ext_resource type="Texture2D" uid="uid://i2xeqs17jre4" path="res://assets/misc/arrow_indicator.png" id="14_s5olp"]
 [ext_resource type="Texture2D" uid="uid://56rdn48hnes3" path="res://assets/things/moon1.png" id="15_eeheb"]
 [ext_resource type="Texture2D" uid="uid://criqd3gnrm7ru" path="res://assets/things/moon.png" id="15_w30ad"]
@@ -129,6 +130,28 @@ animations = [{
 "loop": true,
 "name": &"default",
 "speed": 3.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xtu20"]
+atlas = ExtResource("14_lyft7")
+region = Rect2(0, 0, 50, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ugwyl"]
+atlas = ExtResource("14_lyft7")
+region = Rect2(50, 0, 50, 28)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v1mkj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xtu20")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ugwyl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.5
 }]
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_wiql3"]
@@ -652,6 +675,13 @@ position = Vector2(1173, 622)
 rotation = 3.14159
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_w30ad")
+autoplay = "default"
+
+[node name="PossumIndicator" type="AnimatedSprite2D" parent="CanvasLayer"]
+visible = false
+position = Vector2(248, 657)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_v1mkj")
 autoplay = "default"
 
 [node name="la lune" type="Sprite3D" parent="."]

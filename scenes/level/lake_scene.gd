@@ -7,6 +7,11 @@ const DIALOGUE = preload("res://resources/dialogue/lakeside.tres")
 @onready var hand = $Hand
 @onready var initial_hand_position = $InitialHandPosition
 @onready var bird_flap_sound = $BirdFlapSound
+@onready var lake_sound = $LakeSound
+@onready var other_ambience = $OtherAmbience
+
+
+@onready var music = $Music
 
 const TRANSITION_TIME = 3.5
 const BLACK_TIME = 0.1
@@ -38,6 +43,8 @@ func _ready():
 	tween.tween_property(self, "hand_position", hand_end_pos, HAND_TIME + TRANSITION_TIME/2
 		).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUINT)
 	
+	music.play()
+	
 	await get_tree().create_timer(BIRD_FLAP_SOUND_DELAY).timeout
 	
 	bird_flap_sound.play()
@@ -49,9 +56,9 @@ func _ready():
 	await ScreenOverlay.fade_to_black_in
 	
 	hand.hide()
-	
-	
 	lakeside.show()
+	lake_sound.play()
+	other_ambience.play()
 	
 	await ScreenOverlay.finished
 	

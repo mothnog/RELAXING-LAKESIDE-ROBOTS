@@ -27,6 +27,7 @@ grow_vertical = 2
 color = Color(0.0745098, 0.054902, 0.0901961, 1)
 
 [node name="Review" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 0
 
@@ -102,16 +103,19 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -14.0
-offset_top = -184.0
-offset_right = -14.0
-offset_bottom = -184.0
+offset_top = -223.0
+offset_right = 11.0
+offset_bottom = -223.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "horrible place built by horrible people. i did not feel relaxed and those buildings were NOT cottages. and i don't even like robots that much.
+text = "horrible place built by horrible people. i did not feel relaxed and those buildings were NOT EVEN COTTAGES. and i don't like robots that much.
 
-Okay, for real though. Despite the misrepresenting advertising, I am still grateful to have been able to nourish Relaxing Lakeside Cottages a little with the presence of my robots. It served as reassurance that even in a deteriorated, uncared for space there are pieces that can be put together to make a positive change. Somehow, my experience here turned out way more meaningful than any manufactured feeling of comfort it was originally hoping to provide.
+For real– Relaxing Lakeside Cottages presents itself as an escape to a world detached from the problems of ours, but being a product of this world, it only exemplifies them. In this hectic landscape, I often don't know where I'm meant to be, and well, I suppose this experience ruled out one option! 
 
-Having said that, considering my initial complaints, I can't give this more than [rating] stars. THERE ARE BETTER WAYS TO SPEND YOUR TIME."
+On the other hand, in the deteriorated state I found it in, I had the opportunity to nourish it with the presence of my bird friend. It’s nice to be reassured that even something made with so little care can be given new purpose in some shape or form. Surprisingly, my experience turned out way more meaningful than any manufactured feeling of comfort it was originally hoping to provide. (If it was ever trying to be anything at all…..)
+
+i give [rating] stars, however birds get 5 stars
+"
 autowrap_mode = 2
 
 [node name="Mid" type="Label" parent="Writing/Text"]
@@ -121,14 +125,17 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -13.0
-offset_top = -171.0
-offset_right = -13.0
-offset_bottom = -171.0
+offset_top = -220.0
+offset_right = 17.0
+offset_bottom = -212.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "I think [rating] stars is a fair rating for Relaxing Lakeside Cottages considering it failed at basically everything it promised: it wasn't particularly relaxing and those buildings were definitely not cottages.
+text = "I think [rating] stars is a fair rating for Relaxing Lakeside Cottages despite it failing at basically everything it promised: it wasn't particularly relaxing and those buildings were definitely not cottages. It presents itself as an escape to a world detached from the problems of ours, but being a product of this world, it only exemplifies them. It's just another drop in this sea of mass produced things, made for no one. 
 
-On the other hand, its wrecked state gave me the opportunity to nourish it a little with the presence of my robots. My experience here served as reassurance that even in a deteriorated, uncared for space there are pieces that can be put together to make a positive change. Somehow, Relaxing Lakeside Cottages unintentionally turned out way more meaningful than any manufactured feeling of comfort it was originally hoping to provide."
+On the other hand, in the deteriorated state I found it in, I had the opportunity to nourish it with the presence of my bird friend. It’s nice to be reassured that even something made with so little care can be given new purpose in some shape or form. Surprisingly, my experience turned out way more meaningful than any manufactured feeling of comfort it was originally hoping to provide. (If it was ever trying to be anything at all…..)
+
+In this hectic landscape, I often don't know where I'm meant to be; but maybe I've found new direction, pointed far from the uncaring corridors of Relaxing Lakeside Cottages. 
+"
 autowrap_mode = 2
 
 [node name="Good" type="Label" parent="Writing/Text"]
@@ -137,30 +144,38 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -14.0
-offset_top = -174.0
-offset_right = -14.0
-offset_bottom = -174.0
+offset_left = -15.0
+offset_top = -218.0
+offset_right = 27.0
+offset_bottom = -184.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "I'm a bit surprised to be giving this place [rating] stars, considering it failed at basically everything it promised: it wasn't particularly relaxing and under no reasonable definition could those buildings be considered cottages. 
+text = "I'm surprised to be giving this place [rating] stars, considering it failed at basically everything it promised: it wasn't particularly relaxing and under no reasonable definition could those buildings be considered cottages. It presents itself as an escape to a world detached from the problems of ours, but being a product of this world, it only exemplifies them. It's just another drop in this sea of mass produced things, made for no one. 
 
-However, it did serve well as a canvas for my robots. This trip was made worthwhile by the reassurance that even in a deteriorated, uncared for space, there are pieces that can be put together to make a positive change. Somehow, Relaxing Lakeside Cottages unintentionally turned out way more purposeful than any manufactured feeling of comfort it was originally hoping to provide."
+Despite all this, it did give me the opportunity to nourish its forgotten walkways with the presence of my bird friend. It served as reassurance that even something so uncared for can be given new purpose in some shape or form. My experience unexpectedly turned out way more meaningful than any manufactured feeling of comfort it was originally hoping to provide. (If it was ever trying to be anything at all…..)
+
+In this hectic landscape, I often don't know where I'm meant to be; but maybe I’ve found new direction, pointed far from the cold corridors of Relaxing Lakeside Cottages.
+"
 autowrap_mode = 2
 
 [node name="Portrait" type="Sprite2D" parent="Writing"]
-position = Vector2(245, 548)
+position = Vector2(245, 568)
 scale = Vector2(2, 2)
 texture = ExtResource("3_on3o4")
 
 [node name="Label" type="Label" parent="Writing/Portrait"]
+modulate = Color(0.545098, 0.509804, 0.537255, 1)
 top_level = true
-offset_left = 348.0
-offset_top = 476.0
-offset_right = 666.0
-offset_bottom = 580.0
-text = "they still have these stupid photo verification checks, but to be honest, i doubt there's anyone on the other end anymore"
+anchors_preset = -1
+anchor_left = -0.015625
+anchor_right = -0.01875
+offset_left = 372.0
+offset_top = 501.0
+offset_right = 690.0
+offset_bottom = 605.0
+text = "these stupid photo verification checks are still around, but I doubt there's anyone on the other end anymore"
 autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="QuitPrompt" type="Label" parent="Writing"]
 layout_mode = 0
@@ -172,17 +187,16 @@ text = "[press ESC to leave]"
 
 [node name="Noise" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_lpxs0")
-volume_db = 4.0
+volume_db = 7.0
 bus = &"SFX"
 
 [node name="Bloops" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_1k8x8")
-volume_db = 5.0
+volume_db = 7.0
 bus = &"SFX"
 
 [node name="Bloop" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_swq02")
-volume_db = -3.0
 bus = &"SFX"
 script = ExtResource("6_on3o4")
 metadata/_custom_type_script = "uid://glf2ew4st8qb"

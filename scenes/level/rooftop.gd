@@ -21,7 +21,7 @@ func enter_rooftop(player: Player) -> void:
 	player.sprite.modulate = PLAYER_MODULATE
 	player.set_trans(player_enter_transform.global_transform)
 	world_env.environment = ROOFTOP_ENV
-	ambience.volume_db = 0
+	ambience.volume_db = -6
 
 
 func exit_rooftop(player: Player) -> void:

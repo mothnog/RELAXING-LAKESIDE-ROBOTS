@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bacumyk1uvxqu"]
+[gd_scene load_steps=21 format=3 uid="uid://bacumyk1uvxqu"]
 
 [ext_resource type="Script" uid="uid://cw8n2uo0qgnxg" path="res://scenes/level/lake_scene.gd" id="1_j86dm"]
 [ext_resource type="Texture2D" uid="uid://dcxxpsksbneum" path="res://assets/lake/lake_scene-bg.png" id="2_f41b3"]
@@ -8,6 +8,9 @@
 [ext_resource type="AudioStream" uid="uid://cfjkwe37rk0mr" path="res://sound/sfx/bird_flap.wav" id="4_x5s51"]
 [ext_resource type="Texture2D" uid="uid://chtnen61f83pc" path="res://assets/lake/lake_scene-possum.png" id="5_tvl6q"]
 [ext_resource type="Texture2D" uid="uid://boikhxr4n2s2h" path="res://assets/lake/lake_scene-stars.png" id="6_hu5g4"]
+[ext_resource type="AudioStream" uid="uid://c7r4vf82f6i3" path="res://sound/music/lakeside.mp3" id="9_f2vui"]
+[ext_resource type="AudioStream" uid="uid://ib3n08wpy6io" path="res://sound/sfx/lake_ambience.mp3" id="10_qmepu"]
+[ext_resource type="AudioStream" uid="uid://bcmucjomclay6" path="res://sound/sfx/ambience.wav" id="11_tvl6q"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e3sil"]
 atlas = ExtResource("3_f2vui")
@@ -50,7 +53,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 1.0
+"speed": 1.5
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_68lcf"]
@@ -72,7 +75,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 0.8
+"speed": 1.0
 }]
 
 [node name="LakeScene" type="Node2D"]
@@ -127,7 +130,6 @@ texture = ExtResource("2_f41b3")
 
 [node name="Water" type="AnimatedSprite2D" parent="Lakeside"]
 sprite_frames = SubResource("SpriteFrames_rr6rf")
-autoplay = "default"
 frame_progress = 0.954049
 
 [node name="Seat" type="Sprite2D" parent="Lakeside"]
@@ -173,3 +175,14 @@ text = "[sound of wings flapping]"
 
 [node name="BirdFlapSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_x5s51")
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_f2vui")
+volume_db = -12.0
+
+[node name="LakeSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_qmepu")
+
+[node name="OtherAmbience" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_tvl6q")
+volume_db = -29.0
