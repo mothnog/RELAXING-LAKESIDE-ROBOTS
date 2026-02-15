@@ -192,7 +192,7 @@ bus = &"SFX"
 
 [node name="Bloops" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_1k8x8")
-volume_db = 7.0
+volume_db = 4.0
 bus = &"SFX"
 
 [node name="Bloop" type="AudioStreamPlayer" parent="."]

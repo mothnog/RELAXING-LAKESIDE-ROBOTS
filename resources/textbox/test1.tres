@@ -1,7 +1,9 @@
 [gd_resource type="Resource" script_class="TextBoxRes" load_steps=3 format=3 uid="uid://d1y6x1mgc2frk"]
 
-[ext_resource type="Texture2D" uid="uid://7eh67uxe1srp" path="res://assets/tmp/temp_person1.png" id="1_3ayts"]
 [ext_resource type="Script" uid="uid://cn4fkxsiwgk47" path="res://scenes/dialogue/textbox_resource.gd" id="2_bjsmw"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2uc4e"]
+load_path = "res://.godot/imported/temp_person1.png-5c5b77d2c1156c762c1bb176d6f01667.ctex"
 
 [resource]
 script = ExtResource("2_bjsmw")
@@ -10,7 +12,7 @@ rect = Rect2(200, 100, 500, 150)
 continue_input = false
 continue_text = ""
 modulate = Color(1, 1, 1, 1)
-portrait = ExtResource("1_3ayts")
+portrait = SubResource("CompressedTexture2D_2uc4e")
 portrait_scale = 2.0
 portrait_offset = Vector2(-70, 33)
 sprite_offset = Vector2(0, 42)

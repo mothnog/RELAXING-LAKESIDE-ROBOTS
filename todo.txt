@@ -1,4 +1,0 @@
-SFX:
-	Scrap Get
-	Spring Impact
-	REDO spring jump??
