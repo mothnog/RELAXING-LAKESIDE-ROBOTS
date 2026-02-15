@@ -179,7 +179,6 @@ in_playground = true
 edit_position_in_editor = true
 
 [node name="intro_2" parent="." instance=ExtResource("1_1lmg1")]
-visible = false
 offset_left = 416.0
 offset_top = 344.0
 offset_right = 832.0
@@ -428,6 +427,7 @@ in_playground = true
 edit_position_in_editor = true
 
 [node name="lakeside5" parent="." instance=ExtResource("1_1lmg1")]
+visible = false
 offset_left = 496.0
 offset_top = 448.0
 offset_right = 680.0

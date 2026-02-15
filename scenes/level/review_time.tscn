@@ -97,7 +97,6 @@ offset_bottom = 710.0
 metadata/_edit_lock_ = true
 
 [node name="Bad" type="Label" parent="Writing/Text"]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -110,9 +109,9 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "horrible place built by horrible people. i did not feel relaxed and those buildings were NOT EVEN COTTAGES. and i don't like robots that much.
 
-For real– Relaxing Lakeside Cottages presents itself as an escape to a world detached from the problems of ours, but being a product of this world, it only exemplifies them. In this hectic landscape, I often don't know where I'm meant to be, and well, I suppose this experience ruled out one option! 
+For real though– Relaxing Lakeside Cottages presents itself as an escape to a world detached from the problems of ours, but being a product of this world, it only exemplifies them. In this hectic landscape, I often don't know where I'm meant to be, and well, I suppose this experience ruled out one option! 
 
-On the other hand, in the deteriorated state I found it in, I had the opportunity to nourish it with the presence of my bird friend. It’s nice to be reassured that even something made with so little care can be given new purpose in some shape or form. Surprisingly, my experience turned out way more meaningful than any manufactured feeling of comfort it was originally hoping to provide. (If it was ever trying to be anything at all…..)
+HOWEVER, it did give me the opportunity to transform garbage into my little bird friend. It’s nice to be reassured that even something so uncared for can be given new purpose in some shape or form. My experience unexpectedly turned out way more meaningful than any manufactured feeling of comfort it was originally hoping to provide. (If it was ever trying to be anything at all…..)
 
 i give [rating] stars, however birds get 5 stars
 "
@@ -132,9 +131,9 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "I think [rating] stars is a fair rating for Relaxing Lakeside Cottages despite it failing at basically everything it promised: it wasn't particularly relaxing and those buildings were definitely not cottages. It presents itself as an escape to a world detached from the problems of ours, but being a product of this world, it only exemplifies them. It's just another drop in this sea of mass produced things, made for no one. 
 
-On the other hand, in the deteriorated state I found it in, I had the opportunity to nourish it with the presence of my bird friend. It’s nice to be reassured that even something made with so little care can be given new purpose in some shape or form. Surprisingly, my experience turned out way more meaningful than any manufactured feeling of comfort it was originally hoping to provide. (If it was ever trying to be anything at all…..)
+It gains points by giving me the opportunity to transform garbage into my little bird friend. It’s nice to be reassured that even something so uncared for can be given new purpose in some shape or form. My experience unexpectedly turned out way more meaningful than any manufactured feeling of comfort it was originally hoping to provide. (If it was ever trying to be anything at all…..)
 
-In this hectic landscape, I often don't know where I'm meant to be; but maybe I've found new direction, pointed far from the uncaring corridors of Relaxing Lakeside Cottages. 
+In this hectic landscape, I often don't know where I'm meant to be; but maybe I’ve found new direction, far from the uncaring corridors of Relaxing Lakeside Cottages. 
 "
 autowrap_mode = 2
 
@@ -152,13 +151,14 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "I'm surprised to be giving this place [rating] stars, considering it failed at basically everything it promised: it wasn't particularly relaxing and under no reasonable definition could those buildings be considered cottages. It presents itself as an escape to a world detached from the problems of ours, but being a product of this world, it only exemplifies them. It's just another drop in this sea of mass produced things, made for no one. 
 
-Despite all this, it did give me the opportunity to nourish its forgotten walkways with the presence of my bird friend. It served as reassurance that even something so uncared for can be given new purpose in some shape or form. My experience unexpectedly turned out way more meaningful than any manufactured feeling of comfort it was originally hoping to provide. (If it was ever trying to be anything at all…..)
+Despite all this, I had the opportunity to transform garbage into my little bird friend. It’s nice to be reassured that even something so uncared for can be given new purpose in some shape or form. My experience unexpectedly turned out way more meaningful than any manufactured feeling of comfort it was originally hoping to provide. (If it was ever trying to be anything at all…..)
 
-In this hectic landscape, I often don't know where I'm meant to be; but maybe I’ve found new direction, pointed far from the cold corridors of Relaxing Lakeside Cottages.
+In this hectic landscape, I often don't know where I'm meant to be; but maybe I’ve found new direction, far from the uncaring corridors of Relaxing Lakeside Cottages. 
 "
 autowrap_mode = 2
 
 [node name="Portrait" type="Sprite2D" parent="Writing"]
+visible = false
 position = Vector2(245, 568)
 scale = Vector2(2, 2)
 texture = ExtResource("3_on3o4")
@@ -167,7 +167,7 @@ texture = ExtResource("3_on3o4")
 modulate = Color(0.545098, 0.509804, 0.537255, 1)
 top_level = true
 anchors_preset = -1
-anchor_left = -0.015625
+anchor_left = -0.01875
 anchor_right = -0.01875
 offset_left = 372.0
 offset_top = 501.0
